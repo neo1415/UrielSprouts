@@ -1,7 +1,16 @@
+.head-text{
+    @media screen and (max-width:950px) {
+        margin-bottom: 8rem!important;
+    }
+}
+
 .title{
     margin-top: 4rem;
     text-align: center;
     margin-bottom: -8rem;
+    @media screen and (max-width:950px) {
+        margin-top: -6rem!important;
+    }
     h2{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 32px;
@@ -12,6 +21,7 @@
     position: relative;
     z-index: 1;
     margin-bottom: 15rem;
+
 }
 .circle1{
     position: absolute;
@@ -47,8 +57,9 @@ height: 400px;
     bottom: 77%;
     align-items: center;
     left: 35%;
-    @media screen and (max-width:820px) {
+    @media screen and (max-width:950px) {
         bottom: 70%;
+        display: none;
     }
   }
 
@@ -58,6 +69,9 @@ height: 400px;
     flex: 1;
     width: 100%;
     flex-direction: column;
+    @media screen and (max-width:950px) {
+        margin-top: 3rem;
+    }
 }
 
 .app__testimonial-item{

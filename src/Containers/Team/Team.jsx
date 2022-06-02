@@ -26,10 +26,6 @@ const Team = () => {
         </div>
         </div>
         </div>
-        <div className='mobile-caption'>
-        <h3>Olaniyi Omole</h3>
-        <p>CEO/Founder</p>
-        </div>
       </div>
       <div className='profile'>
       <div className="profile-card">
@@ -45,10 +41,6 @@ const Team = () => {
           <a href="#"><FaTwitter /></a>
         </div>
         </div>
-        </div>
-        <div className="mobile-caption">
-            <h3>Ehiosa Ugiagbe</h3>
-            <p>Executive</p>
         </div>
       </div>
 
@@ -67,10 +59,6 @@ const Team = () => {
           </div>
         </div>
         </div>
-        <div className="mobile-caption">
-          <h3>Babatunde Oladipupo</h3>
-            <p>Executive</p>
-        </div>
       </div>
 
       <div className='profile fourth'>
@@ -87,10 +75,6 @@ const Team = () => {
           <a href="#"><FaTwitter /></a>
         </div>
         </div>
-        </div>
-        <div className="mobile-caption">
-            <h3>Aderonke Omole</h3>
-            <p>Executive</p>
         </div>
       </div>
 
@@ -109,10 +93,6 @@ const Team = () => {
         </div>
         </div>
         </div>
-        <div className="mobile-caption">
-            <h3>John Iyoha</h3>
-            <p>Executive</p>
-        </div>
       </div>
       
       <div className='profile sixth'>
@@ -129,10 +109,6 @@ const Team = () => {
           <a href="#"><FaTwitter /></a>
         </div>
         </div>
-        </div>
-        <div className="mobile-caption">
-            <h3>Marvel Okosodo</h3>
-            <p>Executive</p>
         </div>
       </div>
 
@@ -151,10 +127,6 @@ const Team = () => {
            </div>
            </div>
                   </div>
-                  <div className="mobile-caption">
-            <h3>Adeola Makinwa</h3>
-            <p>Executive</p>
-      </div>
       </div>
 
       <div className='profile eighth'>
@@ -171,10 +143,6 @@ const Team = () => {
           <a href="#"><FaTwitter /></a>
         </div>
         </div>
-        </div>
-        <div className="mobile-caption">
-            <h3>Oselumese Olumese</h3>
-            <p>Executive</p>
         </div>
       </div>
     </div>
