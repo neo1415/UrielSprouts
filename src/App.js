@@ -2,7 +2,7 @@ import React from 'react'
 import { Header, About, Services, Team, Testimonial, Footer } from './Containers';
 import { NavBar } from './Components';
 import './App.scss'
-import Mission from './Containers/Mission1/Mission1';
+import Mission from './Containers/Mission/Mission';
 
 
 const App = () => {
