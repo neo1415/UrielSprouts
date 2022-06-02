@@ -9,7 +9,7 @@ import Ehosa from '../Assets/US Ehosa.png';
 import Iyoha from '../Assets/US Iyoha.png';
 import Oksodo from '../Assets/US Oksodo.png';
 import Uselumese from '../Assets/US Uselumese.png';
-import aboutbg from '../Assets/aboutBG.jpg';
+import aboutbg from '../Assets/aboutBG.png';
 import circle from '../Assets/circle.svg'
 import join from '../Assets/join.jpg';
 import video from '../Assets/Video.mp4';

@@ -2,11 +2,10 @@ import React from 'react'
 import './Team.scss';
 import { images } from '../../Constants';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { MotionWrap, Appwrap } from '../../Wrapper';
 
 const Team = () => {
   return (
-    <div className='Team'>
+    <div className='Team' id='team'>
       <div className='title-team'>
           <h2 className='head-text'>Meet <span>The Faculty</span></h2>
           <div className='line'></div>

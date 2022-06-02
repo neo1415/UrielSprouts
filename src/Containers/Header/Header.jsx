@@ -1,6 +1,5 @@
 import React from 'react'
 import { HiArrowNarrowDown } from 'react-icons/hi';
-import { Appwrap } from '../../Wrapper';
 import './Header.scss';
 import { motion } from 'framer-motion';
 import { BsTwitter, BsInstagram} from 'react-icons/bs';
@@ -9,7 +8,7 @@ import { FaFacebookF } from 'react-icons/fa';
 
 const Header = () => {
   return (
-    <div className='hero-Container app__flex'>
+    <div className='hero-Container app__flex ' id='home'>
         <motion.div
          whileInView={{scale:[0,1]}}
          transition={{duration:1,ease:'easeInOut'}}
@@ -32,7 +31,7 @@ const Header = () => {
             </p>
             </motion.div>
             <div className='circle'>
-                <a href='#'>Learn More</a>
+                <a href='#about'>Learn More</a>
                 <HiArrowNarrowDown />
             </div>
           

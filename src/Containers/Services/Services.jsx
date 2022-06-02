@@ -6,7 +6,7 @@ import { Appwrap } from '../../Wrapper';
 
 const Services = () => {
   return (
-    <div className='services app__flex' >
+    <div className='services app__flex' id='services' >
          <motion.img
                 whileInView={{scale:[0,1]}}
                 transition={{duration:1,ease:'easeInOut'}}
@@ -99,7 +99,7 @@ const Services = () => {
     </div>
   </div>
 </div>
- 
+
 
         <div className='business-management'>
           <h4><span>Business</span> Management & <span>Incubation</span> Program :</h4>

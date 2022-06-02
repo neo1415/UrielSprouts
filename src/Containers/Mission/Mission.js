@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import data from './data';
-import{ SectionCenter, SectionArticle, SliderDescription, SliderTitle } from './SliderElements';
+import './Mission.scss'
 import './slide.css'
 
 
@@ -18,7 +18,7 @@ useEffect(() => {
 useEffect(() => {
     let slider = setInterval(() =>{
         setIndex(index + 1)
-    }, 7500);
+    }, 5700);
     return () => {
         clearInterval(slider)
     };
@@ -26,7 +26,7 @@ useEffect(() => {
 
   return (
     <div className='slider-section' id='discover' >
-        <SectionCenter>
+        <div className='section-center'>
             {sliderData.map((item,sliderIndex) => {
                 const {id, Title, description} = item;
                 let position = 'next-slide';
@@ -38,20 +38,14 @@ useEffect(() => {
                     position='last-slide';
                 }
                 return(
-                    <SectionArticle className={position} key={id}>
-                        <SliderTitle>{Title}</SliderTitle>
-                        <SliderDescription>{description}</SliderDescription>
-                    </SectionArticle>
+                    <div className={position} key={id} id='section-article'>
+                        <div className='slider-title'>{Title}</div>
+                        <div className='slider-description'>{description}</div>
+                    </div>
                 )
                 
             })}
-            {/* <ButtonPrev onClick={() => setIndex(index-1)}>
-                <MdChevronLeft size={30} />
-            </ButtonPrev>
-            <ButtonNext onClick={() => setIndex(index+1)}>
-                <MdChevronRight size={30} />
-            </ButtonNext> */}
-        </SectionCenter>
+        </div>
     </div>
   )
 }

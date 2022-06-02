@@ -14,12 +14,19 @@
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .about-container {
+    margin-bottom: -13.5rem;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .about-container {
     margin-top: -10rem;
-    margin-bottom: -11rem;
+    margin-bottom: -10rem;
     padding-right: 1rem;
     padding-left: 0;
+    height: 110vh;
   }
 }
 
@@ -30,17 +37,18 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 280px) {
   .about-container {
-    margin-top: 8rem;
-    margin-bottom: 14rem;
+    margin-top: 8rem !important;
+    width: 20rem;
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 380px) {
   .about-container {
-    margin-top: 7rem;
+    margin-top: 3rem;
     margin-bottom: 14rem;
+    height: 75vh;
   }
 }
 
@@ -57,7 +65,7 @@
   .about-container .overlay_circle3 {
     width: 200px;
     height: 200px;
-    margin-right: 29rem;
+    margin-right: 29rem !important;
     margin-bottom: 4rem;
     margin-top: -6rem;
   }
@@ -67,8 +75,8 @@
   height: 100%;
   display: flex;
   position: relative;
-  width: 180rem;
-  margin-top: -1rem;
+  width: 150rem;
+  margin-top: 9.5rem;
 }
 
 @media screen and (max-width: 920px) {
@@ -110,13 +118,12 @@
 .app__header-image .about_image {
   position: relative;
   left: 0;
-  right: 100%;
   z-index: 0;
   width: 35rem;
   height: 30rem;
   margin-right: -20rem;
   object-fit: cover;
-  margin-bottom: 3.7rem;
+  margin-bottom: 2.7rem;
 }
 
 @media screen and (max-width: 1300px) {
@@ -223,8 +230,8 @@
 }
 
 .about_content .line {
-  background: #0492c2;
-  background: linear-gradient(87deg, #0492c2 44%, #0492c2 58%, rgba(23, 217, 236, 0) 84%);
+  background-color: #bf2e46;
+  background: linear-gradient(87deg, #bf2e46 44%, #bf2e46 58%, rgba(23, 217, 236, 0) 84%);
   width: 10rem;
   height: .5rem;
   position: relative;

@@ -19,11 +19,11 @@ const About = () => {
         transition={{duration:0.5, delayChildren:.5}}
         className='app__header-image'
         >
-            <motion.img 
+            {/* <motion.img 
             whileInView={{scale:[0,1]}}
             transition={{duration:1,ease:'easeInOut'}}
             src={images.about}
-             alt='about image' className='niyi' />
+             alt='about image' className='niyi' /> */}
             <motion.img
                 whileInView={{scale:[0,1]}}
                 transition={{duration:1,ease:'easeInOut'}}
@@ -56,10 +56,8 @@ const About = () => {
           We have carved a niche in the job creation market, business start-ups and management space. Leveraging collaboration with individuals and organisations to drive positive impact.
 
           </p>
-          <div class="button">
-          <a href="#" class="button">Recommend</a>
-</div>
-          <div class="Button">
+
+          {/* <div class="Button">
   <div class="button__text">Learn more...</div>
   
   <div class="button__wrapper">
@@ -69,7 +67,7 @@ const About = () => {
       <div class="button__small-circle"></div>
     </div>
   </div>
-          </div>
+          </div> */}
 
         </div>
     </div>

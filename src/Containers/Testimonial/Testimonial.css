@@ -44,8 +44,8 @@
 }
 
 .title .line {
-  background: #0492c2;
-  background: linear-gradient(87deg, rgba(4, 146, 194, 0) 10%, #0492c2 49%, rgba(23, 217, 236, 0) 91%);
+  background: #bf2e46;
+  background: linear-gradient(87deg, rgba(4, 146, 194, 0) 10%, #bf2e46 49%, rgba(23, 217, 236, 0) 91%);
   width: 10rem;
   height: .5rem;
   position: relative;
