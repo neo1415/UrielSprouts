@@ -2,7 +2,6 @@ const sliderData =[
 
     {
         id:1,
-
         Title:'Our Mission',
         description:' Providing a unique experience for Entrepreneurs, organizations and job seekers, by providing the best training and developing human capital for exceptional career and business results',
     },

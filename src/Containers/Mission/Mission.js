@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import data from './data';
-import { SlideSection, SectionCenter, SectionArticle, SliderDescription, SectionTitle, SliderImage, SliderH4, SliderTitle, SliderH2, ButtonNext,ButtonPrev } from './SliderElements';
+import{ SectionCenter, SectionArticle, SliderDescription, SliderTitle } from './SliderElements';
 import './slide.css'
-import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 
 const Mission = () => {
@@ -19,7 +18,7 @@ useEffect(() => {
 useEffect(() => {
     let slider = setInterval(() =>{
         setIndex(index + 1)
-    }, 7000);
+    }, 7500);
     return () => {
         clearInterval(slider)
     };
