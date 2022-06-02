@@ -47,11 +47,11 @@
   height: 500px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 850px) {
   .services .overlay_circle2 {
-    width: 300px;
-    height: 300px;
-    margin-left: 5rem;
+    width: 400px;
+    height: 400px;
+    margin-left: 6rem;
     margin-top: 4rem;
   }
 }
@@ -280,10 +280,10 @@
   left: 3%;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 950px) {
   .services .offerings .button {
     top: 60%;
-    left: -115%;
+    left: -30%;
     width: 15rem;
   }
 }
@@ -315,7 +315,23 @@
 @media screen and (max-width: 400px) {
   .services .offerings .button {
     top: 60%;
-    left: -108% !important;
+    left: -120% !important;
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .services .offerings .button {
+    top: 60%;
+    left: -105%;
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .services .offerings .button {
+    top: 60%;
+    left: -65%;
     width: 15rem;
   }
 }

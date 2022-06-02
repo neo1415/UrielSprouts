@@ -168,6 +168,14 @@
           margin-left: -5rem;
           
         }
+        @media screen and (max-width: 550px) {
+          font-size: 18px;
+          font-weight: 700;
+          width: 21.5rem;
+          margin-top: 1rem;
+          margin-left: -5rem;
+          
+        }
       }
       @keyframes types {
          from { width: 0; }
