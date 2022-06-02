@@ -86,6 +86,12 @@ h2 span {
   color: #bf2e46;
 }
 
+@media screen and (max-width: 950px) {
+  h2 {
+    margin-bottom: 2rem !important;
+  }
+}
+
 .line {
   background-color: #bf2e46;
   background: linear-gradient(87deg, rgba(4, 146, 194, 0) 10%, #bf2e46 49%, rgba(23, 217, 236, 0) 91%);
@@ -102,6 +108,14 @@ h2 span {
   .line {
     left: 34%;
     margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .line {
+    left: 34%;
+    margin-top: 3rem;
+    display: none;
   }
 }
 

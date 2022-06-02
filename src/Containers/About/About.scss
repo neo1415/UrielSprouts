@@ -186,6 +186,15 @@
   
           margin-bottom: -3 ;
         }
+        @media screen and (max-width:420px) {
+          width: 100px;
+          height: 100px;
+          margin-right:10rem;
+          margin-left: 3rem;
+          margin-top: 16rem;
+  
+          margin-bottom: -3 ;
+        }
     }
     .overlay_circle2{
       position: absolute;
@@ -199,7 +208,15 @@
         height: 300px;
         margin-right:6rem;
         margin-top: 14rem;
-        margin-left: -6rem;
+        margin-left: -2rem;
+        margin-bottom: -3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             9rem;
+      }
+      @media screen and (max-width:420px) {
+        width: 200px;
+        height: 200px;
+        margin-right:2rem!important;
+        margin-top: 24rem;
+        margin-left: -2rem;
         margin-bottom: -3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             9rem;
       }
   }
@@ -213,6 +230,10 @@
         @media screen and (min-width:1200px){
           padding: 0 1rem 0 1rem;
       }
+      @media screen and (max-width:950px){
+        padding: 0 1rem 0 1rem;
+        margin-bottom: 2rem;
+    }
     }
     .line{
       background-color: #bf2e46;
@@ -226,6 +247,8 @@
       @media screen and (max-width:950px){
         margin-top: 3rem;
         margin-left: -2.5rem;
+        width: 1rem;
+        display: none;
     }
     }
     p{
