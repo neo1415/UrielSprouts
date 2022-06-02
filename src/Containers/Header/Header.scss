@@ -1,0 +1,304 @@
+.hero-Container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.801), rgba(0, 0, 0, .9)),url(USBG.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    object-fit: cover;
+    @media screen and (min-width:1500px){
+      height: 75vh;
+  }
+  @media screen and (max-width:550px){
+    height: 100vh;
+
+}
+@media screen and (max-width:400px){
+  height: 100vh;
+}
+}
+
+.hero-Content{
+    z-index: 3;
+    max-width: 1200px;
+    position: absolute;
+    padding: 8px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    top: 40%;
+    left: 20%;
+    text-align: center;
+    @media screen and (max-width: 820px) {
+      right: 20%;
+      top: 19%;
+    }
+    @media screen and (max-width: 550px) {
+      right: 20%;
+      top: 19%;
+    }
+    @media screen and (max-width: 550px) {
+      right: 20%;
+      top: 19%;
+    }
+    h1{
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        @media screen and (max-width: 420px) {
+          font-size: 1.7rem;
+            font-weight: 700;
+            width: 30rem;
+            margin-top: 1rem;
+            margin-right: 4rem;
+        }
+        @media screen and (max-width: 550px) {
+          max-width: 300px;
+          right: 10%;
+          font-size:1rem;
+
+        }
+        @media screen and (max-width: 300px) {
+          max-width: 300px;
+          right: 10%;
+          font-size:1rem;
+
+        }
+        span{
+            background: linear-gradient(to right, #8360c3 0%, #2ebf91 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            @media screen and (max-width: 420px) {
+              font-size: 3.4rem;
+            }
+            @media screen and (max-width: 550px) {
+              font-size: 2.9rem;
+            }
+            @media screen and (max-width: 300px) {
+              font-size: 2.3rem;
+            }
+            @media screen and (max-width: 420px) {
+              font-size: 2.3rem;
+            }
+        }
+    }
+    .header-text{
+      @media screen and (max-width: 820px) {
+        word-break: break-all;
+        word-wrap: break-word;
+        min-height:250px;
+        max-width:380px;
+        margin-bottom: -36rem;
+        margin: 0 1rem;
+        white-space: wrap;
+      }
+      @media screen and (max-width: 550px) {
+        margin-bottom: -12rem;
+      }
+      @media screen and (max-width: 300px) {
+        margin-bottom: -15rem;
+      }
+      @media screen and (max-width: 420px) {
+        font-size: 18px;
+        font-weight: 700;
+        width: 20rem;
+        margin-top: 1rem;
+      }
+    }
+     p{
+        font-size: 20px;
+        font-weight: 400;
+        color: #fff;
+        width: 45rem;
+        // white-space: nowrap;
+        overflow: hidden;
+        border-right: 5px solid var(--primary-color);
+        animation: types 4s steps(30, end), cursorblink 1s step-end infinite;
+        @media screen and (max-width: 820px) {
+          white-space: wrap;
+          width: 23rem;
+          display: block;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+        }
+        @media screen and (max-width: 300px) {
+          font-size: 15px;
+          font-weight: 700;
+          width: 13rem;
+          margin-top: 1rem;
+        }
+        @media screen and (max-width: 420px) {
+          font-size: 18px;
+          font-weight: 700;
+          width: 16rem;
+          margin-top: 1rem;
+          
+        }
+      }
+      @keyframes types {
+         from { width: 0; }
+         to { width:250px; }
+      }
+       
+      @keyframes cursorblink{
+        from, to {border-color: transparent}
+        50%{ border-color:var(--primary-color)}
+      }
+
+a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5rem;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    
+    // Using inset box-shadow instead of border for sizing simplicity
+    border-radius: 100%;
+    font-size: inherit;
+    font-weight: 700;
+  
+    // Required, since we're setting absolute on pseudo-elements
+    position: relative;
+    vertical-align: middle;
+        @media screen and (max-width:420px) {
+      left: 0;
+      width: 7rem;
+      margin-right: 5rem;
+    }
+    @media screen and (max-width:300px) {
+      left: 0;
+      width: 7rem;
+      margin-right: 0;
+    }
+  
+    &::before,
+    &::after {
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+       border-radius: 100%;
+    }
+    
+    &:hover {
+      color: var(--secondary-color);
+    }
+  
+    &::before,
+    &::after {
+      top: 0;
+      left: 0;
+    }
+  
+    &::before {
+      border: 2px solid transparent; // We're animating border-color again
+    }
+  
+    &:hover::before {
+      border-top-color: var(--secondary-color); // Show borders
+      border-right-color: var(--secondary-color);
+      border-bottom-color: var(--secondary-color);
+  
+      transition:
+        border-top-color 0.15s linear, // Stagger border appearances
+        border-right-color 0.15s linear 0.10s,
+        border-bottom-color 0.15s linear 0.20s;
+    }
+  
+    &::after {
+      border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
+    }
+  
+    &:hover::after {
+      border-top: 2px solid var(--secondary-color); // Shows border
+      border-left-width: 2px; // Solid edges, invisible borders
+      border-right-width: 2px; // Solid edges, invisible borders
+      transform: rotate(270deg); // Rotate around circle
+      transition:
+        transform 0.4s linear 0s,
+        border-left-width 0s linear 0.35s; // Solid edge post-rotation
+    }
+  }
+}  
+.app__social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  left:0;
+  bottom: 10%;
+  padding: 1rem;
+
+  div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    margin: 1rem 0!important;
+    margin-bottom: 3rem;
+    border: 1px solid var(--lightGray-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease-in-out;
+    border-color: var(--secondary-color);
+
+
+    svg {
+      width: 15px;
+      height: 15px;
+      color: white!important;
+    }
+
+    &:hover {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+
+      svg {
+        color: var(--white-color);
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 70px;
+      height: 70px;
+
+      margin: 0.5rem 0;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .app__navigation,
+  .app__social {
+    display: none;
+  }
+}
+
+
