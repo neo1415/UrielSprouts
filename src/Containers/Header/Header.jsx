@@ -30,8 +30,8 @@ const Header = () => {
             ...Leveraging collaboration with individuals and organisations to drive positive impact.
             </p>
             </motion.div>
-            <div className='circle'>
-                <a href='#about'>Learn More</a>
+            <div className='Circle'>
+                <a href='#about' className='about-link'>Learn More</a>
                 <HiArrowNarrowDown />
             </div>
           

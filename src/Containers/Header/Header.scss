@@ -58,8 +58,6 @@
             margin-right: 0rem;
         }
         @media screen and (max-width: 550px) {
-          // max-width: 300px;
-
           font-size:1rem;
 
         }
@@ -88,20 +86,13 @@
             @media screen and (max-width: 300px) {
               font-size: 2.3rem;
             }
-            // @media screen and (max-width: 420px) {
-            //   font-size: 2.3rem;
-            //   margin-left: 3.5rem;
-            // }
         }
     }
     .header-text{
       @media screen and (max-width: 820px) {
         word-break: break-all;
-        // display: grid;
         word-wrap: break-word;
         min-height:250px;
-        // max-width:380px;
-        // margin-bottom: -36rem;
         margin: 0 1rem;
         white-space: wrap;
         align-items: center;
@@ -116,13 +107,6 @@
       @media screen and (max-width: 300px) {
         margin-bottom: -15rem;
       }
-      // @media screen and (max-width: 420px) {
-      //   font-size: 18px;
-      //   font-weight: 700;
-      //   width: 20rem;
-      //   margin-top: 1rem;
-      // }
-    }
      p{
         font-size: 20px;
         font-weight: 400;
@@ -187,7 +171,7 @@
         50%{ border-color:var(--primary-color)}
       }
 
-a{
+.about-link{
     text-decoration: none;
     color: var(--secondary-color);
     @media screen and (max-width:850px){
@@ -195,7 +179,7 @@ a{
       font-weight: 900;
     }
 }
-.circle {
+.Circle {
     width: 100px;
     height: 100px;
     display: flex;
@@ -287,65 +271,67 @@ a{
     }
   }
 }  
-.app__social {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  left:0;
-  bottom: 10%;
-  padding: 1rem;
+// .app__social {
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   flex-direction: column;
+//   // left:0;
+//   bottom: 10%;
+//   padding: 1rem;
+//   margin-left: -75rem;
+//   margin-top: 30rem;
 
-  div {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: transparent;
-    margin: 1rem 0!important;
-    margin-bottom: 3rem;
-    border: 1px solid var(--lightGray-color);
+//   div {
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 50%;
+//     background: transparent;
+//     margin: 1rem 0!important;
+//     margin-bottom: 3rem;
+//     border: 1px solid var(--lightGray-color);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
 
-    transition: all 0.3s ease-in-out;
-    border-color: var(--secondary-color);
+//     transition: all 0.3s ease-in-out;
+//     border-color: var(--secondary-color);
 
 
-    svg {
-      width: 15px;
-      height: 15px;
-      color: white!important;
-    }
+//     svg {
+//       width: 15px;
+//       height: 15px;
+//       color: white!important;
+//     }
 
-    &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
+//     &:hover {
+//       background-color: var(--secondary-color);
+//       border-color: var(--secondary-color);
 
-      svg {
-        color: var(--white-color);
-      }
-    }
+//       svg {
+//         color: var(--white-color);
+//       }
+//     }
 
-    @media screen and (min-width: 2000px) {
-      width: 70px;
-      height: 70px;
+//     @media screen and (min-width: 2000px) {
+//       width: 70px;
+//       height: 70px;
 
-      margin: 0.5rem 0;
+//       margin: 0.5rem 0;
 
-      svg {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-}
+//       svg {
+//         width: 30px;
+//         height: 30px;
+//       }
+//     }
+//   }
+// }
 @media screen and (max-width: 500px) {
   .app__navigation,
   .app__social {
     display: none;
   }
 }
-
+}
 

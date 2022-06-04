@@ -82,13 +82,29 @@ const Services = () => {
           </p>
 
         </div>
+        <div className='review'>
         <div className='join'>
-        <div className='video'>
+        <div className='Video'>
             <video autoPlay loop muted src={images.video} type='video/mp4'><source src="https://mbluxury1.s3.amazonaws.com/2020/09/18141509/home-video-2020.mp4" type="video/mp4"/></video>
         </div>
         </div>
-
+        <div className='join-content'>
+        
         <div class="button">
+  <div class="button__text">Learn more...</div>
+   <div class="button__wrapper">
+    <div class="button__arrow"></div>
+    <div class="button__border-circle"></div>
+    <div class="button__mask-circle">
+      <div class="button__small-circle"></div>
+    </div>
+  </div>
+</div>
+        </div>
+        </div>
+
+
+        {/* <div class="button">
   <div class="button__text">Learn more...</div>
   
   <div class="button__wrapper">
@@ -98,7 +114,7 @@ const Services = () => {
       <div class="button__small-circle"></div>
     </div>
   </div>
-</div>
+</div> */}
 
 
         <div className='business-management'>

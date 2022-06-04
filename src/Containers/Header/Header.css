@@ -152,7 +152,7 @@
   }
 }
 
-.hero-Content p {
+.hero-Content .header-text p {
   font-size: 20px;
   font-weight: 400;
   color: #fff;
@@ -163,7 +163,7 @@
 }
 
 @media screen and (max-width: 820px) {
-  .hero-Content p {
+  .hero-Content .header-text p {
     white-space: wrap;
     display: flex;
     width: 40rem;
@@ -179,7 +179,7 @@
 }
 
 @media screen and (max-width: 300px) {
-  .hero-Content p {
+  .hero-Content .header-text p {
     font-size: 12px;
     font-weight: 700;
     width: 20rem;
@@ -188,7 +188,7 @@
 }
 
 @media screen and (max-width: 380px) {
-  .hero-Content p {
+  .hero-Content .header-text p {
     font-size: 18px;
     font-weight: 700;
     width: 21.5rem;
@@ -198,7 +198,7 @@
 }
 
 @media screen and (max-width: 420px) {
-  .hero-Content p {
+  .hero-Content .header-text p {
     font-size: 18px;
     font-weight: 700;
     width: 21.5rem;
@@ -208,7 +208,7 @@
 }
 
 @media screen and (max-width: 550px) {
-  .hero-Content p {
+  .hero-Content .header-text p {
     font-size: 18px;
     font-weight: 700;
     width: 21.5rem;
@@ -235,19 +235,19 @@
   }
 }
 
-.hero-Content a {
+.hero-Content .header-text .about-link {
   text-decoration: none;
   color: var(--secondary-color);
 }
 
 @media screen and (max-width: 850px) {
-  .hero-Content a {
+  .hero-Content .header-text .about-link {
     color: var(--black-color);
     font-weight: 900;
   }
 }
 
-.hero-Content .circle {
+.hero-Content .header-text .Circle {
   width: 100px;
   height: 100px;
   display: flex;
@@ -269,7 +269,7 @@
 }
 
 @media screen and (max-width: 850px) {
-  .hero-Content .circle {
+  .hero-Content .header-text .Circle {
     left: 0;
     width: 7rem;
     margin-right: 0;
@@ -283,14 +283,14 @@
 }
 
 @media screen and (max-width: 300px) {
-  .hero-Content .circle {
+  .hero-Content .header-text .Circle {
     left: 0;
     width: 7rem;
     margin-right: 0;
   }
 }
 
-.hero-Content .circle::before, .hero-Content .circle::after {
+.hero-Content .header-text .Circle::before, .hero-Content .header-text .Circle::after {
   box-sizing: inherit;
   content: '';
   position: absolute;
@@ -299,31 +299,31 @@
   border-radius: 100%;
 }
 
-.hero-Content .circle:hover {
+.hero-Content .header-text .Circle:hover {
   color: var(--secondary-color);
 }
 
-.hero-Content .circle::before, .hero-Content .circle::after {
+.hero-Content .header-text .Circle::before, .hero-Content .header-text .Circle::after {
   top: 0;
   left: 0;
 }
 
-.hero-Content .circle::before {
+.hero-Content .header-text .Circle::before {
   border: 2px solid transparent;
 }
 
-.hero-Content .circle:hover::before {
+.hero-Content .header-text .Circle:hover::before {
   border-top-color: var(--secondary-color);
   border-right-color: var(--secondary-color);
   border-bottom-color: var(--secondary-color);
   transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
 }
 
-.hero-Content .circle::after {
+.hero-Content .header-text .Circle::after {
   border: 0 solid transparent;
 }
 
-.hero-Content .circle:hover::after {
+.hero-Content .header-text .Circle:hover::after {
   border-top: 2px solid var(--secondary-color);
   border-left-width: 2px;
   border-right-width: 2px;
@@ -331,61 +331,9 @@
   transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
 }
 
-.app__social {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  left: 0;
-  bottom: 10%;
-  padding: 1rem;
-}
-
-.app__social div {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: transparent;
-  margin: 1rem 0 !important;
-  margin-bottom: 3rem;
-  border: 1px solid var(--lightGray-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
-  border-color: var(--secondary-color);
-}
-
-.app__social div svg {
-  width: 15px;
-  height: 15px;
-  color: white !important;
-}
-
-.app__social div:hover {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-}
-
-.app__social div:hover svg {
-  color: var(--white-color);
-}
-
-@media screen and (min-width: 2000px) {
-  .app__social div {
-    width: 70px;
-    height: 70px;
-    margin: 0.5rem 0;
-  }
-  .app__social div svg {
-    width: 30px;
-    height: 30px;
-  }
-}
-
 @media screen and (max-width: 500px) {
-  .app__navigation,
-  .app__social {
+  .hero-Content .app__navigation,
+  .hero-Content .app__social {
     display: none;
   }
 }
