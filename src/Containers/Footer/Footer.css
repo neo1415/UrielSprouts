@@ -98,7 +98,7 @@ h2 {
   }
 }
 
-@media screen and (min-width: 2570px) and (max-width: 4000px) {
+@media screen and (min-width: 2570px) {
   .app__footer-form {
     width: 90%;
     height: 50rem;
@@ -125,7 +125,7 @@ h2 {
   outline: none;
 }
 
-@media screen and (min-width: 2570px) and (max-width: 4000px) {
+@media screen and (min-width: 2570px) {
   .app__footer-form div input, .app__footer-form div textarea {
     height: 8rem;
   }
@@ -135,7 +135,7 @@ h2 {
   height: 170px;
 }
 
-@media screen and (min-width: 2570px) and (max-width: 4000px) {
+@media screen and (min-width: 2570px) {
   .app__footer-form div textarea {
     height: 700px;
   }
@@ -158,7 +158,7 @@ h2 {
   cursor: pointer;
 }
 
-@media screen and (min-width: 2570px) and (max-width: 4000px) {
+@media screen and (min-width: 2570px) {
   .app__footer-form button {
     width: 700px;
     height: 700px;
@@ -187,7 +187,7 @@ h2 {
   justify-content: center;
 }
 
-@media screen and (min-width: 2570px) and (max-width: 4000px) {
+@media screen and (min-width: 2570px) {
   .Copyright {
     margin-top: 37rem;
     height: 12rem;
@@ -206,7 +206,7 @@ h2 {
   margin: .7rem 1rem;
 }
 
-@media screen and (min-width: 2570px) and (max-width: 4000px) {
+@media screen and (min-width: 2570px) {
   .Copyright .p-text {
     font-size: 3rem;
   }
