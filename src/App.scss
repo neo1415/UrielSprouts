@@ -92,6 +92,20 @@
     padding: 1rem;
     margin-left: -75rem;
     margin-top: 25rem;
+    @media screen and (min-width:1910px) and (max-width:2550px) {
+
+margin-left: -105rem;
+
+  }
+  @media screen and (min-width:2570px) {
+margin-left: -210rem;
+margin-top: 60rem;
+}
+@media screen and (min-width:1910px) and (max-width:2565px) {
+
+  margin-left: -145rem;
+
+}
   
     div {
       width: 40px;
@@ -105,11 +119,25 @@
       align-items: center;
   
       transition: all 0.3s ease-in-out;
+      @media screen and (min-width:2570px) {
+        margin: 3rem 0!important;
+        width: 120px!important;
+        height: 120px!important;
+}
+@media screen and (min-width:1910px) and (max-width:2565px) {
+
+  margin: 1.5rem 0!important;
+
+}
   
       svg {
         width: 15px;
         height: 15px;
         color: var(--gray-color);
+        @media screen and (min-width:2570px) {
+          width: 45px!important;
+          height: 45px!important;
+  }
       }
   
       &:hover {
@@ -132,6 +160,7 @@
           height: 30px;
         }
       }
+      
     }
   }
   
@@ -213,6 +242,11 @@
       font-weight: 900;
       
     }
+    @media screen and (min-width:2570px) {
+      width: 300px;
+      height: 300px;
+}
+
     @media screen and (max-width:300px) {
       left: 0;
       width: 7rem;
@@ -275,5 +309,14 @@
       color: var(--black-color);
       font-weight: 900;
     }
+    @media screen and (min-width:2570px) {
+      font-size: 3rem;
+}
+@media screen and (min-width:1910px) and (max-width:2565px) {
+
+  font-size: 2rem;
+  width: 40rem;
+
+}
 }
 

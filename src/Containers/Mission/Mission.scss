@@ -40,7 +40,7 @@
     max-width: 100%;
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow-y: visible;
     display: flex;
 }
 
@@ -65,7 +65,15 @@
     position: relative;
     z-index: 1;
     color: #bf2e46;
+    @media screen and (min-width:1910px) and (max-width:2550px) {
+        font-size: 45px;
+
+    }
+    @media screen and (min-width:2570px) {
+        font-size: 80px;
 }
+}
+
 
 
 
@@ -78,6 +86,15 @@
 
 @media screen and (max-width: 880px) {
 padding-bottom: 1rem;
+}
+@media screen and (min-width:1910px) and (max-width:2550px) {
+        font-size: 1.5rem;
+
+}
+@media screen and (min-width:2570px) {
+    font-size: 3.5rem;
+    height: 8rem;
+    margin-bottom: 10rem;
 }
 }
 

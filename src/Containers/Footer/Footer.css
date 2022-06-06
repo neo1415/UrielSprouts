@@ -98,6 +98,13 @@ h2 {
   }
 }
 
+@media screen and (min-width: 2570px) and (max-width: 4000px) {
+  .app__footer-form {
+    width: 90%;
+    height: 50rem;
+  }
+}
+
 .app__footer-form div {
   width: 100%;
   margin: 0.75rem 0;
@@ -118,8 +125,20 @@ h2 {
   outline: none;
 }
 
+@media screen and (min-width: 2570px) and (max-width: 4000px) {
+  .app__footer-form div input, .app__footer-form div textarea {
+    height: 8rem;
+  }
+}
+
 .app__footer-form div textarea {
   height: 170px;
+}
+
+@media screen and (min-width: 2570px) and (max-width: 4000px) {
+  .app__footer-form div textarea {
+    height: 700px;
+  }
 }
 
 .app__footer-form div:hover {
@@ -139,6 +158,14 @@ h2 {
   cursor: pointer;
 }
 
+@media screen and (min-width: 2570px) and (max-width: 4000px) {
+  .app__footer-form button {
+    width: 700px;
+    height: 700px;
+    font-size: 2rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .app__footer-form {
     width: 100%;
@@ -152,6 +179,7 @@ h2 {
 
 .Copyright {
   display: flex;
+  position: relative;
   background-color: #202020;
   width: 100%;
   text-align: center;
@@ -159,7 +187,27 @@ h2 {
   justify-content: center;
 }
 
+@media screen and (min-width: 2570px) and (max-width: 4000px) {
+  .Copyright {
+    margin-top: 37rem;
+    height: 12rem;
+    margin-bottom: -32rem;
+  }
+}
+
+@media screen and (min-width: 1910px) and (max-width: 2565px) {
+  .Copyright {
+    bottom: -10% !important;
+  }
+}
+
 .Copyright .p-text {
   color: white;
   margin: .7rem 1rem;
+}
+
+@media screen and (min-width: 2570px) and (max-width: 4000px) {
+  .Copyright .p-text {
+    font-size: 3rem;
+  }
 }

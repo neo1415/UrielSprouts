@@ -81,6 +81,10 @@ h2{
     @media screen and (max-width:850px) {
         padding: 0  1rem 0 1rem;
     }
+    @media screen and (min-width:2570px) {
+width: 90%;
+height: 50rem;
+    }
 
     div {
         width: 100%;
@@ -89,6 +93,7 @@ h2{
         cursor: pointer;
         background-color:var(--primary-color) ;
         transition: all .3s ease-in-out;
+        
 
         input, textarea{
             width: 100%;
@@ -100,10 +105,16 @@ h2{
             font-family: var(--font-base);
             color: var(--secondary-color);
             outline: none;
+            @media screen and (min-width:2570px)  {
+                height: 8rem;
+            }
         }
 
         textarea{
             height: 170px;
+            @media screen and (min-width:2570px) {
+                height: 700px;
+            }
         }
         &:hover{
             box-shadow: 0 0 25px var(--primary-color)
@@ -121,6 +132,11 @@ h2{
         margin: 2rem 0 0 0;
         font-family: var(--font-base);
         cursor: pointer;
+        @media screen and (min-width:2570px) {
+            width: 700px;
+            height: 700px;
+            font-size: 2rem;
+        }
 
     }
 
@@ -137,13 +153,26 @@ h2{
 
 .Copyright{
     display: flex;
+    position: relative;
     background-color: rgb(32, 32, 32);
     width: 100%;
     text-align: center;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width:2570px) {
+margin-top: 37rem;;
+height: 12rem;
+margin-bottom: -32rem;
+    }
+    @media screen and (min-width:1910px) and (max-width:2565px) {
+        
+bottom: -10%!important;
+    }
     .p-text{
         color: white;
         margin: .7rem 1rem;
+        @media screen and (min-width:2570px) {
+            font-size: 3rem;
+        }
     }
 }
