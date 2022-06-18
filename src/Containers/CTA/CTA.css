@@ -1,0 +1,124 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.774), white), url(reviewBG.jpg) !important;
+  padding: 2rem 0 2rem 0;
+  margin-top: -12rem;
+}
+
+.review__container {
+  display: grid;
+  grid-gap: 3rem;
+  align-items: center;
+  text-align: center;
+}
+
+.cta {
+  color: var(--black-color) !important;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+h3 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  padding: 0 1rem;
+}
+
+.button {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  justify-items: center;
+  padding-left: 10px;
+  height: 3rem;
+  width: 12rem;
+  margin-top: 0rem;
+  background: linear-gradient(to right, var(--secondary-color) 0%, #bf2e46 100%);
+  z-index: 9;
+  left: 38%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  .button {
+    left: 30%;
+  }
+}
+
+.button:hover .button__border-circle {
+  transform: translateX(60px);
+  background-color: transparent;
+}
+
+.button:hover .button__mask-circle {
+  clip-path: circle(25px at 85px);
+}
+
+.button__text {
+  margin-top: 1rem;
+  color: #fafafa;
+  font-weight: 600;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: -.6rem;
+}
+
+.button__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.button__arrow {
+  left: 30px;
+  height: 3px;
+  width: 50px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  background-color: var(--secondary-color);
+}
+
+.button__arrow:after {
+  content: '';
+  width: 0;
+  height: 0;
+  top: -5px;
+  right: -7px;
+  position: absolute;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid var(--secondary-color);
+}
+
+.button__border-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+  transition: transform 987ms;
+}
+
+.button__mask-circle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(25px);
+  transition: clip-path 987ms;
+}
+
+.button__small-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translateX(60px);
+  background-color: var(--secondary-color);
+}

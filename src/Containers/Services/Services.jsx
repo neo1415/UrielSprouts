@@ -1,137 +1,133 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import './Services.scss';
-import { motion } from 'framer-motion';
 import { images } from '../../Constants';
-import { Appwrap } from '../../Wrapper';
+import { motion } from 'framer-motion';
+// import {urlFor, client} from '../../client';
+
 
 const Services = () => {
-  return (
-    <div className='services app__flex' id='services' >
-         <motion.img
-                whileInView={{scale:[0,1]}}
-                transition={{duration:1,ease:'easeInOut'}}
-                src={images.circle}
-                alt='profile_circle'
-                className='overlay_circle1'
-        />
-                                <motion.img
-                whileInView={{scale:[0,1]}}
-                transition={{duration:1,ease:'easeInOut'}}
-                src={images.circle}
-                alt='profile_circle'
-                className='overlay_circle2'
-        />
-                                <motion.img
-                whileInView={{scale:[0,1]}}
-                transition={{duration:1,ease:'easeInOut'}}
-                src={images.circle}
-                alt='profile_circle'
-                className='overlay_circle3'
-        />
-          <h2>We <span>Deliver</span></h2>
-          <div className='line'></div>
-        <div className='grid-services'>  
-          <motion.div
-              whileInView={{opacity:1}}
-              whileHover={{scale:1.2}}
-              transition={{duration:.5, type: 'tween'}}
-           className='management'>
-            <p>
-              Business Management Consultation Services
-            </p>
-          </motion.div>
-          <motion.div
-              whileInView={{opacity:1}}
-              whileHover={{scale:1.2}}
-              transition={{duration:.5, type: 'tween'}}
- 
-           className='start-up'>
-           <p>
-              Business Start-ups Incubation
-           </p> 
-          </motion.div>
-          <motion.div
-              whileInView={{opacity:1}}
-              whileHover={{scale:1.2}}
-              transition={{duration:.5, type: 'tween'}}
-           className='employ'>
-            <p>
-              Employability Skills program and Job/Internship Placements
-            </p>
-          </motion.div>
-          <motion.div
-              whileInView={{opacity:1}}
-              whileHover={{scale:1.2}}
-              transition={{duration:.5, type: 'tween'}}
-              className='workshops'>
-            <p>
-              Business Clinic and Workshops
-            </p>
-          </motion.div>
-      </div>
-      <div className='offerings'>
-        <div className='internships'>
-          <h4><span>Employability</span> Programs & <span>Internship</span> :</h4>
-          <p>
-            We offer unique training that upskill and
-            prepares graduates and job seekers for
-            the world of work. Through our work
-            readiness program, we have recorded
-            increasing demands for UrielSprout
-            Interns and most importantly, job placements.
-          </p>
+    const [isActive, setActive] = useState(false)
+    const [isActive2, setActive2] = useState(false)
+    const [isActive3, setActive3] = useState(false)
+    // const [ services, setServices ] = useState([]);
+    // useEffect(() => {
+    //   const query = '*[_type == "services"]';
+    //   client.fetch(query)
+    //   .then((data) => setServices(data))
+    // }, []);
 
-        </div>
-        <div className='review'>
-        <div className='join'>
-        <div className='Video'>
-            <video autoPlay loop muted src={images.video} type='video/mp4'><source src="https://mbluxury1.s3.amazonaws.com/2020/09/18141509/home-video-2020.mp4" type="video/mp4"/></video>
-        </div>
-        </div>
-        <div className='join-content'>
-        
-        <div class="button">
-  <div class="button__text">Learn more...</div>
-   <div class="button__wrapper">
-    <div class="button__arrow"></div>
-    <div class="button__border-circle"></div>
-    <div class="button__mask-circle">
-      <div class="button__small-circle"></div>
-    </div>
-  </div>
-</div>
-        </div>
-        </div>
+    const handleMouseEnter = () => {
+      setActive(!isActive);
+    };
+    const handleMouseLeave = () => {
+      setActive(!isActive);
+    };
 
-
-        {/* <div class="button">
-  <div class="button__text">Learn more...</div>
+    const handleMouseEnter2 = () => {
+      setActive2(!isActive2);
+    };
+    const handleMouseLeave2 = () => {
+      setActive2(!isActive2);
+    };
+    const handleMouseEnter3 = () => {
+      setActive3(!isActive3);
+    };
+    const handleMouseLeave3 = () => {
+      setActive3(!isActive3);
+    };
   
-  <div class="button__wrapper">
-    <div class="button__arrow"></div>
-    <div class="button__border-circle"></div>
-    <div class="button__mask-circle">
-      <div class="button__small-circle"></div>
-    </div>
-  </div>
-</div> */}
+  return (
+  <>
+      <div className='services ' id='services'>
+          <h2 className='service-title'>
+            We <span>Offer</span>
+          </h2>
+          <div className='card-container'>
+                <div className='card ' onMouseEnter={handleMouseEnter}
+                                      onMouseLeave={handleMouseLeave}
+                >
+                <div 
+                className={`card__inner ${isActive ? 'is-flipped':''}`} 
+>
+                  <div className='card__face card__face--front employ'>
+                    
+                    <h2>Employability Programs</h2>
+                  </div>
+                      <div className='card__face card__face--back'>
+                    <div className='card__content'>
+                      <div className='employ__header'>
+                        {/* <img src={images.Employ} alt='employment card' className='employ__image'/> */}
+                      </div>
+                      <div className='card__body'>
+                      <h3>Emplpoyability Skills Program and Job/Internship Placements</h3>
+                        <p>We offer unique training that upskill and prepares graduates and
+                         job seekers for the world of work. Through our work readiness 
+                         program, we have recorded increasing demands for UrielSprout Interns
+                        and most importantly, job placements. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
 
+                <div className='card' onMouseEnter={handleMouseEnter2}
+                                      onMouseLeave={handleMouseLeave2}
+                >
+                <div 
+                className={`card__inner ${isActive2 ? 'is-flipped':''}`} 
+>
+                  <div className='card__face card__face--front business'>
+                    <h2>Business Advisory</h2>
+                  </div>
+                      <div className='card__face card__face--back'>
+                    <div className='card__content'>
+                      <div className='business__header'>
+                        {/* <img src={images.business} alt='business'  className='business__image'/> */}
+                      </div>
+                      <div className='card__body'>
+                      <h3>Business Management & Incubation Program </h3>
+                        <p>We train individuals business enthusiast on the rudiment of starting a business
+                         from ideation stage to going-live and also deploy advanced business management 
+                         training for organisations that aspire to scale their businesses. We incubate business
+                          ideas and help accelerate through our unique business support servicess.</p>
+.                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
 
-        <div className='business-management'>
-          <h4><span>Business</span> Management & <span>Incubation</span> Program :</h4>
-          <p>
-          We train individuals business enthusiast on 
-          the rudiment of starting a business from 
-          ideation stage to going-live and also deploy
-          advanced business management training for
-          organisations that aspire to scale their
-          businesses. We incubate business ideas and
-          help accelerate through our unique business 
-          support servicess.
-          </p>
-        </div>
-      </div>
-    </div>
+                <div className='card'  onMouseEnter={handleMouseEnter3}
+                                      onMouseLeave={handleMouseLeave3}
+                >
+                <div 
+                className={`card__inner ${isActive3 ? 'is-flipped':''}`} 
+>
+                  <div className='card__face card__face--front hospitality'>
+                    <h2>Hospitality Management</h2>
+                  </div>
+                      <div className='card__face card__face--back'>
+                    <div className='card__content'>
+                      <div className='hospitality__header'>
+                        {/* <img src={images.Employ} alt='Hospitality image' className='hospitality__image' /> */}
+                      </div>
+                      <div className='card__body'>
+                      <h3>Hospitality Management</h3>
+                        <p>The Hospitality and Tourism industry is a large and complex industry
+                        and one that is of significant economic importance to the country. At UrielSprouts,
+                        We pride in our hospitality management interventions,we would sit with you to identify
+                        your manpower training needs, Identify potential growth that ensures robust return on 
+                        investment, Employee satisfaction that will improve employee performance with a higher
+                        customer satisfaction </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+          </div>
+
+  </>
+
   )
 }
 

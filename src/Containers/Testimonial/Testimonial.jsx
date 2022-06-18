@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { motion } from 'framer-motion';
-import { images } from '../../Constants';
-
 import { Appwrap, MotionWrap } from '../../Wrapper';
 import { urlFor, client } from '../../client';
 import './Testimonial.scss';
@@ -32,7 +30,7 @@ const Testimonial = () => {
   return (
     <>
       <div className='title'>
-          <h2 className='head-text'>What Our <span>Customers Say</span></h2>
+          <h2 className='testimonial-title'>What Our <span>Customers Say</span></h2>
           <div className='line'></div>
       </div>
       {testimonials.length && (

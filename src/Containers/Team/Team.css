@@ -15,6 +15,13 @@
   }
 }
 
+@media screen and (max-width: 950px) {
+  .Team {
+    margin-bottom: 10.5rem;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .third, .fourth {
     margin-top: 8.5rem !important;
@@ -71,12 +78,18 @@
   margin-bottom: -8rem;
 }
 
+@media screen and (max-width: 950px) {
+  .title-team {
+    margin-bottom: -15rem;
+  }
+}
+
 h2 {
   font-family: var(--font-base);
   font-size: 32px;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   margin-bottom: 2rem;
   position: relative;
   z-index: 1;
@@ -218,6 +231,24 @@ h2 span {
 
 @media screen and (max-width: 550px) {
   .profile-card {
+    width: 220px;
+    margin-left: -.3rem;
+    margin-right: -1.2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .profile-card {
+    width: 190px;
+    margin-left: -.3rem;
+    margin-right: -1.2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .profile-card {
     width: 160px;
     margin-left: -.3rem;
     margin-right: -1.2rem;
@@ -277,6 +308,20 @@ h2 span {
 }
 
 @media screen and (max-width: 720px) {
+  .img img {
+    width: 220px;
+    margin-left: -1.85rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .img img {
+    width: 190px;
+    margin-left: -1.85rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
   .img img {
     width: 160px;
     margin-left: -1.85rem;

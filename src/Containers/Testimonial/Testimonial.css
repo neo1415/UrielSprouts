@@ -1,5 +1,9 @@
+.testimonial-title {
+  color: var(--black-color) !important;
+}
+
 @media screen and (max-width: 950px) {
-  .head-text {
+  .testimonial-title {
     margin-bottom: 8rem !important;
   }
 }

@@ -43,7 +43,7 @@ const About = () => {
              className='overlay_circle2'
         />
 
-          <h2>About <span>Us</span></h2>
+          <h2 className='about-title'>About <span>Us</span></h2>
           <div className='line'></div>
           <p>
           Urielsprout Limited is a vibrant and innovative 
