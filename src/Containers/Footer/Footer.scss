@@ -28,6 +28,7 @@ h2{
     margin: 4rem 2rem 2rem;
 
 
+
     .app__footer-card{
         min-width: 200px;
         display: flex;
@@ -68,6 +69,7 @@ h2{
          @media screen and (max-width:768px) {
             width: 100%;
      }
+
 }
 
 .app__footer-cards .app__footer-card:last-child{
@@ -80,10 +82,12 @@ h2{
     margin: 1rem 2rem;
     @media screen and (max-width:850px) {
         padding: 0  1rem 0 1rem;
+        margin-right: 4rem;
     }
     @media screen and (min-width:2570px) {
 width: 90%;
 height: 50rem;
+margin-top: 7rem;
     }
 
     div {

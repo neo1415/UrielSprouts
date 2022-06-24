@@ -99,11 +99,6 @@ uploadTask.on('state_changed',
     <div className='hero-container' id='Home'>
         <div className='hero-content'>
             <h1>Progress Made Easy</h1>
-            <p>
-            Lorem ipsum dolor sit amet. Qui dolore iste et so
-            luta atque et explicabo nihil non doloribus
-             ducimus est ducimus itaque.  
-            </p>
             <div className='blob'></div>
             <div className="bottom">
           <div className="left">

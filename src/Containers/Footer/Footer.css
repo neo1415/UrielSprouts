@@ -95,6 +95,7 @@ h2 {
 @media screen and (max-width: 850px) {
   .app__footer-form {
     padding: 0  1rem 0 1rem;
+    margin-right: 4rem;
   }
 }
 
@@ -102,6 +103,7 @@ h2 {
   .app__footer-form {
     width: 90%;
     height: 50rem;
+    margin-top: 7rem;
   }
 }
 

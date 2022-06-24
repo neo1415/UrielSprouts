@@ -7,7 +7,7 @@
   text-align: center;
   align-items: center;
   width: 100%;
-  margin-top: -32rem;
+  margin-top: -26rem !important;
   background-image: var(--primary-color);
 }
 
@@ -37,7 +37,7 @@
 
 @media screen and (min-width: 1280px) and (max-width: 1400px) {
   .faq {
-    margin-top: -55rem !important;
+    margin-top: -35rem !important;
   }
 }
 

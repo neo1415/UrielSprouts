@@ -10,7 +10,7 @@
     text-align: center;
     align-items: center;    
     width: 100%;
-    margin-top: -32rem;
+    margin-top: -26rem !important;
     background-image: var(--primary-color); 
     @media screen and (max-width: 720px) {
         margin-top: -70rem !important;
@@ -25,7 +25,7 @@
         margin-top: -35rem !important;
     }
     @media screen and (min-width: 1280px) and (max-width:1400px) {
-        margin-top: -55rem !important;
+        margin-top: -35rem !important;
     }
     @media screen and (min-width: 1400px) and (max-width:1910px) {
         margin-top: -65rem !important;

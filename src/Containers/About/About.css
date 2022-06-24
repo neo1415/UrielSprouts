@@ -51,7 +51,8 @@
 
 @media screen and (min-width: 2571px) and (max-width: 4000px) {
   .about-container {
-    margin-bottom: 5rem !important;
+    margin-bottom: -18rem !important;
+    margin-top: -15rem;
   }
 }
 
@@ -327,7 +328,8 @@
 
 @media screen and (min-width: 2570px) {
   .about_content h2 {
-    font-size: 5rem;
+    font-size: 4rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -353,7 +355,7 @@
 
 @media screen and (min-width: 2550px) {
   .about_content .line {
-    margin-left: -34rem;
+    margin-left: -24rem;
   }
 }
 
@@ -374,7 +376,7 @@
 
 @media screen and (min-width: 2570px) {
   .about_content {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 

@@ -242,8 +242,8 @@ h2 span {
 
 @media screen and (min-width: 2570px) {
   .profile-card {
-    width: 700px;
-    height: 700px;
+    width: 400px;
+    height: 400px;
   }
 }
 
@@ -287,8 +287,8 @@ h2 span {
 
 @media screen and (min-width: 2570px) {
   .profile-card:hover {
-    width: 700px;
-    height: 800px;
+    width: 400px;
+    height: 500px;
   }
 }
 
@@ -320,8 +320,8 @@ h2 span {
 
 @media screen and (min-width: 2570px) {
   .img img {
-    width: 700px;
-    height: 700px;
+    width: 400px;
+    height: 400px;
   }
 }
 
@@ -374,7 +374,7 @@ h2 span {
 
 @media screen and (min-width: 2570px) {
   .caption h3 {
-    font-size: 45px;
+    font-size: 25px;
     margin-top: -2.5rem;
   }
 }
@@ -388,7 +388,7 @@ h2 span {
 
 @media screen and (min-width: 2570px) {
   .caption p {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 
