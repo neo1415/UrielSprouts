@@ -25,6 +25,9 @@ export const InfoWrapper = styled.div`
     margin-left:auto ;
     padding: 0 24px;
     justify-content: center;
+    @media screen and (max-width: 720px) {
+        height: 40rem;
+    }
 `
 export const InfoRow = styled.div`
     display: grid;
@@ -70,11 +73,11 @@ export const TopLine = styled.p`
 export const Heading = styled.h1`
     margin-bottom: 24px;
     line-height: 1.1;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 900;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')} ;
+    color: ${({lightText}) => (lightText ? '#bf2e46' : '#bf2e46')} ;
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
@@ -83,11 +86,13 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
     max-width: 440px;
+    line-height: 2rem !important;
+    font-weight: 600;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     margin-bottom: 35px;
     line-height: 24px;
-     font-size: 1.5rem;;
-    color: ${({darkText}) => (darkText ? '#010606' : '#010606')} ;
+    font-size: 1.2rem;;
+    color: ${({darkText}) => (darkText ? '#333333' : '#010606')} ;
 `
 
 export const BtnWrap = styled.div`
@@ -98,10 +103,16 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
     max-width: 555px;
     height: 100%;
+    background-image: url(professionalism.jpg);
+
 `
 
-export const Img = styled.img`
+export const Video = styled.video`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
+    border: none;
+    @media screen and (max-width: 720px) {
+        height: 20rem;
+    }
 `

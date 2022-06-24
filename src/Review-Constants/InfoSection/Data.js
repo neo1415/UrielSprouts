@@ -1,3 +1,8 @@
+import React from 'react'
+import professional from '../../Constants/images'
+
+
+
 export const homeObjOne = {
   id:'about',
   lightBg : true,
@@ -8,7 +13,7 @@ export const homeObjOne = {
   description: 'Our Experts understand the value of first impression and makes sure that your resume captures the attention of both the ATS and the recruiting officer',
   buttonLabel: 'Get Started',
   imgStart:false,
-  img: require('../../Assets/career-progress.svg').default,
+  img: require("../../Assets/standing.mp4"),
   alt:'Car',
   dark:false,
   primary:false,
@@ -17,7 +22,7 @@ export const homeObjOne = {
 
 export const homeObjTwo = {
   id:'about',
-  lightBg : false,
+  lightBg : true,
   lightText:true,
   lightTextDesc:false,
   topLine: 'The Application Tracking System',
@@ -25,10 +30,10 @@ export const homeObjTwo = {
   description: 'There are thousands of job applicants looking to catch the eyes of employers, but only one in four applications ever make it past the ATS to the hands of the employer. Our experts guarantee you make the cut  ',
   buttonLabel: 'Get Started',
   imgStart:true,
-  img: require('../../Assets/stand-out.svg').default,
+  img: require('../../Assets/upgrade.mp4'),
   alt:'Car',
-  dark:true,
-  primary:true,
+  dark:false ,
+  primary:false,
   darkText:false
 };
 
@@ -42,7 +47,7 @@ export const homeObjThree = {
   description: 'Lorem ipsum dolor sit amet. Aut expedita illo eum provident similique aut numquam doloremque et doloremque corporis qui repudiandae autem quo voluptas quos',
   buttonLabel: 'Get Started',
   imgStart:false,
-  img: require('../../Assets/upgrade.svg').default,
+  img:  require("../../Assets/businessTeam.mp4"),
   alt:'Car',
   dark:false,
   primary:false,

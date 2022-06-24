@@ -4,30 +4,33 @@ import React,{useContext} from 'react'
 import './App.scss'
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Home from './Pages/Home';
-// import Review from './Pages/Review';
-// // import Mission from './Containers/Mission/Mission';
+import Review from './Pages/Review';
+// import Mission from './Containers/Mission/Mission';
 import AdminHome from './Admin/AdminHome';
-// import Login from './Admin/Login/Login';
-// import { AuthContext } from './Context/AuthContext';
+import Login from './Admin/Login/Login';
+import { AuthContext } from './Context/AuthContext';
+import Checkout from './Components/Checkout/Checkout';
 
 
 const App = () => {
-  // const {currentUser} = useContext(AuthContext)
-  // const RequireAuth= ({children})=>{
-  //   return currentUser ? (children) : <Navigate to={'/Login'} />
-  // }
+  const {currentUser} = useContext(AuthContext)
+  const RequireAuth= ({children})=>{
+    return currentUser ? (children) : <Navigate to={'/Login'} />
+  }
   return (
     <div className='app'>
 
       <Routes >
           <Route exact path="/"
            element = {<Home />} />
-          {/* <Route exact path="/review"
+          <Route exact path="/review"
            element = {<Review />} />
+          <Route exact path="/checkout"
+           element = {<Checkout />} />
           <Route exact path="/login"
-           element = {<Login />} />*/} 
-           <Route exact path="/adminHome"
-           element = {  <AdminHome />} /> 
+           element = {<Login />} />
+          <Route exact path="/adminHome"
+           element = { <RequireAuth> <AdminHome /></RequireAuth> } />
   
       </Routes>
     </div>

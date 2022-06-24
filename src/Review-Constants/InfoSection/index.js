@@ -1,5 +1,5 @@
 import React from 'react'
-import { Column1, Column2, InfoContainer, InfoRow, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, InfoWrapper,Img } from './infoElement';
+import { Column1, Column2, InfoContainer, InfoRow, TextWrapper,Video, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, InfoWrapper,Img } from './infoElement';
 
 const InfoSection = ({ lightBg, lightText, id, topLine, description, Headline, imgStart, darkText, buttonLabel, alt, img, primary, dark, dark2 }) => {
   return (
@@ -28,7 +28,7 @@ const InfoSection = ({ lightBg, lightText, id, topLine, description, Headline, i
                     </Column1>
                     <Column2>
                         <ImgWrap>
-                            <Img src={img} alt={alt} />
+                            <Video autoPlay loop muted src={img} alt={alt} type='video/mp4' />
                         </ImgWrap>
                     </Column2>
                 </InfoRow>

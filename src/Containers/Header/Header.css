@@ -21,6 +21,12 @@
   }
 }
 
+@media screen and (min-height: 1200px) {
+  .hero-Container {
+    height: 75vh !important;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .hero-Container {
     height: 90vh;
@@ -88,11 +94,19 @@
   .hero-Content {
     margin-left: 37rem;
     width: 90rem;
+    margin-top: -10rem;
+  }
+}
+
+@media screen and (min-height: 1200px) {
+  .hero-Content {
+    margin-left: -6rem;
   }
 }
 
 .hero-Content h1 {
   font-size: 2rem;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 900;
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -121,6 +135,13 @@
   }
 }
 
+@media screen and (min-height: 1200px) {
+  .hero-Content h1 {
+    max-width: 900px;
+    left: 47%;
+  }
+}
+
 @media screen and (min-width: 1440px) and (max-width: 1900px) {
   .hero-Content h1 {
     font-size: 3rem;
@@ -136,6 +157,13 @@
 @media screen and (min-width: 2570px) {
   .hero-Content h1 {
     font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 2571px) and (max-width: 4000px) {
+  .hero-Content h1 {
+    margin-left: -50rem;
+    width: 300rem;
   }
 }
 
@@ -246,6 +274,12 @@
   .hero-Content .header-text p {
     font-size: 35px;
     width: 80rem;
+  }
+}
+
+@media screen and (min-width: 2571px) and (max-width: 4000px) {
+  .hero-Content .header-text p {
+    margin-left: 90rem;
   }
 }
 

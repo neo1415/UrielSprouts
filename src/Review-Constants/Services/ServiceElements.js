@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ServicesContainer = styled.div`
-    height: 300px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,6 +12,9 @@ export const ServicesContainer = styled.div`
 
     @media screen and (max-width: 480px) {
         height: 1300px;
+    }
+    @media screen and (max-width: 820px) {
+        margin-top: 7rem !important;
     }
 `
 
@@ -34,15 +37,20 @@ export const ServicesWrapper = styled.div`
     }
 
 `
+export const Video =styled.video`
+    height: 10rem;
+    
+`
 
 export const ServicesCard = styled.div`
     background: #fff;
     display: flex;
     flex-direction: column  ;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     align-items: center;
     border-radius: 10px;
     max-height: 340px;
+    width: 300px;
     padding: 30px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     transition: all .2s ease-in-out;
@@ -63,9 +71,10 @@ export const ServicesIcon = styled.img`
 export const ServicesH1 = styled.h1`
     color: #fff;
     margin-bottom: 64px;
-    font-family: var(--font-base);
-    font-size: 32px;
+    font-size: 2.7rem;
     font-weight: 800;
+    text-align: center; 
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     text-transform:uppercase ;
     margin-bottom: 2rem;
     position: relative;
@@ -80,13 +89,17 @@ export const ServicesH1 = styled.h1`
 export const ServicesH2 = styled.h2`
     font-size: 1rem;
     margin-bottom: 10px;
+    color: var(--black-color) !important;
     
+`
+export const HiCloudUpload = styled.svg`
+    font-size: 4rem;
 `
 
 export const ServicesP = styled.p`
     text-align: center;
     font-size: 20px;
-        font-weight: 400;
+        font-weight: 500;
         color: var(--secondary-color);
         width: 100%;
         // white-space: nowrap;

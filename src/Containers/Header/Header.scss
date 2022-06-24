@@ -15,6 +15,11 @@
 height: 110vh!important;
 
 }
+@media screen and (min-height:1200px) {
+
+  height: 75vh!important;
+  
+  }
   @media screen and (max-width:850px){
     height: 90vh;
     display: flex;
@@ -65,10 +70,18 @@ height: 110vh!important;
     @media screen and (min-width:2570px) {
         margin-left: 37rem;
       width: 90rem;
+      margin-top: -10rem;
   }
+
+  @media screen and (min-height:1200px) {
+
+    margin-left: -6rem;
+    
+    }
 
     h1{
         font-size: 2rem;
+        color: #fff;
         text-transform: uppercase;
         font-weight: 900;
         font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -88,6 +101,11 @@ height: 110vh!important;
           font-size:1rem;
 
         }
+        @media screen and (min-height:1200px) {
+          max-width: 900px;
+          left:47% ;
+          
+          }
         @media screen and (min-width:1440px) and (max-width:1900px) {
 
           font-size: 3rem;
@@ -101,6 +119,10 @@ height: 110vh!important;
         @media screen and (min-width:2570px) {
           font-size: 6rem;
     }
+    @media screen and (min-width:2571px) and (max-width:4000px) {
+      margin-left: -50rem;
+      width: 300rem;
+      }
         span{
           background:linear-gradient(to right, var(--secondary-color) 0%, #bf2e46 100%);
             background-clip: text;
@@ -185,6 +207,9 @@ height: 110vh!important;
           width: 80rem;
   
       }
+      @media screen and (min-width:2571px) and (max-width:4000px) {
+        margin-left: 90rem;
+        }
         @media screen and (max-width: 300px) {
           font-size: 13px!important;
           font-weight: 700;

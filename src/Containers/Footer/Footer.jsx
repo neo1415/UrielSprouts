@@ -1,39 +1,44 @@
 import React, { useState } from 'react'
 import { images } from '../../Constants'
 import { Appwrap, MotionWrap } from '../../Wrapper';
-import { client } from '../../client';
+import {addDoc,  collection, serverTimestamp, timeStamp} from 'firebase/firestore' 
+import { auth,db, storage } from '../../Components/firebase'
+import { v4 as uuidv4 } from 'uuid';
+import { doc, setDoc } from "firebase/firestore"; 
 import './Footer.scss';
+import { Inputs } from './contactform';
 
 const Footer = () => {
 
-  const [formData, setFormData] = useState({name: '', email:'', message:''});
+  const [data, setData] = useState({name: '', email:'', message:''});
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { name, email, message} = formData;
-   const handleChangeInput = (e) => {
-     const { name, value } = e.target;
+   const handleInput =(e)=>{
+    const id = e.target.id;
+    const value = e.target.value
 
-     setFormData({...formData, [name] : value});
-   }
-
-   const handleSubmit= () => {
-     setLoading(true)
-
-     const contact = {
-       _type: 'contact',
-       name:name,
-       email:email,
-       message:message
-     }
-
-     client.create(contact)
-     .then(() => {
-       setLoading(false);
-       setIsFormSubmitted(true)
-     })
-
-   }
+    setData({...data,[id]: value});
+  }
+  console.log(data)
+  const handleAdd= async(e) => {
+    e.preventDefault()
+    setLoading(false);
+    setIsFormSubmitted(true)
+    try{
+      // const res=await createUserWithEmailAndPassword(
+      //   auth,
+      //   data.email,
+      //   data.password
+      // )
+      await setDoc(doc(db, "contactForm", uuidv4()), {
+        ...data,
+        timeStamp:serverTimestamp(),
+      });
+  }catch(err){
+    console.log(err)
+  }
+    };
 
   return (
     <>
@@ -57,25 +62,19 @@ const Footer = () => {
 
     {!isFormSubmitted ?
       <div className='app__footer-form app__flex'>
-        <div className='app__flex'>
-          <input className='p-text' type='text' placeholder='Your Name' name='name' value={name} onChange={handleChangeInput} />
-        </div>
-
-        <div className='app__flex'>
-          <input className='p-text' type='email' placeholder='Your Email' name='email' value={email} onChange={handleChangeInput} />
-        </div>
-
-        <div>
-        <textarea
-        className='p-text'
-        placeholder='Your Mesage'
-        value={message}
-        name={'message'}
-        onChange={handleChangeInput}
-        />
-        </div>
-
-        <button type='button' className='p-text' onClick={handleSubmit}>{loading ? 'Sending' : 'Send Message'}</button>
+      {Inputs.map((input) => (
+                <div className="formInput" key={input.id}>
+                  <label>{input.label}</label>
+                  <input
+                    id={input.id}
+                    type={input.type}
+                    className={input.className}
+                    placeholder={input.placeholder}
+                    onChange={handleInput}
+                  />
+                </div>
+              ))}  
+        <button type='button' className='p-text' onClick={handleAdd}>{loading ? 'Sending' : 'Send Message'}</button>
         
       </div>
       :<div>

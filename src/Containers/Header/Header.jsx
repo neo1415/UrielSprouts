@@ -38,13 +38,19 @@ const Header = () => {
         </motion.div>
         <div className='app__social'>
         <div>
+        <a href=''>
             <BsTwitter />
+        </a>
         </div>
         <div>
+        <a href=''>
             <FaFacebookF />
+        </a>
         </div>
          <div>
+         <a href=''>
             <BsInstagram />
+         </a>
         </div>
     </div>
     </div>    

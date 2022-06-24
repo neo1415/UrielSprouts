@@ -1,7 +1,9 @@
-const link = document.createElement('a');
+import { Link } from "@mui/material";
+import { getStorage } from 'firebase/storage';
+import { HiDownload } from "react-icons/hi";
 
 export const userColumns = [
-    { field: "a", headerName: "ID", width: 70 },
+    { field: "id", headerName: "ID", width: 70 },
     {
       field: "user",
       headerName: "User",
@@ -24,9 +26,12 @@ export const userColumns = [
     {
       field: "file",
       headerName: "File",
-      width: 1530,
-      type:'reference',
-      link:'a'
+      width: 230,
+      type:'link',
+      link:'a',
+      renderCell: (cellValues) => {
+        return <a href={`${cellValues.row.file}` } download ><HiDownload /></a>;
+      }
      
       
     },

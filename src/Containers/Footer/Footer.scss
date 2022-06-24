@@ -95,22 +95,22 @@ height: 50rem;
         transition: all .3s ease-in-out;
         
 
-        input, textarea{
+       .formInput{
             width: 100%;
             padding: .95rem;
             border: none;
-            border-radius: 7px;
-            background-color: var(--primary-color);
-
+            border-radius: 7px;       
+            background-color: var(--black-color);
             font-family: var(--font-base);
             color: var(--secondary-color);
             outline: none;
             @media screen and (min-width:2570px)  {
                 height: 8rem;
             }
+
         }
 
-        textarea{
+         .message{
             height: 170px;
             @media screen and (min-width:2570px) {
                 height: 700px;
@@ -120,7 +120,19 @@ height: 50rem;
             box-shadow: 0 0 25px var(--primary-color)
         }
     }
-
+    .topInput{
+        height: 3rem;
+        background-color:var(--primary-color) ;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+    }
+.message{
+    height: 6rem;
+    width: 100%;
+    background-color:var(--primary-color) ;
+    border-radius: 10px;
+}
     button{
         padding: 1rem 2rem;
         border-radius: 10px;

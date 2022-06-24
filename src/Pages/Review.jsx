@@ -6,6 +6,9 @@ import Footer from './../Review-Constants/Footer/index';
 import { homeObjOne, homeObjTwo, homeObjThree } from './../Review-Constants/InfoSection/Data';
 import NavBar from './../Components/Navbar/NavBar';
 import InfoSection from './../Review-Constants/InfoSection/index';
+import PriceTable from '../Review-Constants/PriceTable/PriceTable';
+import FAQ from '../Review-Constants/FaQ/FAQ';
+
 
 const Review = () => {
   return (
@@ -16,7 +19,9 @@ const Review = () => {
     <InfoSection {...homeObjOne} />
     <InfoSection {...homeObjTwo} />
     <InfoSection {...homeObjThree} />
-    <Section />
+    <PriceTable />
+    <FAQ />
+    {/* <Section /> */}
     <Footer />
     </>
   )

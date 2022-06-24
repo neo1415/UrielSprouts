@@ -16,6 +16,10 @@ import video from '../Assets/Video.mp4';
 import email from '../Assets/email.png';
 import mobile from '../Assets/mobile.png';
 import Employ from '../Assets/deliver3.png';
+import professional from '../Assets/professionalism.jpg'
+import wait from '../Assets/waiting.mp4'
+import upload from '../Assets/uploading.mp4'
+import Email from '../Assets/email.mp4'
 
 export default {
     logo,
@@ -35,5 +39,9 @@ export default {
     Oksodo,
     Uselumese,
     email,
-    mobile
+    mobile,
+    professional,
+    wait, 
+    upload,
+    Email
 }

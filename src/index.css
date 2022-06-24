@@ -40,4 +40,14 @@ body{
     overflow-x: hidden;
 
 }
+
+}
+
+@media screen and (max-height:500px) {
+  html,body
+{
+  
+    height: 100%;
+
+}
 }

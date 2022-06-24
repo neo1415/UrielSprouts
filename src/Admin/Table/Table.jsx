@@ -3,16 +3,13 @@ import { userColumns, userRows } from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './Table.scss'
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../Components/firebase";
-import uploadFileProgress from "../../Components/FileUploader/uploadFileProgress";
-import { addDoc } from "firebase/firestore";
+
 
 const List = () => {
   const [data, setData] = useState([]);
   
-  const [imageURL, setImageURL] = useState(null)
-
   useEffect(()=> {
     const fetchData = async () =>{
       let list =[]
@@ -32,59 +29,17 @@ const List = () => {
   },[])
   console.log(data)
 
-  // useEffect(() => {
-  //   const uploadFile = async () => {
-  //     const fileName =  file.name.split('.').pop();
-  //     try {
-  //       const url = await uploadFileProgress(
-  //         file
-  //       );
-  //       const galleryDoc = {
-  //         imageURL: url
-  //       };
-  //       await addDoc(collection, galleryDoc, fileName);
-  //       setImageURL(null);
-  //     } catch (error) {
-  //       console.log({
-  //         isAlert: true,
-  //         severity: 'error',
-  //         message: error.message,
-  //         timeout: 8000,
-  //         location: 'main',
-  //       });
-  //       console.log(error);
-  //     }
-  //   };
-  //   setImageURL(URL.createObjectURL(file));
-  //   uploadFile();
-  // }, [file]);
 
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+
+  const handleDelete = async (id) => {
+    try {
+      await deleteDoc(doc(db, "users", id));
+      setData(data.filter((item) => item.id !== id));
+    } catch (err) {
+      console.log(err);
+    }
   };
 
-  const handleDownload = async (id) => {
-    try {
-      const response = await fetch(imageURL);
-      const data = await response.blob();
-      const blob = URL.createObjectURL(data);
-      const link = document.createElement('a');
-      link.href = blob;
-      link.download = id;
-      link.click();
-      URL.revokeObjectURL(blob);
-      link.remove();
-    } catch (error) {
-      console.log({
-        isAlert: true,
-        severity: 'error',
-        message: error.message,
-        timeout: 8000,
-        location: 'main',
-      });
-      console.log(error);
-    }
-  }
   const actionColumn = [
     {
       field: "action",
@@ -102,12 +57,7 @@ const List = () => {
             >
               Delete
             </div>
-            <div
-              className="deleteButton"
-              onClick={() => handleDownload(params.row.id)}
-            >
-              Download
-            </div>
+
           </div>
         );
       },

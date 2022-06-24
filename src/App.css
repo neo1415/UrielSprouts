@@ -274,6 +274,12 @@
   }
 }
 
+@media screen and (min-width: 2571px) and (max-width: 4000px) {
+  .Circle {
+    margin-left: 90rem;
+  }
+}
+
 .Circle::before, .Circle::after {
   box-sizing: inherit;
   content: '';

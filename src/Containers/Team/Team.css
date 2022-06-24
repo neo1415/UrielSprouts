@@ -22,6 +22,12 @@
   }
 }
 
+@media screen and (min-height: 1200px) {
+  .Team {
+    margin-bottom: 12rem;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .third, .fourth {
     margin-top: 8.5rem !important;
@@ -46,6 +52,12 @@
   }
 }
 
+@media screen and (min-height: 1200px) {
+  .fifth, .sixth {
+    margin-top: -40rem;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .seventh, .eighth {
     margin-top: 26.5rem;
@@ -55,6 +67,12 @@
 @media screen and (max-width: 830px) {
   .seventh, .eighth {
     margin-top: 26.5rem;
+  }
+}
+
+@media screen and (min-height: 1200px) {
+  .seventh, .eighth {
+    margin-top: -40rem;
   }
 }
 
@@ -80,7 +98,7 @@
 
 @media screen and (max-width: 950px) {
   .title-team {
-    margin-bottom: -15rem;
+    margin-bottom: -10rem;
   }
 }
 
