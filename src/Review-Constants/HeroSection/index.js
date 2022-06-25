@@ -18,8 +18,10 @@ const HeroSection = () => {
   const [file, setFile] = useState('')
   const [data , setData] = useState('')
   const [per, setPerc] = useState(null)
+  const [error , setError]= useState(null)
   
 const navigate = useNavigate()
+const types= ['application/pdf'];
 
   useEffect(() => {
     const uploadFile = () =>{
@@ -73,9 +75,7 @@ uploadTask.on('state_changed',
     setData({...data,[id]: value});
   }
   console.log(data)
-  const handleAdd= async(e) => {
-    e.preventDefault()
-    navigate('/checkout')
+  const handleSend= async (e) =>{
     try{
       // const res=await createUserWithEmailAndPassword(
       //   auth,
@@ -89,7 +89,24 @@ uploadTask.on('state_changed',
   }catch(err){
     console.log(err)
   }
+  }
+  const handleAdd= async(e) => {
+    e.preventDefault()
+   
+    navigate('/checkout')
+   
     };
+    const changeHandler =(e) =>{
+      let selected= e.target.files[0];
+    
+      if (selected && types.includes(selected.type)){
+        setFile(selected)
+        setError('');
+      }else{
+        setFile(null);
+        setError('please select a PDF document')
+      }
+    }
     const Icon = {
       fontSize:90,
       marginTop:30
@@ -119,7 +136,7 @@ uploadTask.on('state_changed',
                 className="input-file" 
                 id="my-file" 
                 type="file"
-                onChange={(e) => setFile(e.target.files[0])} />
+                onChange={changeHandler} />
                 <label tabindex="0" for="my-file" className="input-file-trigger">
                 <p>Select a file</p>
                 <div className='iconBorder'>
@@ -138,9 +155,14 @@ uploadTask.on('state_changed',
                     placeholder={input.placeholder}
                     onChange={handleInput}
                     className='Mail'
+                    required
                   />
                 </div>
               ))}
+              <div className='output'>
+                {error && <div className='error'>{error}</div>}
+                {file && <div className='error'>{file.name}</div>}
+              </div>
               <button disabled={per !== null && per < 100} type="submit" className='send'>
                 Upload CV
               </button>

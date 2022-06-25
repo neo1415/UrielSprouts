@@ -9,7 +9,7 @@ import { PaystackButton } from "react-paystack"
 const Checkout = () => {
   const [data, setData] = useState({});
   const publicKey = "pk_live_0afa18997567469cbe8d41896893d8d268ec05e6"
-  const amount = 1000000
+  const amount = 0
   const [email, setEmail] = useState("")
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
@@ -23,7 +23,7 @@ const Checkout = () => {
     publicKey,
     text: "Pay Now",
     onSuccess: () =>
-      alert("Thanks for doing business with us! Come back soon!!"),
+     <handleSend />,
     onClose: () => alert("Wait! Don't leave :("),
   }
 
