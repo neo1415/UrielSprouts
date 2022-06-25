@@ -17,8 +17,8 @@
       
       }
     @media screen and (max-width:1280px) {
-
-      margin-bottom: -11.5rem;
+      margin-top: -6.5rem;
+      margin-bottom: -14.5rem;
 
     }
     @media screen and (min-width:1300px) and (max-width:1400px) {
@@ -38,6 +38,11 @@
      margin-bottom: -18rem !important;
      margin-top: -15rem;
       }
+      @media only screen 
+   and (width : 2560px) 
+   and (height : 1440px) {
+   margin-bottom: -16rem;
+}
     
     @media screen and (max-width:550px) {
       margin-top: -10rem;
@@ -133,6 +138,7 @@
     height: 40rem;
     object-fit: contain !important;
     }
+    
 }
 
 .about_content{
@@ -147,6 +153,7 @@
 @media screen and (min-height:1200px) {
 
   margin-top: -5rem;
+
   
   }
 @media screen and (max-width:1250px){
@@ -265,6 +272,7 @@ padding: 0 .8rem 0 13rem;
     }
     p{
         position: relative;
+        width: 30rem;
         z-index: 1;
         color: rgb(70, 69, 69);
         font-weight: 600;

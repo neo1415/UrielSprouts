@@ -26,7 +26,8 @@
 
 @media screen and (max-width: 1280px) {
   .about-container {
-    margin-bottom: -11.5rem;
+    margin-top: -6.5rem;
+    margin-bottom: -14.5rem;
   }
 }
 
@@ -53,6 +54,12 @@
   .about-container {
     margin-bottom: -18rem !important;
     margin-top: -15rem;
+  }
+}
+
+@media only screen and (width: 2560px) and (height: 1440px) {
+  .about-container {
+    margin-bottom: -16rem;
   }
 }
 
@@ -361,6 +368,7 @@
 
 .about_content p {
   position: relative;
+  width: 30rem;
   z-index: 1;
   color: #464545;
   font-weight: 600;

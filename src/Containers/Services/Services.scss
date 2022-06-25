@@ -655,18 +655,16 @@
     height: 600px;
   }
   @media screen and (min-width:1910px) and (max-width:2565px) {
-    width: 650px;
-
+    width: 600px;
     }
     @media screen and (min-width:2570px) and (max-width:4000px) {
       width: 750px;
-  
-      }
+    }
 }
 .employ,.hospitality,.business{
   background-color: #053794;
 opacity: 1;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #053794 13px ), repeating-linear-gradient( #ff4b4b55, #ff4b4b );
+background-image:repeating-radial-gradient( circle at 0 0, transparent 0, #053794 13px ), repeating-linear-gradient( #ff4b4b55, #ff4b4b );
 }
 .hospitality{
   @media screen and (max-width:920px) {

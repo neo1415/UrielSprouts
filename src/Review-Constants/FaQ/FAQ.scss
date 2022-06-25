@@ -12,33 +12,6 @@
     width: 100%;
     margin-top: -26rem !important;
     background-image: var(--primary-color); 
-    @media screen and (max-width: 720px) {
-        margin-top: -70rem !important;
-    }
-        @media screen and (max-width: 720px) {
-        margin-top: -70rem !important;
-    }
-    @media screen and (max-width: 820px) {
-        margin-top: -114rem;
-    }
-    @media screen and (max-width: 380px) {
-        margin-top: -35rem !important;
-    }
-    @media screen and (min-width: 1280px) and (max-width:1400px) {
-        margin-top: -35rem !important;
-    }
-    @media screen and (min-width: 1400px) and (max-width:1910px) {
-        margin-top: -65rem !important;
-    }
-    @media screen and (min-width: 1910px) and (max-width:2500px) {
-        margin-top: -90rem !important;
-    }
-    @media screen and (min-width: 2500px) and (max-width:3000px) {
-        margin-top: -95rem !important;
-    }
-    @media screen and (min-width: 3001px) {
-        margin-top: -230rem !important;
-    }
 }
 
 .faq__logo {
