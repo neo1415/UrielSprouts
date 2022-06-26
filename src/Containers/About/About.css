@@ -19,12 +19,6 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .about-container {
-    margin-bottom: -25rem;
-  }
-}
-
 @media screen and (min-width: 1910px) {
   .about-container {
     margin-bottom: -32.5rem;
@@ -116,12 +110,6 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .about_content {
-    margin-bottom: 12rem;
-  }
-}
-
 @media screen and (min-width: 1000px) {
   .about_content {
     margin-top: -6rem;
@@ -201,7 +189,7 @@
   font-size: 32px;
   text-transform: uppercase;
   font-weight: 800;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   color: var(--black-color);
 }
 

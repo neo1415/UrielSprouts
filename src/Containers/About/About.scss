@@ -15,10 +15,10 @@
       margin-bottom: -15rem;
     
     }
-    @media screen and (min-width:1280px) {
-      margin-bottom: -25rem;
+    // @media screen and (min-width:1280px) {
+    //   margin-bottom: -25rem;
     
-    }
+    // }
     @media screen and (min-width:1910px)  {
 
       margin-bottom: -32.5rem;
@@ -96,10 +96,10 @@ margin-top: -20rem !important;
   margin-top: -85rem !important;
   
   }
-  @media screen and (min-width:1280px) {
-    margin-bottom: 12rem;
+  // @media screen and (min-width:1280px) {
+  //   margin-bottom: 12rem;
   
-  }
+  // }
 @media screen and (min-width:1000px) {
   margin-top: -6rem;  
   }
@@ -163,7 +163,7 @@ margin-top: -20rem !important;
         font-size: 32px;
         text-transform: uppercase;
         font-weight: 800;
-        margin-bottom: 3rem;
+        margin-bottom: 0rem;
         color:var(--black-color);
         @media screen and (min-width:1200px){
           padding: 0 1rem 0 1rem;
