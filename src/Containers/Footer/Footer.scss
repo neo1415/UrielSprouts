@@ -78,6 +78,8 @@ h2{
 
 .app__footer-form{
     width: 60%;
+    position: relative;
+    z-index: 1000;
     flex-direction: column;
     margin: 1rem 6rem;
     @media screen and (max-width:850px) {
@@ -101,6 +103,8 @@ margin-top: 7rem;
 
        .formInput{
             width: 100%;
+            position: relative;
+            z-index: 1000;
             padding: .95rem;
             border: none;
             border-radius: 7px;       
@@ -116,6 +120,8 @@ margin-top: 7rem;
 
          .message{
             height: 170px;
+            position: inherit;
+            z-index: 1000;
             @media screen and (min-width:2570px) {
                 height: 700px;
             }
