@@ -4,100 +4,42 @@
 
 .about-container {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   height: 100vh;
-  margin-top: -4.7rem;
+  margin-top: -4.7rem !important;
   margin-bottom: 1rem;
+  margin: auto;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (min-width: 1080px) {
   .about-container {
-    margin-top: -19rem;
-    margin-bottom: -20rem;
-    margin-right: 1rem;
+    margin-bottom: -15rem;
   }
 }
 
-@media screen and (min-height: 1200px) {
+@media screen and (min-width: 1280px) {
   .about-container {
-    height: 59vh;
+    margin-bottom: -25rem;
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1910px) {
   .about-container {
-    margin-top: -6.5rem;
-    margin-bottom: -14.5rem;
+    margin-bottom: -32.5rem;
   }
 }
 
-@media screen and (min-width: 1300px) and (max-width: 1400px) {
+@media screen and (min-width: 3000px) {
   .about-container {
-    margin-bottom: -11rem;
+    margin-bottom: -100rem !important;
   }
 }
 
-@media screen and (min-width: 1910px) and (max-width: 2565px) {
+@media screen and (min-width: 600px) and (max-width: 999px) {
   .about-container {
-    margin-top: -7rem;
-    margin-bottom: -31rem;
-  }
-}
-
-@media screen and (min-width: 1440px) and (max-width: 1900px) {
-  .about-container {
-    margin-bottom: -21.5rem;
-  }
-}
-
-@media screen and (min-width: 2571px) and (max-width: 4000px) {
-  .about-container {
-    margin-bottom: -18rem !important;
-    margin-top: -15rem;
-  }
-}
-
-@media only screen and (width: 2560px) and (height: 1440px) {
-  .about-container {
-    margin-bottom: -16rem;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .about-container {
-    margin-top: -10rem;
-    margin-bottom: -10rem;
-    padding-right: 1rem;
-    padding-left: 0;
-    height: 110vh;
-  }
-}
-
-@media screen and (max-width: 330px) {
-  .about-container {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-  }
-}
-
-@media screen and (max-width: 280px) {
-  .about-container {
-    margin-top: 8rem !important;
-    width: 20rem;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .about-container {
-    margin-top: 3rem;
-    margin-bottom: 14rem;
-    height: 75vh;
-  }
-}
-
-@media screen and (min-width: 2570px) {
-  .about-container {
-    margin-bottom: -32rem;
+    margin-bottom: -40rem;
   }
 }
 
@@ -142,56 +84,14 @@
   height: 30.2rem !important;
   object-fit: fill;
   margin-top: -.05rem;
-  transform: rotateY(180deg);
-}
-
-@media screen and (min-width: 1910px) and (max-width: 2565px) {
-  .app__header-image {
-    width: 150rem;
-    height: 39rem;
-    max-height: 60rem;
-  }
-}
-
-@media screen and (min-height: 1200px) {
-  .app__header-image {
-    width: 29rem;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .app__header-image {
-    margin-right: 0;
-    padding: 0;
-    margin-right: 7rem;
-    top: 4%;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .app__header-image {
-    margin-right: 0;
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .app__header-image {
-    margin: 0;
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 2571px) and (max-width: 4000px) {
-  .app__header-image {
-    width: 120rem;
-    height: 40rem;
-    object-fit: contain !important;
-  }
 }
 
 .about_content {
-  padding: 10rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 1;
   margin-top: -3rem;
@@ -204,49 +104,33 @@
   }
 }
 
-@media screen and (min-height: 1200px) {
+@media screen and (min-width: 1910px) {
   .about_content {
-    margin-top: -5rem;
+    margin-top: -20rem !important;
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (min-width: 3000px) {
   .about_content {
-    padding: 0 1rem 0 1rem;
-    text-align: left;
+    margin-top: -85rem !important;
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1900px) {
+@media screen and (min-width: 1280px) {
   .about_content {
-    margin-bottom: 12.5rem;
+    margin-bottom: 12rem;
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (min-width: 1000px) {
   .about_content {
-    margin-right: 2rem;
+    margin-top: -6rem;
   }
 }
 
-@media screen and (min-width: 2570px) {
+@media screen and (min-width: 600px) and (max-width: 999px) {
   .about_content {
-    width: 150rem;
-  }
-}
-
-@media screen and (min-width: 1910px) and (max-width: 2565px) {
-  .about_content {
-    width: 190rem;
-    margin-top: -10rem;
-    margin-bottom: 14rem;
-    padding: 0 .8rem 0 13rem;
-  }
-}
-
-@media screen and (min-width: 2971px) and (max-width: 4000px) {
-  .about_content {
-    width: 120rem;
+    margin-top: -40rem;
   }
 }
 
@@ -317,6 +201,7 @@
   font-size: 32px;
   text-transform: uppercase;
   font-weight: 800;
+  margin-bottom: 3rem;
   color: var(--black-color);
 }
 
@@ -337,32 +222,6 @@
   .about_content h2 {
     font-size: 4rem;
     margin-bottom: 2rem;
-  }
-}
-
-.about_content .line {
-  background-color: #bf2e46;
-  background: linear-gradient(87deg, #bf2e46 44%, #bf2e46 58%, rgba(23, 217, 236, 0) 84%);
-  width: 10rem;
-  height: .5rem;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 1rem;
-  margin-left: -12.6rem;
-}
-
-@media screen and (max-width: 950px) {
-  .about_content .line {
-    margin-top: 3rem;
-    margin-left: -2.5rem;
-    width: 1rem;
-    display: none;
-  }
-}
-
-@media screen and (min-width: 2550px) {
-  .about_content .line {
-    margin-left: -24rem;
   }
 }
 
@@ -390,34 +249,5 @@
 @media screen and (min-width: 2570px) {
   .about_content {
     font-size: 2.5rem;
-  }
-}
-
-@media screen and (min-width: 2570px) {
-  .app__header-image .about_image {
-    position: absolute;
-    left: 0;
-    z-index: 0;
-    width: 105rem;
-    height: 100rem;
-    margin-right: -20rem;
-    object-fit: cover;
-    margin-bottom: 2.7rem;
-    max-width: 200rem;
-  }
-}
-
-@media screen and (min-width: 1910px) and (max-width: 2565px) {
-  .app__header-image .about_image {
-    position: absolute;
-    left: 0;
-    z-index: 0;
-    width: 60rem;
-    height: 42rem;
-    margin-right: -20rem;
-    object-fit: cover;
-    margin-bottom: 2.7rem;
-    max-width: 200rem;
-    margin-top: -12rem;
   }
 }

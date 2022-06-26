@@ -44,7 +44,6 @@ const About = () => {
         />
 
           <h2 className='about-title'>About <span>Us</span></h2>
-          <div className='line'></div>
           <p>
           Urielsprout Limited is a vibrant and innovative 
           company committed to the goal of training and 
