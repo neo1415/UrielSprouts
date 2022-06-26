@@ -33,11 +33,20 @@ body{
 }
 
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:1050px) {
   html,body
 {
   
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+
+}
+
+}
+@media screen and (max-width:360px) {
+  html,body
+{
+  
+    overflow-x: hidden !important;
 
 }
 

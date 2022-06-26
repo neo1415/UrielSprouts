@@ -52,8 +52,7 @@
 
 .hero-Content {
   z-index: 3;
-  max-width: 1200px;
-  position: absolute;
+  max-width: 1000px;
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
