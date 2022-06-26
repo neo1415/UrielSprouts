@@ -3,6 +3,7 @@ import { Header, About, Services, Team, Testimonial, Footer } from '../Container
 import Mission from './../Containers/Mission/Mission';
 import NavBar from './../Components/Navbar/NavBar';
 import CTA from '../Containers/CTA/CTA';
+import CopyRight from '../Containers/copyright';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Team />
       <Testimonial />
       <Footer />
+      <CopyRight />
     </>
   )
 }

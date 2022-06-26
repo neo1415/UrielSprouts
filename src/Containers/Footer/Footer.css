@@ -89,7 +89,7 @@ h2 {
 .app__footer-form {
   width: 60%;
   flex-direction: column;
-  margin: 1rem 2rem;
+  margin: 1rem 6rem;
 }
 
 @media screen and (max-width: 850px) {
@@ -214,7 +214,7 @@ h2 {
 
 @media screen and (min-width: 1910px) and (max-width: 2565px) {
   .Copyright {
-    bottom: -10% !important;
+    bottom: -15% !important;
   }
 }
 
@@ -227,4 +227,8 @@ h2 {
   .Copyright .p-text {
     font-size: 3rem;
   }
+}
+
+.head-text {
+  color: var(--primary-color);
 }

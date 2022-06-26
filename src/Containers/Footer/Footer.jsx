@@ -81,10 +81,6 @@ const Footer = () => {
         <h3 className='head-text'>Thank you for getting in Touch</h3>
       </div>
     } 
-    <footer className='Copyright'>
-    <p className='p-text'>@2022 SKYNET</p>
-    <p className='p-text'>All Rights Reserved</p>
-</footer>
     </>
   )
   
