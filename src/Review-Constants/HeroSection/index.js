@@ -1,27 +1,66 @@
 import React, {useState, useEffect} from 'react'
 import './Hero.scss'
 // import {useNavigate} from 'react-router-dom'
-import {addDoc,  collection, serverTimestamp, timeStamp} from 'firebase/firestore' 
+import { serverTimestamp} from 'firebase/firestore' 
 import { doc, setDoc } from "firebase/firestore"; 
-import { auth,db, storage } from '../../Components/firebase'
+import { db, storage } from '../../Components/firebase'
 import { userInputs } from '../../formSource'
-import {createUserWithEmailAndPassword} from 'firebase/auth';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from 'uuid';
 import { BsCloudUpload } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
+import { PaystackButton } from 'react-paystack';
+import { Link } from 'react-router-dom'
+import { BsArrowLeft } from 'react-icons/bs'
+import EmailModal from './../Modals/Email-Modal/EmailModal';
 
 
 
 
 const HeroSection = () => {
+
+  // checkout states
+
+  const publicKey = "pk_test_d76efdb1f2965b416262f9d99e8b53ff9e801434"
+  const amount = 1
+  const [email, setEmail] = useState("")
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [openPayment, setOpenPayment] = useState(false)
+
+  // checkout componentProps
+
+  const componentProps = {
+    email,
+    amount,
+    metadata: {
+     firstName,
+     lastName
+    },
+    publicKey,
+    text: "Pay Now",
+    onSuccess: () =>
+     handleSend(),
+    onClose: () => window.location.reload()
+    ,
+  }
+
+  const handleComplete =(e)=>{
+    e.preventDefault()
+  }
+
+
+
+  // hero states
+
   const [file, setFile] = useState('')
   const [data , setData] = useState('')
   const [per, setPerc] = useState(null)
   const [error , setError]= useState(null)
   
-const navigate = useNavigate()
 const types= ['application/pdf'];
+
+// storage hooks
 
   useEffect(() => {
     const uploadFile = () =>{
@@ -90,11 +129,12 @@ uploadTask.on('state_changed',
     console.log(err)
   }
   }
+  const navigate=useNavigate()
+  
   const handleAdd= async(e) => {
     e.preventDefault()
-   
-    navigate('/checkout')
-   
+    setOpenPayment(!openPayment);
+    document.body.style.overflow = "hidden";   
     };
     const changeHandler =(e) =>{
       let selected= e.target.files[0];
@@ -110,6 +150,12 @@ uploadTask.on('state_changed',
     const Icon = {
       fontSize:90,
       marginTop:30
+    }
+    const style = {
+      display: 'none'
+    }
+    const handleLink =()=>{
+      window.location.reload()
     }
 
   return (
@@ -129,7 +175,7 @@ uploadTask.on('state_changed',
             />
           </div>
           <div className="right">
-            <form onSubmit={handleAdd}>
+            <form onSubmit={handleAdd} >
               <div className="formInput">
               <div class="input-file-container">  
                 <input 
@@ -137,7 +183,7 @@ uploadTask.on('state_changed',
                 id="my-file" 
                 type="file"
                 onChange={changeHandler} />
-                <label tabindex="0" for="my-file" className="input-file-trigger">
+                <label tabIndex="0" for="my-file" className="input-file-trigger">
                 <p>Select a file</p>
                 <div className='iconBorder'>
                 <BsCloudUpload style={Icon} />
@@ -170,6 +216,58 @@ uploadTask.on('state_changed',
           </div>
         </div>
         </div>
+        
+                {/* checkout form */}
+
+    <div   className={` ${openPayment ? 'check':'checkHidden'}`}  id='checkout'>
+      <div 
+     className='check_container'>
+      <div className="top">
+          <h1>Checkout </h1>
+        </div>
+        <div className="bottom">
+          <div className="left">
+          </div>
+          <div className="right">
+            <form  onSubmit={handleComplete}>
+
+                <div className="formInput" key='first name'>
+                  <input
+                    id='first name'
+                    type='text'
+                    placeholder='First Name'
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
+                  <input
+                    id='last name '
+                    type='text'
+                    placeholder='Last Name'
+                    onChange={(e) => setLastName(e.target.value)}
+                  />
+                  <input
+                    id='email'
+                    type='mail'
+                    placeholder='Email'
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+              <div className='submit_button'>
+                  <Link to='/review'>
+                  <div  onClick={handleLink} className='back'>
+                    <BsArrowLeft />
+                    <p>Go Back</p> 
+                  </div>             
+                    </Link>
+                    <PaystackButton {...componentProps} />
+              </div>  
+            </form>
+          </div>
+        </div>
+      </div>
+          
+      </div>
+
+
         <div class="custom-shape-divider-bottom-1656072431">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
@@ -178,5 +276,6 @@ uploadTask.on('state_changed',
       </div>
   )
 }
+
 
 export default HeroSection

@@ -10,6 +10,7 @@ import AdminHome from './Admin/AdminHome';
 import Login from './Admin/Login/Login';
 import { AuthContext } from './Context/AuthContext';
 import Checkout from './Components/Checkout/Checkout';
+import EmailModal from './Review-Constants/Modals/Email-Modal/EmailModal';
 
 
 const App = () => {
@@ -25,8 +26,8 @@ const App = () => {
            element = {<Home />} />
           <Route exact path="/review"
            element = {<Review />} />
-          <Route exact path="/checkout"
-           element = {<Checkout />} />
+           <Route exact path="/emailmodal"
+           element = {<EmailModal />} />
           <Route exact path="/login"
            element = {<Login />} />
           <Route exact path="/adminHome"

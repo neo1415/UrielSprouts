@@ -1,5 +1,3 @@
-import { Link } from "@mui/material";
-import { getStorage } from 'firebase/storage';
 import { HiDownload } from "react-icons/hi";
 
 export const userColumns = [
@@ -26,7 +24,7 @@ export const userColumns = [
     {
       field: "file",
       headerName: "File",
-      width: 230,
+      width: 30,
       type:'link',
       link:'a',
       renderCell: (cellValues) => {
@@ -41,6 +39,11 @@ export const userColumns = [
       field: "age",
       headerName: "Age",
       width: 100,
+    },
+    {
+      field: "timeStamp",
+      headerName: "Date",
+      width: 600,
     },
     {
       field: "status",
