@@ -174,15 +174,23 @@
     width: 100vw;
     height: 150vh ;    
     display: flex;
-    position: relative;
+    position: absolute;
+
     z-index: 100;
     background-color: #EDF2F8;
     transition: transform 1s;
+    @media screen and (max-width:900px) {
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        overflow-y:hidden;
+        position: fixed;
+    }
     
   
     .check_container {
-      flex: 6;
-      height: 200vh ;    
+      flex: 6;  
+      width: 100vw;
       transition: transform 1s;
   
       .top,
