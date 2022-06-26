@@ -9,9 +9,7 @@ import { FaFacebookF } from 'react-icons/fa';
 const Header = () => {
   return (
     <div className='hero-Container app__flex ' id='home'>
-        <motion.div
-         whileInView={{scale:[0,1]}}
-         transition={{duration:1,ease:'easeInOut'}}
+        <div
          className='hero-Content'>
             <motion.h1
             initial={{x:'-100vw'}}
@@ -35,7 +33,7 @@ const Header = () => {
                 <HiArrowNarrowDown />
             </div>
           
-        </motion.div>
+        </div>
         <div className='app__social'>
         <div>
         <a href=''>
