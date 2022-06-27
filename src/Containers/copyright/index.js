@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems,FooterLinkTitle, FooterLink, SocialLogo,WebsiteRights, SocialIconLink, SocialIcons, SocialMedia, SocialMediaWrap, } from './FooterElements'
+import { FooterContainer, FooterWrap,WebsiteRights, SocialIconLink, SocialIcons, SocialMedia, SocialMediaWrap, } from './FooterElements'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const CopyRight = () => {

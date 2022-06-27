@@ -1,6 +1,7 @@
 import React from 'react'
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems,FooterLinkTitle, FooterLink, SocialLogo,WebsiteRights, SocialIconLink, SocialIcons, SocialMedia, SocialMediaWrap, } from './FooterElements'
+import { FooterContainer, FooterWrap, SocialLogo,WebsiteRights, SocialIconLink, SocialIcons, SocialMedia, SocialMediaWrap, } from './FooterElements'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { images } from '../../Constants';
 
 const Footer = () => {
 
@@ -11,51 +12,9 @@ const Footer = () => {
   return (
     <FooterContainer>
         <FooterWrap>
-            {/* <FooterLinksContainer>
-                <FooterLinksWrapper>
-                    <FooterLinkItems>
-                        <FooterLinkTitle>About us</FooterLinkTitle>
-                            <FooterLink to='/signin'>About</FooterLink>
-                            <FooterLink to='/signin'>How it works</FooterLink>
-                            <FooterLink to='/signin'>Testimonials</FooterLink>
-                            <FooterLink to='/signin'>Careers</FooterLink>
-                            <FooterLink to='/signin'>Investors</FooterLink>
-                            <FooterLink to='/signin'>Terms of Service</FooterLink>
-                    </FooterLinkItems>
-                    <FooterLinkItems>
-                        <FooterLinkTitle>About us</FooterLinkTitle>
-                            <FooterLink to='/signin'>About</FooterLink>
-                            <FooterLink to='/signin'>How it works</FooterLink>
-                            <FooterLink to='/signin'>Testimonials</FooterLink>
-                            <FooterLink to='/signin'>Careers</FooterLink>
-                            <FooterLink to='/signin'>Investors</FooterLink>
-                            <FooterLink to='/signin'>Terms of Service</FooterLink>
-                    </FooterLinkItems>
-                </FooterLinksWrapper>
-                <FooterLinksWrapper>
-                    <FooterLinkItems>
-                        <FooterLinkTitle>About us</FooterLinkTitle>
-                            <FooterLink to='/signin'>About</FooterLink>
-                            <FooterLink to='/signin'>How it works</FooterLink>
-                            <FooterLink to='/signin'>Testimonials</FooterLink>
-                            <FooterLink to='/signin'>Careers</FooterLink>
-                            <FooterLink to='/signin'>Investors</FooterLink>
-                            <FooterLink to='/signin'>Terms of Service</FooterLink>
-                    </FooterLinkItems>
-                    <FooterLinkItems>
-                        <FooterLinkTitle>About us</FooterLinkTitle>
-                            <FooterLink to='/signin'>About</FooterLink>
-                            <FooterLink to='/signin'>How it works</FooterLink>
-                            <FooterLink to='/signin'>Testimonials</FooterLink>
-                            <FooterLink to='/signin'>Careers</FooterLink>
-                            <FooterLink to='/signin'>Investors</FooterLink>
-                            <FooterLink to='/signin'>Terms of Service</FooterLink>
-                    </FooterLinkItems>
-                </FooterLinksWrapper>
-            </FooterLinksContainer> */}
             <SocialMedia>
                 <SocialMediaWrap>
-                {/* <SocialLogo to ='/' onClick={toggleHome}>Poise</SocialLogo> */}
+                <SocialLogo to ='/'>{images.logo}</SocialLogo>
                 <WebsiteRights>Poise @ {new Date().getFullYear()}
                 All rights reserved</WebsiteRights>
                 <SocialIcons>

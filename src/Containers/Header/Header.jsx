@@ -36,17 +36,17 @@ const Header = () => {
         </div>
         <div className='app__social'>
         <div>
-        <a href=''>
+        <a href='www.twittwer.com'>
             <BsTwitter />
         </a>
         </div>
         <div>
-        <a href=''>
+        <a href='www.facebook.com'>
             <FaFacebookF />
         </a>
         </div>
          <div>
-         <a href=''>
+         <a href='www.instagram.com'>
             <BsInstagram />
          </a>
         </div>

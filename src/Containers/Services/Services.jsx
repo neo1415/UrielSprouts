@@ -1,7 +1,5 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState} from 'react'
 import './Services.scss';
-import { images } from '../../Constants';
-import { motion } from 'framer-motion';
 // import {urlFor, client} from '../../client';
 
 

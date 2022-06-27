@@ -1,7 +1,7 @@
 import React from 'react'
-import { Column1, Column2, InfoContainer, InfoRow, TextWrapper,Video, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, InfoWrapper,Img } from './infoElement';
+import { Column1, Column2, InfoContainer, InfoRow, TextWrapper,Video, TopLine, Heading, Subtitle,  ImgWrap, InfoWrapper } from './infoElement';
 
-const InfoSection = ({ lightBg, lightText, id, topLine, description, Headline, imgStart, darkText, buttonLabel, alt, img, primary, dark, dark2 }) => {
+const InfoSection = ({ lightBg, lightText, id, topLine, description, Headline, imgStart, darkText, alt, img }) => {
   return (
     <>
         <InfoContainer lightBg= {lightBg} id={id}>

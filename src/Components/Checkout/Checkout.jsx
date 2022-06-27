@@ -1,14 +1,14 @@
-import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
-import { BsArrowLeft } from 'react-icons/bs'
-import HeroSection from '../../Review-Constants/HeroSection'
-import './checkout.scss'
-import { userInputs } from './data'
-import { setDoc,doc } from 'firebase/firestore'
-import { v4 as uuidv4 } from 'uuid';
-import { db } from '../firebase'
-import { serverTimestamp } from 'firebase/firestore'
-import { PaystackButton } from "react-paystack"
+// import React,{useState} from 'react'
+// import { Link } from 'react-router-dom'
+// import { BsArrowLeft } from 'react-icons/bs'
+// import HeroSection from '../../Review-Constants/HeroSection'
+// import './checkout.scss'
+// import { userInputs } from './data'
+// import { setDoc,doc } from 'firebase/firestore'
+// import { v4 as uuidv4 } from 'uuid';
+// import { db } from '../firebase'
+// import { serverTimestamp } from 'firebase/firestore'
+// import { PaystackButton } from "react-paystack"
 
 // const Checkout = (data) => {
 //   const publicKey = "pk_test_d76efdb1f2965b416262f9d99e8b53ff9e801434"

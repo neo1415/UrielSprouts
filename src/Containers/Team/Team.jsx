@@ -1,7 +1,6 @@
 import React from 'react'
 import './Team.scss';
 import { images } from '../../Constants';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Team = () => {
   return (
@@ -14,32 +13,22 @@ const Team = () => {
       <div className='profile'>
       <div className="profile-card">
           <div className="img">
-            <img src={images.Omole} />
+            <img src={images.Omole} alt='member images' />
           </div>
           <div className="caption">
             <h3>Olaniyi Omole</h3>
             <p>CEO/Founder</p>
-            <div className="social-links">
-          <a href="#"><FaFacebook /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaTwitter /></a>
-        </div>
         </div>
         </div>
       </div>
       <div className='profile'>
       <div className="profile-card">
           <div className="img">
-            <img src={images.Ehosa} />
+            <img src={images.Ehosa}  alt='member images' />
           </div>
           <div className="caption">
             <h3>Ehiosa Ugiagbe</h3>
             <p>Executive</p>
-            <div className="social-links">
-        <a href="#"><FaFacebook /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaTwitter /></a>
-        </div>
         </div>
         </div>
       </div>
@@ -47,16 +36,12 @@ const Team = () => {
       <div className='profile third'>
       <div className="profile-card">
           <div className="img">
-            <img src={images.Babatunde} />
+            <img src={images.Babatunde} alt='member images' />
           </div>
           <div className="caption">
           <h3>Babatunde Oladipupo</h3>
             <p>Executive</p>
-            <div className="social-links">
-            <a href="#"><FaFacebook /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaTwitter /></a>
-          </div>
+        
         </div>
         </div>
       </div>
@@ -64,16 +49,11 @@ const Team = () => {
       <div className='profile fourth'>
         <div className="profile-card">
           <div className="img">
-            <img src={images.Aderonke} />
+            <img src={images.Aderonke} alt='member images' />
           </div>
           <div className="caption">
             <h3>Aderonke Omole</h3>
             <p>Executive</p>
-            <div className="social-links">
-        <a href="#"><FaFacebook /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaTwitter /></a>
-        </div>
         </div>
         </div>
       </div>
@@ -81,16 +61,11 @@ const Team = () => {
       <div className='profile fifth'>
         <div className="profile-card">
           <div className="img">
-            <img src={images.Iyoha} />
+            <img src={images.Iyoha}  alt='member images' />
           </div>
           <div className="caption">
             <h3>John Iyoha</h3>
             <p>Executive</p>
-            <div className="social-links">
-        <a href="#"><FaFacebook /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaTwitter /></a>
-        </div>
         </div>
         </div>
       </div>
@@ -98,16 +73,11 @@ const Team = () => {
       <div className='profile sixth'>
       <div className="profile-card">
           <div className="img">
-            <img src={images.Oksodo} />
+            <img src={images.Oksodo}  alt='member images'/>
           </div>
           <div className="caption">
             <h3>Marvel Okosodo</h3>
             <p>Executive</p>
-            <div className="social-links">
-        <a href="#"><FaFacebook /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaTwitter /></a>
-        </div>
         </div>
         </div>
       </div>
@@ -115,16 +85,11 @@ const Team = () => {
       <div className='profile seventh'>
                 <div className="profile-card">
           <div className="img">
-            <img src={images.Adeola} />
+            <img src={images.Adeola}  alt='member images'/>
           </div>
           <div className="caption">
             <h3>Adeola Makinwa</h3>
             <p>Executive</p>
-            <div className="social-links">
-              <a href="#"><FaFacebook /></a>
-              <a href="#"><FaInstagram /></a>
-              <a href="#"><FaTwitter /></a>
-           </div>
            </div>
                   </div>
       </div>
@@ -132,17 +97,12 @@ const Team = () => {
       <div className='profile eighth'>
       <div className="profile-card">
           <div className="img">
-            <img src={images.Uselumese} />
+            <img src={images.Uselumese} alt='member images' />
           </div>
           <div className="caption">
             <h3>Oselumese Olumese</h3>
             <p>Executive</p>
-                    <div className="social-links">
-        <a href="#"><FaFacebook /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaTwitter /></a>
-        </div>
-        </div>
+                 </div>
         </div>
       </div>
     </div>

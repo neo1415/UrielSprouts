@@ -1,15 +1,9 @@
 import React from 'react'
-import { HiCloudUpload } from 'react-icons/hi'
-import { FaWatchmanMonitoring } from 'react-icons/fa'
-import { FaTruckLoading } from 'react-icons/fa'
 import { images } from '../../Constants'
 
-import { ServicesContainer,ServicesH1,Video, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServiceElements'
+import { ServicesContainer,ServicesH1,Video, ServicesWrapper, ServicesCard, ServicesH2, ServicesP } from './ServiceElements'
 
 const Services = () => {
-    const iconStyle={
-        fontSize:60,
-    }
   return (
     <ServicesContainer id ='services'>
         <ServicesH1><span>How it Works</span></ServicesH1>

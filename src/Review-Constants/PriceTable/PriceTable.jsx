@@ -21,17 +21,17 @@ const PriceTable = () => {
         <h2>Our Pricing</h2>
     </div>
     <div className='container-fluid'>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="Card text-center">
-            <div class="title">
+    <div className="container">
+      <div className="row">
+        <div className="col-sm-4">
+          <div className="Card text-center">
+            <div className="title">
               <FaPaperPlane style={cardStyle} />
             </div>
-            <div class="price">
+            <div className="price">
               <h4><sup>₦</sup>1000</h4>
             </div>
-            <div class="option">
+            <div className="option">
               <ul>
               <li> <FaCheck style={checkStyle} /> Professionalreview </li>
               <li> <FaCheck style={checkStyle} />  48-hour response </li>

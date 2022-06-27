@@ -1,8 +1,3 @@
-import React from 'react'
-import professional from '../../Constants/images'
-
-
-
 export const homeObjOne = {
   id:'about',
   lightBg : true,

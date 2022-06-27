@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { images } from '../../Constants'
 import { Appwrap, MotionWrap } from '../../Wrapper';
-import {addDoc,  collection, serverTimestamp, timeStamp} from 'firebase/firestore' 
-import { auth,db, storage } from '../../Components/firebase'
+import { serverTimestamp} from 'firebase/firestore' 
+import { db } from '../../Components/firebase'
 import { v4 as uuidv4 } from 'uuid';
 import { doc, setDoc } from "firebase/firestore"; 
 import './Footer.scss';
@@ -26,11 +26,6 @@ const Footer = () => {
     setLoading(false);
     setIsFormSubmitted(true)
     try{
-      // const res=await createUserWithEmailAndPassword(
-      //   auth,
-      //   data.email,
-      //   data.password
-      // )
       await setDoc(doc(db, "contactForm", uuidv4()), {
         ...data,
         timeStamp:serverTimestamp(),

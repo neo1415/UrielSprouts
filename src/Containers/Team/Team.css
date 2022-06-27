@@ -224,8 +224,8 @@ h2 span {
 .profile-card {
   position: relative;
   font-family: sans-serif;
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   background: #fff;
   padding: 30px;
   border-radius: 10%;
@@ -276,7 +276,7 @@ h2 span {
 
 .profile-card:hover {
   border-radius: 10px;
-  height: 270px;
+  height: 240px;
 }
 
 @media screen and (min-width: 1910px) {
@@ -301,12 +301,12 @@ h2 span {
 }
 
 .img img {
-  width: 210px;
-  height: 210px;
+  width: 180px;
+  height: 180px;
   border-radius: 10%;
   transition: .6s;
-  margin-top: -1.5rem;
-  margin-left: -1.5rem;
+  margin-top: -1.85rem;
+  margin-left: -1.9rem;
 }
 
 @media screen and (min-width: 1910px) {
