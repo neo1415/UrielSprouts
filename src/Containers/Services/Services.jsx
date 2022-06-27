@@ -9,12 +9,6 @@ const Services = () => {
     const [isActive, setActive] = useState(false)
     const [isActive2, setActive2] = useState(false)
     const [isActive3, setActive3] = useState(false)
-    // const [ services, setServices ] = useState([]);
-    // useEffect(() => {
-    //   const query = '*[_type == "services"]';
-    //   client.fetch(query)
-    //   .then((data) => setServices(data))
-    // }, []);
 
     const handleMouseEnter = () => {
       setActive(!isActive);
