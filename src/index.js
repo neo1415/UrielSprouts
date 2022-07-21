@@ -5,14 +5,41 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { AuthContextProvider } from './Context/AuthContext';
+// import {createStore, applyMiddleware,compose} from 'redux'
+// import rootReducer from './Context/rootRducer';
+// import { Provider } from 'react-redux';
+// import thunk from 'redux-thunk'
+// import {createFirestoreInstance} from 'redux-firestore'
+// import {ReactReduxFirebaseProvider, getFirebase} from 'react-redux-firebase'
+// import firebaseConfig from './Components/firebaseConfig';
+// import * as firebase from 'firebase/app'
+
+// const store = createStore(rootReducer, 
+
+//       applyMiddleware(thunk.withExtraArgument({getFirebase})),
+     
+// );
+
+// const rrfProps ={
+//   firebase,
+//   config:{firebaseConfig},
+//   dispatch:store.dispatch,
+//   createFirestoreInstance
+// }
+  
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <BrowserRouter>
+  {/* <Provider store={store}> */}
+  {/* <ReactReduxFirebaseProvider {...rrfProps}> */}
   <AuthContextProvider>
-      <App />
+  <App />
   </AuthContextProvider>
+  {/* </ReactReduxFirebaseProvider> */}
+  {/* </Provider> */}
   </BrowserRouter>
  
 );

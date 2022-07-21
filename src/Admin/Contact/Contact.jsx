@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { collection, getDocs, deleteDoc,doc, } from "firebase/firestore";
 import { Link } from 'react-router-dom';
-import { db } from "../../Components/firebase";
+import { db } from "../../Components/firebaseConfig";
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns } from './contactTableSource';
 

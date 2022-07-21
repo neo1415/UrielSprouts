@@ -1,7 +1,7 @@
 import React,{useState, useContext} from 'react'
 import './Login.scss'
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../Components/firebase'
+import { auth } from '../../Components/firebaseConfig'
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './../../Context/AuthContext';
 

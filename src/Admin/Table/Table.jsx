@@ -1,14 +1,18 @@
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns} from "../../datatablesource";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import './Table.scss'
+import { useNavigate } from "react-router-dom";
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
-import { db } from "../../Components/firebase";
+import { db } from "../../Components/firebaseConfig";
+import {AuthContext} from '../../Context/AuthContext'
 
 
 const List = () => {
   const [data, setData] = useState([]);
+  // const {currentUser} = useContext(AuthContext)
+  const navigate=useNavigate()
   
   useEffect(()=> {
     const fetchData = async () =>{
@@ -40,22 +44,32 @@ const List = () => {
     }
   };
 
+  const handleView = async (id) => {
+    navigate('/adminHome/' + id)
+  };
+
   const actionColumn = [
     {
       field: "action",
       headerName: "Action",
       width: 200,
-      renderCell: (params) => {
+      renderCell: (params, id) => {
         return (
           <div className="cellAction">
-            <Link to="adminHome/test" style={{ textDecoration: "none" }}>
+            {/* <Link to={"/adminid/" + id} style={{ textDecoration: "none" }}>
               <div className="viewButton">View</div>
-            </Link>
+            </Link> */}
             <div
               className="deleteButton"
               onClick={() => handleDelete(params.row.id)}
             >
               Delete
+            </div>
+            <div
+              className="viewButton"
+              onClick={() => handleView(params.row.id)}
+            >
+              View
             </div>
 
           </div>
@@ -64,6 +78,7 @@ const List = () => {
     },
   ];
   return (
+
     <div className="datatable">
       <div className="datatableTitle">
         Add New User
@@ -80,7 +95,9 @@ const List = () => {
         checkboxSelection
       />
     </div>
+    
   );
+
 };
 
 export default List;

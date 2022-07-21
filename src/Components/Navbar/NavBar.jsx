@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import { images } from '../../Constants';
 import './NavBar.scss';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const [toggle, setToggle] = useState(false);
@@ -23,6 +24,9 @@ const NavBar = () => {
                  ))
              }
         </ul>
+        <Link to='/dashboard' className='app__navbar-logo'>
+            <button className='signin' >Signin</button>
+        </Link>
         <div className='app__navbar-menu'>
             <HiMenuAlt4 onClick={() => setToggle(true) } />
             {toggle && (

@@ -3,7 +3,7 @@ import './Hero.scss'
 // import {useNavigate} from 'react-router-dom'
 import { serverTimestamp} from 'firebase/firestore' 
 import { doc, setDoc } from "firebase/firestore"; 
-import { db, storage } from '../../Components/firebase'
+import { db, storage } from '../../Components/firebaseConfig'
 import { userInputs } from '../../formSource'
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from 'uuid';

@@ -107,6 +107,8 @@
     width: 14rem;
     background-color: rgb(255, 250, 250);
     border-radius: 5px;
+    position: relative;
+    z-index: 9999;
  }
  .send{
     padding: 10px;

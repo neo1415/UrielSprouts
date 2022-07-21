@@ -112,6 +112,8 @@
   width: 14rem;
   background-color: snow;
   border-radius: 5px;
+  position: relative;
+  z-index: 9999;
 }
 
 .send {
