@@ -18,7 +18,7 @@ const Header = () => {
       <Carousel.Item interval={7500} className='image'>
         <img
           className="d-block w-100 images"
-src={images.Hero1}
+src={images.carousel1}
           alt="One"
         />
         <Carousel.Caption>
@@ -59,18 +59,59 @@ src={images.Hero1}
       <Carousel.Item interval={7500} className='image'>
         <img
           className="d-block w-100 images"
-          src={images.Hero2}
+          src={images.executive}
           alt="Two"
         />
         <Carousel.Caption>
         <div
          className='hero-Contents'>
-            <h1 className='hero-h'
-            >Reach Your <br/><span className='span'>Highest Potential</span> </h1>
+            <h1 className='hero-h span'>
+            Business Management & Incubation </h1>
             <div
             className='header-p'
             >
-        <p className='head-p'> Leveraging collaboration with individuals and organisations to drive positive impact.</p>
+        <p className='head-p'>We incubate business ideas and help accelerate through our unique business support servicess.</p>
+            </div>
+            <div className='Circle'>
+                <a href='#about' className='about-link'>Learn More</a>
+                <HiArrowNarrowDown  style={arrow}/>
+            </div>
+          
+        </div>
+        <div className='app__social'>
+        <div>
+        <a href='www.twitter.com'>
+            <BsTwitter />
+        </a>
+        </div>
+        <div>
+        <a href='www.facebook.com'>
+            <FaFacebookF />
+        </a>
+        </div>
+         <div>
+         <a href='www.instagram.com'>
+            <BsInstagram />
+         </a>
+        </div>
+    </div>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={7500} className='image'>
+        <img
+          className="d-block w-100 images"
+          src={images.Hero1}
+          alt="Two"
+        />
+        <Carousel.Caption>
+        <div
+         className='hero-Contents'>
+            <h1 className='hero-h span'
+            >Hospitality Management </h1>
+            <div
+            className='header-p'
+            >
+        <p className='head-p'>Identify potential growth that ensures robust return on investment, </p>
             </div>
             <div className='Circle'>
                 <a href='#about' className='about-link'>Learn More</a>

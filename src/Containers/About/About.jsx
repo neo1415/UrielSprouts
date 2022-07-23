@@ -24,14 +24,21 @@ const About = () => {
       <Carousel.Item interval={7500} className='image'>
         <img
           className="d-block w-100 images1"
-src={images.Hero1}
+src={images.basic}
           alt="One"
         />
       </Carousel.Item>
       <Carousel.Item interval={7500} className='image'>
         <img
           className="d-block w-100 images1"
-          src={images.Hero2}
+          src={images.carousel3}
+          alt="Two"
+        />
+      </Carousel.Item>
+      <Carousel.Item interval={7500} className='image'>
+        <img
+          className="d-block w-100 images1"
+          src={images.carousel7}
           alt="Two"
         />
       </Carousel.Item>

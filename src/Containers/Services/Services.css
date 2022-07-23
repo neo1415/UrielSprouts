@@ -46,7 +46,7 @@
 
 @media screen and (max-width: 1150px) {
   .card {
-    width: 320px;
+    width: 290px;
     height: 530px;
   }
 }
@@ -55,13 +55,15 @@
   .card {
     width: 550px;
     height: 500px;
+    margin: 10px auto 0;
   }
 }
 
 @media screen and (max-width: 580px) {
   .card {
-    width: 500px;
+    width: 40px;
     height: 550px;
+    margin: 10px auto 0;
   }
 }
 
