@@ -1,8 +1,9 @@
 import React from 'react'
 import { images } from '../../Constants'
-
 import './About.scss';
 import { motion } from 'framer-motion';
+import 'bootstrap/dist/css/bootstrap.css';
+import Carousel from 'react-bootstrap/Carousel';
 
 const About = () => {
   return (
@@ -19,13 +20,22 @@ const About = () => {
             transition={{duration:0.5, delayChildren:.5}}
            className='app__header-image'
         >
-          <motion.img
-            whileInView={{scale:[0,1]}}
-            transition={{duration:1,ease:'easeInOut'}}
-            src={images.aboutbg}
-            alt='profile_circle'
-            className='about_image'
+          <Carousel className='carousel'>
+      <Carousel.Item interval={7500} className='image'>
+        <img
+          className="d-block w-100 images1"
+src={images.Hero1}
+          alt="One"
         />
+      </Carousel.Item>
+      <Carousel.Item interval={7500} className='image'>
+        <img
+          className="d-block w-100 images1"
+          src={images.Hero2}
+          alt="Two"
+        />
+      </Carousel.Item>
+    </Carousel>
         </motion.div>
         <div className='about_content'>
         <motion.img

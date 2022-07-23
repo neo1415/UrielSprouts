@@ -24,14 +24,12 @@ const NavBar = () => {
                  ))
              }
         </ul>
-        <Link to='/dashboard' className='app__navbar-logo'>
-            <button className='signin' >Signin</button>
-        </Link>
+        
         <div className='app__navbar-menu'>
             <HiMenuAlt4 onClick={() => setToggle(true) } />
             {toggle && (
                 <motion.div
-                    whileInView={{x: [300, 0]}}
+                    whileInView={{y: [-300, 0]}}
                     transition= {{ duration:0.85, ease:'easeOut' }}
                 >
                     <HiX onClick={() => setToggle(false)} />

@@ -22,7 +22,7 @@ background: linear-gradient(rgba(0, 0, 0, 0.877), rgb(0, 0, 0)),url(Missions.jpg
 /* border-top-left-radius:15rem ;
 border-top-right-radius:15rem ; */
 position: relative;
-z-index: 3;
+/* z-index: 3; */
 object-fit: cover;
 
 }

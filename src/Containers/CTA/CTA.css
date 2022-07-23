@@ -1,7 +1,6 @@
 .review {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10rem;
   align-items: center;
   justify-content: center;
   justify-items: center;
@@ -27,7 +26,7 @@ h3 {
   padding: 0 1rem;
 }
 
-.button {
+.buttons {
   display: flex;
   position: relative;
   cursor: pointer;
@@ -44,21 +43,21 @@ h3 {
 }
 
 @media screen and (max-width: 550px) {
-  .button {
+  .buttons {
     left: 30%;
   }
 }
 
-.button:hover .button__border-circle {
+.buttons:hover .buttons__border-circle {
   transform: translateX(60px);
   background-color: transparent;
 }
 
-.button:hover .button__mask-circle {
+.buttons:hover .buttons__mask-circle {
   clip-path: circle(25px at 85px);
 }
 
-.button__text {
+.buttons__text {
   margin-top: 1rem;
   color: #fafafa;
   font-weight: 600;
@@ -67,13 +66,13 @@ h3 {
   margin-top: -.6rem;
 }
 
-.button__wrapper {
+.buttons__wrapper {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.button__arrow {
+.buttons__arrow {
   left: 30px;
   height: 3px;
   width: 50px;
@@ -83,7 +82,7 @@ h3 {
   background-color: var(--secondary-color);
 }
 
-.button__arrow:after {
+.buttons__arrow:after {
   content: '';
   width: 0;
   height: 0;
@@ -95,7 +94,7 @@ h3 {
   border-left: 7px solid var(--secondary-color);
 }
 
-.button__border-circle {
+.buttons__border-circle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -103,7 +102,7 @@ h3 {
   transition: transform 987ms;
 }
 
-.button__mask-circle {
+.buttons__mask-circle {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -115,10 +114,17 @@ h3 {
   transition: clip-path 987ms;
 }
 
-.button__small-circle {
+.buttons__small-circle {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   transform: translateX(60px);
   background-color: var(--secondary-color);
+}
+
+.ctaTitle {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }

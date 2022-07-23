@@ -36,9 +36,12 @@
 
 .card {
   margin: 100px auto 0;
-  width: 400px;
-  height: 550px;
+  width: 350px;
   perspective: 1000px;
+  border: none;
+  transition: .6s;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 1150px) {
@@ -51,21 +54,21 @@
 @media screen and (max-width: 920px) {
   .card {
     width: 550px;
-    height: 400px;
+    height: 500px;
   }
 }
 
 @media screen and (max-width: 580px) {
   .card {
     width: 500px;
-    height: 450px;
+    height: 550px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 300px) {
   .card {
-    width: 350px;
-    height: 490px;
+    width: 100px !important;
+    height: 590px;
   }
 }
 
@@ -101,9 +104,10 @@
 }
 
 .card__inner {
-  width: 100%;
-  height: 100%;
+  width: 350px;
+  height: 480px;
   transition: transform 1s;
+  transition: .6s;
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
@@ -111,6 +115,8 @@
 
 .card__inner.is-flipped {
   transform: rotateY(180deg);
+  width: 380px;
+  height: 590px;
 }
 
 .card__face {
