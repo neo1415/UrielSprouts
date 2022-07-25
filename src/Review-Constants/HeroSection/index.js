@@ -154,7 +154,7 @@ uploadTask.on('state_changed',
     }
 
   return (
-    <div className='hero-container' id='Home'>
+    <div id='cvhome' className='hero-container'>
         <div className='hero-content'>
             <h1>Progress Made Easy</h1>
             <div className='blob'></div>

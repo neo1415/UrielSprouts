@@ -14,8 +14,8 @@ const Footer = () => {
         <FooterWrap>
             <SocialMedia>
                 <SocialMediaWrap>
-                <SocialLogo to ='/'>{images.logo}</SocialLogo>
-                <WebsiteRights>Poise @ {new Date().getFullYear()}
+                <SocialLogo  src={images.logo}  />
+                <WebsiteRights>UrielSprouts Limited @ {new Date().getFullYear()}
                 All rights reserved</WebsiteRights>
                 <SocialIcons>
                     <SocialIconLink href='//www.facebook.com' target ='_blank' aria-label="FaceBook">

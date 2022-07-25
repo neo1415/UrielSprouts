@@ -193,7 +193,7 @@
     .check_container {
       flex: 6;  
       width: 100vw;
-      transition: transform 1s;
+      transition: .6s;
   
       .top,
       .bottom {
@@ -302,6 +302,7 @@
   
   .checkHidden{
     display: none;
+    transition: .6s;
   }
   .left{
     display: none;

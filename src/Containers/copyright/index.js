@@ -14,8 +14,7 @@ const CopyRight = () => {
             <SocialMedia>
                 <SocialMediaWrap>
                 {/* <SocialLogo to ='/' onClick={toggleHome}>Poise</SocialLogo> */}
-                <WebsiteRights>Poise @ {new Date().getFullYear()}
-                All rights reserved</WebsiteRights>
+                <WebsiteRights>UrielSprouts Limited @ {new Date().getFullYear()} All rights reserved</WebsiteRights>
                 <SocialIcons>
                     <SocialIconLink href='//www.facebook.com' target ='_blank' aria-label="FaceBook">
                         <FaFacebook />

@@ -136,8 +136,11 @@ details[open] .faq__summary:after {
     }
 
     .faq__detail {
-        margin: 20px 0 0 0 0;
+        margin: 30px 0 0 0 0;
         padding: 0 6rem 0 6rem;
+    }
+    .faq__summary{
+        height: 5rem;
     }
 }
 

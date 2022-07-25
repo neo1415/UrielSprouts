@@ -26,10 +26,10 @@
   border: 1px solid var(--secondary-color);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .our-team:hover {
-    box-shadow: none;
-    border: none;
+    height: 210px;
+    width: 190px;
   }
 }
 
@@ -71,8 +71,8 @@
 
 @media screen and (max-width: 550px) {
   .pic img {
-    height: 310px;
-    width: 310px;
+    height: 290px;
+    width: 290px;
   }
 }
 

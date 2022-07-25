@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const InfoContainer = styled.div`
     color: #fff;
     z-index: 2;
+    margin-bottom: 5rem;
     position: relative;
     background-color: ${({lightBg}) => (lightBg ? '#f9f9f9' :'#6b76886e')};
     background-image: url('../../Images/84631.jpg');

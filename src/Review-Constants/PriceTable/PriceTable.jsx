@@ -12,7 +12,8 @@ const PriceTable = () => {
     }
     const checkStyle={
         color: 'white',
-        fontSize: 19,
+        fontSize: 24,
+        fontWeight:800,
         marginTop:4
     }
   return (
@@ -21,7 +22,7 @@ const PriceTable = () => {
         <h2>Our Pricing</h2>
     </div>
     <div className='container-fluid'>
-    <div className="container">
+    <div className="container-price">
       <div className="row">
         <div className="col-sm-4">
           <div className="Card text-center">
@@ -33,13 +34,13 @@ const PriceTable = () => {
             </div>
             <div className="option">
               <ul>
-              <li> <FaCheck style={checkStyle} /> Professionalreview </li>
+              <li> <FaCheck style={checkStyle} /> Professional review </li>
               <li> <FaCheck style={checkStyle} />  48-hour response </li>
               <li> <FaCheck style={checkStyle} />  Job Offer Guarantee </li>
               <li> <FaCheck style={checkStyle} />  Clean and Reusable </li>
               </ul>
             </div>
-            <Link to='/review#home'>Send Now</Link>
+            <Link to='/#cvhome'>Send Now</Link>
           </div>
         </div>
     </div>

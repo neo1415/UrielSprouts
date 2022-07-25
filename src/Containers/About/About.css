@@ -260,3 +260,7 @@
 .carousel-control-prev, .carousel-control-next, .carousel-indicators {
   display: none;
 }
+
+.d-block {
+  display: flex !important;
+}

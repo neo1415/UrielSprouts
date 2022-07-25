@@ -8,7 +8,7 @@ const CTA = () => {
         <div className='review__container'>
             <h2 className='cta'>Are You Job Ready?</h2>
             <h3 className='ctaTitle'>We Will Provide You With a Thourough CV/Resume Review that will Guarantee A Job Placement In your Next Application </h3>
-            <Link to='/review'>
+            <Link to='/review/#CVhome'>
             <div className="buttons cta">
   <div className="buttons__text">Learn more...</div>
    <div className="buttons__wrapper">

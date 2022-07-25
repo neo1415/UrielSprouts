@@ -23,9 +23,9 @@
   transition: .5s;
     box-shadow: 0px 1px 5px 0px #d1d1d1;
     border:1px solid var(--secondary-color);
-    @media screen and (max-width:1000px) {
-      box-shadow: none;
-      border:none;
+    @media screen and (max-width:1100px) {
+      height: 210px ;
+      width: 190px ;
     }
   }
   .our-team .pic{
@@ -55,8 +55,8 @@
       width: 150px ;
     }
     @media screen and (max-width:550px) {
-      height: 310px ;
-      width: 310px ;
+      height: 290px ;
+      width: 290px ;
     }
     @media screen and (max-width:300px) {
       height: 210px ;

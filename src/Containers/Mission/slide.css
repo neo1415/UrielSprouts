@@ -32,6 +32,12 @@ object-fit: cover;
     }
     
 }
+@media screen and (max-width:300px) {
+    .slider-section{
+        padding-bottom: 9rem;
+    }
+    
+}
 @media screen and (min-width:2570px)  {
     .slider-section{
 height: 30rem;

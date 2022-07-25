@@ -201,7 +201,7 @@
 .check .check_container {
   flex: 6;
   width: 100vw;
-  transition: transform 1s;
+  transition: .6s;
 }
 
 .check .check_container .top,
@@ -338,6 +338,7 @@
 
 .checkHidden {
   display: none;
+  transition: .6s;
 }
 
 .left {

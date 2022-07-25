@@ -10,11 +10,13 @@ export const ServicesContainer = styled.div`
     // border-top-left-radius:15rem ;
    
 
-    @media screen and (max-width: 480px) {
-        height: 1300px;
+    @media screen and (max-width: 550px) {
+        height: 1300px !important;
+        margin-top: 0rem !important;
     }
     @media screen and (max-width: 820px) {
-        margin-top: 7rem !important;
+        margin-top: 7rem !important ;
+        height: 80vh;
     }
 `
 
@@ -49,7 +51,8 @@ export const ServicesCard = styled.div`
     /* justify-content: flex-start; */
     align-items: center;
     border-radius: 10px;
-    max-height: 340px;
+    max-height: 1000px;
+    height: 350px;
     width: 300px;
     padding: 30px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
