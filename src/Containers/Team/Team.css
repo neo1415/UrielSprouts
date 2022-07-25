@@ -33,6 +33,23 @@
   }
 }
 
+@media screen and (max-width: 550px) {
+  .our-team:hover {
+    height: 350px;
+    width: 338px;
+    margin-bottom: 7rem;
+    border: 0px rgba(95, 158, 160, 0);
+    box-shadow: 0px 1px 5px 0px #d1d1d100;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .our-team:hover {
+    height: 270px;
+    width: 255px;
+  }
+}
+
 .our-team .pic {
   display: inline-block;
   width: 100%;

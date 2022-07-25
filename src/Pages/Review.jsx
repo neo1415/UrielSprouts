@@ -11,7 +11,7 @@ import FAQ from '../Review-Constants/FaQ/FAQ';
 
 const Review = () => {
   return (
-    <>
+    <div id='cv'>
     <NavBar />
     <HeroSection />
     <Services />
@@ -22,7 +22,7 @@ const Review = () => {
     <FAQ />
     {/* <Section /> */}
     <Footer />
-    </>
+    </div>
   )
 }
 

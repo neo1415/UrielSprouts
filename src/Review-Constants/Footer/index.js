@@ -1,20 +1,15 @@
 import React from 'react'
-import { FooterContainer, FooterWrap, SocialLogo,WebsiteRights, SocialIconLink, SocialIcons, SocialMedia, SocialMediaWrap, } from './FooterElements'
+import { FooterContainer, FooterWrap,WebsiteRights, SocialIconLink, SocialIcons, SocialMedia, SocialMediaWrap, } from './FooterElements'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import { images } from '../../Constants';
 
 const Footer = () => {
 
-    // const toggleHome = () => {
-    //     scroll.scrollToTop();
-    //   }
 
   return (
     <FooterContainer>
         <FooterWrap>
             <SocialMedia>
                 <SocialMediaWrap>
-                <SocialLogo  src={images.logo}  />
                 <WebsiteRights>UrielSprouts Limited @ {new Date().getFullYear()}
                 All rights reserved</WebsiteRights>
                 <SocialIcons>

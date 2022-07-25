@@ -5,13 +5,12 @@ import { useState } from 'react';
 
 import { images } from '../../Constants';
 import './NavBar.scss';
-import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const [toggle, setToggle] = useState(false);
   return (
     <nav className='app__navbar'>
-        <a href='#home' className='app__navbar-logo'>
+        <a href='/#homepage' className='app__navbar-logo'>
             <img src={ images.logo } alt='logo' />
         </a>
         <ul className='app__navbar-links'>

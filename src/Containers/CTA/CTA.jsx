@@ -1,6 +1,5 @@
 import React from 'react'
 import './CTA.scss'
-import { Link } from 'react-router-dom';
 
 const CTA = () => {
   return (
@@ -8,7 +7,7 @@ const CTA = () => {
         <div className='review__container'>
             <h2 className='cta'>Are You Job Ready?</h2>
             <h3 className='ctaTitle'>We Will Provide You With a Thourough CV/Resume Review that will Guarantee A Job Placement In your Next Application </h3>
-            <Link to='/review/#CVhome'>
+            <a href='/review/#cv'>
             <div className="buttons cta">
   <div className="buttons__text">Learn more...</div>
    <div className="buttons__wrapper">
@@ -19,7 +18,7 @@ const CTA = () => {
     </div>
   </div>
 </div>
-            </Link>
+            </a>
         </div>
     </div>
   )

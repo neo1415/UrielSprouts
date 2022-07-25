@@ -8,7 +8,7 @@ import Header from '../Containers/Header/Header';
 
 const Home = () => {
   return (
-    <>
+    <div id='homepage'>
       <NavBar />
       <Header />
       <About />
@@ -19,7 +19,7 @@ const Home = () => {
       <Testimonial />
       <Footer />
       <CopyRight />
-    </>
+    </div>
   )
 }
 

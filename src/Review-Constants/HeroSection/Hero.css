@@ -185,7 +185,8 @@
   position: absolute;
   z-index: 100;
   background-color: #EDF2F8;
-  transition: transform 1s;
+  transition: 1s;
+  top: 0;
 }
 
 @media screen and (max-width: 900px) {
@@ -343,4 +344,13 @@
 
 .left {
   display: none;
+}
+
+.check .check_container .bottom .right form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  align-items: center;
 }

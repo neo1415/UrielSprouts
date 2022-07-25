@@ -32,7 +32,7 @@ src={images.carousel1}
             <p className='head-p'> Leveraging collaboration with individuals and organisations to drive positive impact.</p>
             </div>
             <div className='Circle'>
-                <Link to ='#about' className='about-link'>Learn More</Link>
+                <a href ='#about' className='about-link'>Learn More</a>
                 <HiArrowNarrowDown  style={arrow}/>
             </div>
           
