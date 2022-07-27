@@ -1,0 +1,293 @@
+$black: #2A363B
+$red: #ffffffce
+$red-dark: var(--secondary-color)
+$orange: #bf2e46
+$yellow: #FECEAB
+$white: #2e2c2c
+
+@mixin mobile
+  @media screen and (max-width: 600px)
+    @content
+  
+
+.menu
+  background: $red
+  height: 4rem
+  z-index: 9999
+  display: flex
+  align-items: center
+  justify-content: center
+  position: fixed
+  width: 100%
+  
+  
+  ol
+    list-style-type: none
+    margin: 0 auto
+    padding: 0
+    
+  > ol
+    max-width: 1000px
+    padding: 0 2rem
+    display: flex
+    @media screen and (max-width:600px) 
+      flex-direction: column
+      display: none !important
+    
+    
+    > .menu-item
+      flex: 1
+      padding: 0.75rem 2rem
+      
+      // &:after
+      //   content: ''
+      //   position: absolute
+      //   width: 4px
+      //   height: 4px
+      //   border-radius: 50%
+      //   bottom: 5px
+      //   left: calc(50% - 2px)
+      //   background: $yellow
+      //   will-change: transform
+      //   transform: scale(0)
+      //   transition: transform 0.2s ease
+      
+      &:hover:after
+        transform: scale(1)
+  
+  &-item
+    position: relative
+    line-height: 2.5rem
+    text-align: center
+    
+    a
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      display: block
+      color: $white
+      &:hover
+       
+        color: var(--secondary-color)
+       
+    
+    @at-root .sub-menu &
+      padding: 0.35rem 
+      background: var(--secondary-color)
+      color: white
+      opacity: 0
+      transform-origin: bottom
+      animation: enter 0.2s ease forwards
+      
+      @for $n from 1 through 3
+        // &:nth-child(#$n)
+        //   animation-duration: 0.2s + 0.1s * ($n - 1)
+        //   animation-delay: 0.1s * ($n - 1)
+      
+      &:hover
+        background: $orange
+      
+      a
+        padding: 0 0.75rem
+        color: white
+        
+      @include mobile
+        background: $red-dark
+        color: white
+
+
+  @include mobile
+    position: fixed
+    
+    &:after
+      content: ''
+      position: absolute
+      top: calc(50% - 2px)
+      right: 1rem
+      width: 30px
+      height: 4px
+      background: $white
+      box-shadow: 0 10px $white, 0 -10px $white
+      
+    > ol
+      display: none
+      background: $red
+      flex-direction: column
+      justify-content: center
+      height: 100vh
+      animation: fade 0.2s ease-out
+      
+      > .menu-item
+        flex: 0
+        opacity: 0
+        animation: enter 0.3s ease-out forwards
+        
+        @for $n from 1 through 3
+          &:nth-child(#{$n})
+            animation-duration: 0.2s + 0.1s * ($n - 1)
+            animation-delay: 0.1s * ($n - 1)
+      
+          &:hover
+            background: $orange
+        
+        & + .menu-item
+          margin-top: 0.75rem
+          
+        &:after
+          left: auto
+          right: 1rem
+          bottom: calc(50% - 2px)
+        
+        &:hover
+          z-index: 1
+      
+    &:hover
+      > ol
+        display: flex
+      
+      &:after
+        box-shadow: none
+      
+.sub-menu
+  position: absolute
+  width: 20rem
+  top: 100%
+  left: -50%
+  display: none
+  z-index: 1
+  
+  @at-root .menu-item:hover > &
+    display: block
+    position: absolute
+    
+    @media screen and (max-width:600px)
+      left: -10.2rem
+    
+    
+  @include mobile
+    width: 100vw
+    left: -2rem
+    top: 50%
+    transform: translateY(-50%)
+  
+a
+  text-decoration: none
+  font-size: 1rem
+  font-weight: 600
+  color: var(--gray-color)
+  &:hover
+    color: white
+  
+@keyframes enter
+  from
+    opacity: 0
+    transform: scaleY(0.98) translateY(10px)
+  to
+    opacity: 1
+    transform: none
+    
+@keyframes fade
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.app__navbar-logo
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    height: 4rem
+    img
+        width: 180px
+        height: 100px
+        @media screen and (min-width:2000px) 
+            width: 100px
+            height: 60px
+        
+        @media screen and (max-width:820px) 
+            width: 150px
+            height: 100px
+            position: absolute
+            left: 0
+        
+    
+.app__navbar-menu
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    background: var(--secondary-color)
+    position: absolute
+    right: 0
+    top: 20%
+    z-index: 3
+    margin-right: 1rem 
+    @media screen and (min-width:600px) 
+      display: none
+
+    svg
+        width: 70%
+        height: 70%
+        color: var(--white-color)
+    
+    div
+        position: fixed
+        top: 0
+        bottom: 0
+        width: 100%
+        right: 0
+        z-index: 10
+        padding: 1rem
+        width: 100%
+        height: 100vh
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        flex-direction: column
+        // background: url('../../Assets/bgWhite.png')
+        background: var(--white-color)
+        background-size: cover
+        background-repeat: repeat
+        box-shadow: 00 20px rgba( 168, 168 ,168, .15)
+    
+        svg
+            width: 35px
+            height: 35px
+            color: var(--secondary-color)
+            margin: .5rem 1rem
+            @media screen and (min-width:600px) 
+            flex-direction: column
+            display: none
+        
+        .app__navbar-menu-links
+            list-style: none
+            margin: 0
+            padding: 0
+            height: 100%
+            width: 100%
+            display: flex
+
+            align-items: center
+            flex-direction: column
+            li
+                margin: 1rem
+                a
+                    // color: var(--gray-color)
+                    text-decoration: none
+                    font-size: 1rem
+                    text-transform: uppercase
+                    font-weight: 600
+                    transition: all 0.3s ease-in-out
+                    &:hover
+                        // color: var(--primary-color)
+.hix
+  position: absolute       
+  z-index: 10      
+                
+            
+        
+
+    

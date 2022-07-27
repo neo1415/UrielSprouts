@@ -14,7 +14,7 @@ const Team = () => {
             <div className="col-md-3 col-sm-6">
                 <div className="our-team">
                     <div className="pic">
-                    <img src={images.Omole} alt='member images' classNameName='omole' />
+                    <img src={images.Omole} alt='member images' className='omole' />
                     </div>
                     <h3 className="titles">Olaniyi Omole.</h3>
                     <span className="post">CEO/Founder</span>
@@ -123,7 +123,7 @@ const Team = () => {
             <div className="col-md-3 col-sm-6">
                 <div className="our-team">
                     <div className="pic">
-                    <img src={images.Uselumese} alt='member images'  classNameName='omole'/>
+                    <img src={images.Uselumese} alt='member images'  className='omole'/>
                     </div>
                     <h3 className="titles">Oselumese Olumese</h3>
                     <span className="post">Executive</span>
