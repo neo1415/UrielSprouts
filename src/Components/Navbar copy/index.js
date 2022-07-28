@@ -1,7 +1,6 @@
 import React, {useState, useEffect
 } from 'react'
 import { animateScroll as scroll } from 'react-scroll/modules';
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn,NavBtnLinks } from './NavbarElement'
 import {FaBars} from 'react-icons/fa';
 import Dropdown from '../Dropdown';
 import {HiMenuAlt4 , HiX} from 'react-icons/hi'
@@ -75,11 +74,11 @@ const [toggle, setToggle] = useState(false);
     <>
 <nav className="menu">
 <div className='app__navbar-logo'>
-<img src={images.logo} className='logo' />
+<a href='/#homepage '><img src={images.logo} className='logo' /> </a>
 </div>
   <ol>
-    <li className="menu-item"><a href="#home">Home</a></li>
-    <li className="menu-item"><a href="#about">About</a></li>
+    <li className="menu-item"><a href="/#homepge">Home</a></li>
+    <li className="menu-item"><a href="/#about">About</a></li>
     <li className="menu-item">
     <a href="#services">Services</a>
       <ol className="sub-menu">
@@ -89,12 +88,9 @@ const [toggle, setToggle] = useState(false);
       </ol>
     </li>
     <li className="menu-item">
-      <a href="#team">Our Team</a>
+      <a href="/#team">Our Team</a>
     </li>
-    <li className="menu-item">
-      <a href="#testimonials">Testimonials</a>
-    </li>
-    <li className="menu-item"><a href="#contact">Contact</a></li>
+    <li className="menu-item"><a href="/#contact">Contact</a></li>
   </ol>
 
   <div className='app__navbar-menu'>
@@ -109,15 +105,15 @@ const [toggle, setToggle] = useState(false);
     <li className="menu-item"><a href="#home" onClick={() => setToggle(false)}>Home</a></li>
     <li className="menu-item"><a href="#about" onClick={() => setToggle(false)}>About</a></li>
     <li className="menu-item" >
-      <a href="#services">Services</a>
-      <ol className="sub-menu">
-        <li className="menu-item"><a href="https://urielsproutslimited.netlify.app/" >Employability</a></li>
-        <li className="menu-item"><a href="/review/#cv" >Business Advisory</a></li>
-        <li className="menu-item"><a href="#0" >Hospitality</a></li>
-      </ol>
+    <details className="faq__detail drop-container">
+          <summary  className="faq__summary drop"><span className="faq__question question"><p className='d-link'>Services</p></span></summary>
+          <a href='https://urielsproutslimited.netlify.app' className="faq__text drop-link" onClick={() => setToggle(false)}>Employability</a>
+          <a href='/review/#cv' className="faq__text drop-link" onClick={() => setToggle(false)}>Business Advisory</a>
+          <a href='#0' className="faq__text drop-link" onClick={() => setToggle(false)}>Hospitality</a>
+        </details> 
     </li>
     <li className="menu-item" >
-      <a href="#team" >Team</a>
+      <a href="#team"  onClick={() => setToggle(false)}>Team</a>
     </li>
     <li className="menu-item"><a href="#contact" onClick={() => setToggle(false)}>Contact</a></li>
   </ol>

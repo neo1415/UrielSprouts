@@ -29,7 +29,7 @@ const Testimonial = () => {
 
   return (
     <>
-      <div className='title'>
+      <div className='title' id='testimonials'>
           <h2 className='testimonial-title'>What Our <span>Customers Say</span></h2>
           <div className='line'></div>
       </div>
