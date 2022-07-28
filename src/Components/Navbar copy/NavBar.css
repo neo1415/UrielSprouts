@@ -21,7 +21,7 @@
   display: flex;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
   .menu > ol {
     flex-direction: column;
     display: none !important;
@@ -73,14 +73,14 @@
   color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
   .sub-menu .menu-item {
     background: var(--secondary-color);
     color: white;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
   .menu {
     position: fixed;
   }
@@ -165,13 +165,13 @@
   position: absolute;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
   .menu-item:hover > .sub-menu {
     left: -10.2rem;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
   .sub-menu {
     width: 100vw;
     left: -2rem;
@@ -236,12 +236,13 @@ a:hover {
     height: 100px;
     position: absolute;
     left: 0;
+    top: -25%;
   }
 }
 
 .app__navbar-menu {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -252,10 +253,10 @@ a:hover {
   right: 0;
   top: 20%;
   z-index: 3;
-  margin-right: 1rem;
+  margin-right: 0.7rem !important;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 821px) {
   .app__navbar-menu {
     display: none;
   }

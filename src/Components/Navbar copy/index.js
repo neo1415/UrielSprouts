@@ -3,6 +3,7 @@ import React, {useState, useEffect
 import { animateScroll as scroll } from 'react-scroll/modules';
 import {FaBars} from 'react-icons/fa';
 import Dropdown from '../Dropdown';
+import { Link } from 'react-router-dom';
 import {HiMenuAlt4 , HiX} from 'react-icons/hi'
 import {motion} from 'framer-motion'
 import './NavBar.sass'
@@ -74,7 +75,7 @@ const [toggle, setToggle] = useState(false);
     <>
 <nav className="menu">
 <div className='app__navbar-logo'>
-<a href='/#homepage '><img src={images.logo} className='logo' /> </a>
+<Link to='/#homepage ' className='logo'><img src={images.logo} className='logo' /> </Link>
 </div>
   <ol>
     <li className="menu-item"><a href="/#homepge">Home</a></li>
