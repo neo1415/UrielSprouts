@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar copy';
 import CTA from '../Containers/CTA/CTA';
 import CopyRight from '../Containers/copyright';
 import Header from '../Containers/Header/Header';
+import Slider from '../Containers/TesSlider/Slider';
 
 const Home = () => {
   return (

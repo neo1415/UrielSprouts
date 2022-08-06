@@ -26,6 +26,8 @@ const SingleUser = () => {
         <a href={data.file} download>download</a>
         <p>{data.firstname}</p>
         <p>{data.lastname}</p>
+        <p>{data.email}</p>
+        <p>{data.message}</p>
     </div>
     
   )

@@ -3,20 +3,6 @@ import { HiDownload } from "react-icons/hi";
 export const userColumns = [
     { field: "id", headerName: "ID", width: 70 },
     {
-      field: "user",
-      headerName: "User",
-      width: 230,
-      renderCell: (params) => {
-        return (
-          <div className="cellWithImg">
-    
-            <img className="cellImg" src={params.row.img} alt="avatar" />
-            {params.row.username}
-          </div>
-        );
-      },
-    },
-    {
       field: "email",
       headerName: "Email",
       width: 230,
@@ -43,12 +29,12 @@ export const userColumns = [
     {
       field: "timeStamp",
       headerName: "Date",
-      width: 600,
+      width: 300,
     },
     {
       field: "status",
       headerName: "Status",
-      width: 160,
+      width: 60,
       renderCell: (params) => {
         return (
           <div className={`cellWithStatus ${params.row.status}`}>

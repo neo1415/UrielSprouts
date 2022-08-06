@@ -8,7 +8,7 @@ const Team = () => {
     <div className="container">
           <div className='titles-team'>
           <h2 className='head-text'>Meet <span>The Faculty</span></h2>
-          <div className='line'></div>
+          
       </div>
         <div className="row">
             <div className="col-md-3 col-sm-6">

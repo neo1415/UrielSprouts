@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.75);
+  background: transparent;
   backdrop-filter: blur(4rem);
   -webkit-backdrop-filter: blur(4rem);
   position: fixed;
@@ -146,7 +146,7 @@
 }
 
 .app__navbar-menu div .app__navbar-menu-links li a {
-  color: var(--gray-color);
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 1rem;
   text-transform: uppercase;

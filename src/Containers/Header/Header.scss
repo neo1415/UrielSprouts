@@ -20,7 +20,7 @@
   left:0;
   right:0;
   background:rgba(0, 0, 0, 0.74);
-  z-index: 9 ;
+  z-index: 4 ;
 }
 
 .images{
@@ -221,4 +221,33 @@
   @media screen and (min-width:2570px) {
     font-size: 5rem;
 }
+}
+.custom-shape-divider-bottom-1656072431 {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1656072431 svg {
+  position: relative;
+  display: block;
+  width: calc(166% + 1.3px);
+  height: 201px;
+}
+
+.custom-shape-divider-bottom-1656072431 .shape-fill {
+  fill: #edf2f8;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1656072431 svg {
+      width: calc(190% + 1.3px);
+      height: 201px;
+  }
 }

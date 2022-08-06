@@ -7,6 +7,10 @@ import AdminHome from './Admin/AdminHome';
 import Login from './Admin/Login/Login';
 import { AuthContext } from './Context/AuthContext';
 import SingleUser from './Admin/Singleuser/SingleUser';
+import List from './Admin/Table/Table';
+import Contact from './Admin/Contact/Contact';
+import TestimonialsAdmin from './Admin/TestimonialsAdmin/TestimonialsAdmin';
+import Brands from './Admin/Brands/Brands';
 
 const App = () => {
   const {currentUser} = useContext(AuthContext)
@@ -29,7 +33,22 @@ const App = () => {
             <Route index element = { <RequireAuth> <AdminHome /> </RequireAuth> } />
             <Route path='/adminHome/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
           </Route>
-          
+          <Route exact path="/list">
+            <Route index element = { <RequireAuth> <List /> </RequireAuth> } />
+            <Route path='/list/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+          </Route>
+          <Route exact path="/contact">
+            <Route index element = { <RequireAuth> <Contact /> </RequireAuth> } />
+            <Route path='/contact/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+          </Route>
+          <Route exact path="/testimonialadmin">
+            <Route index element = { <RequireAuth> <TestimonialsAdmin /> </RequireAuth> } />
+            <Route path='/testimonialadmin/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+          </Route>
+          <Route exact path="/brands">
+            <Route index element = { <RequireAuth> <Brands /> </RequireAuth> } />
+            <Route path='/brands/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+          </Route>
       </Routes>
     </div>
   )

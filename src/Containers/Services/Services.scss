@@ -2,13 +2,14 @@
   --primary: var(--secondary-color);
   --secondary: #FE4880;
   --dark: #212121;
-  --light: #F3F3F3;
+  --light: rgb(234, 234, 250);
 }
 
 
 .services{
   display: flex;
   flex-direction: column;
+  margin-bottom: 5rem;
   .service-title{
     text-align: center;
     color: var(--dark-color)!important;
@@ -45,6 +46,7 @@
   border: none;
   transition: .6s;
   display: flex;
+  background-color:var(--primary-color);
 align-items: center;
   @media screen and (max-width:1150px) {
     width: 290px;
@@ -89,11 +91,12 @@ background-image:repeating-radial-gradient( circle at 0 0, transparent 0, #05379
 }
 
 .card__inner {
-  width: 350px;
-  height: 480px;
+  width: 420px;
+  height: 280px;
   transition: transform 1s;
   transition: .6s;
   transform-style: preserve-3d;
+  
   cursor: pointer;
   position: relative;
   @media screen and (max-width:1150px) {
@@ -235,7 +238,7 @@ background-image:repeating-radial-gradient( circle at 0 0, transparent 0, #05379
   height: 128px;
   margin: 0 auto 30px;
   border-radius: 50%;
-  background-color: #FFF;
+  background-color:var(--primary-color) !important;
   border: 5px solid #FFF;
   object-fit: cover;
 }

@@ -1,14 +1,15 @@
 import React,{useEffect,useState} from 'react'
 import { collection, getDocs, deleteDoc,doc, } from "firebase/firestore";
-import { Link } from 'react-router-dom';
 import { db } from "../../Components/firebaseConfig";
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns } from './contactTableSource';
-
+import SideBar from '../SideBar/SideBar';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
 
     const [data, setData] = useState([]);
+    const navigate=useNavigate()
 
     useEffect(()=> {
         const fetchData = async () =>{
@@ -38,15 +39,20 @@ const Contact = () => {
           console.log(err);
         }
       };
+
+      const handleView = async (id) => {
+        navigate('/contact/' + id)
+      };
+    
       const actionColumn = [
         {
           field: "action",
           headerName: "Action",
           width: 200,
-          renderCell: (params) => {
+          renderCell: (params, id) => {
             return (
               <div className="cellAction">
-                {/* <Link to="adminHome/test" style={{ textDecoration: "none" }}>
+                {/* <Link to={"/adminid/" + id} style={{ textDecoration: "none" }}>
                   <div className="viewButton">View</div>
                 </Link> */}
                 <div
@@ -55,18 +61,24 @@ const Contact = () => {
                 >
                   Delete
                 </div>
+                <div
+                  className="viewButton"
+                  onClick={() => handleView(params.row.id)}
+                >
+                  View
+                </div>
+    
               </div>
             );
           },
         },
       ];
       return (
+        <div className='list'>
+        <SideBar />
         <div className="datatable">
           <div className="datatableTitle">
-            Add New User
-            <Link to="/adminHome/new" className="link">
-              Add New
-            </Link>
+            Contact Us 
           </div>
           <DataGrid
             className="datagrid"
@@ -77,6 +89,8 @@ const Contact = () => {
             checkboxSelection
           />
         </div>
+        </div>
+
       );
 }
 

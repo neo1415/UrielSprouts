@@ -7,7 +7,10 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const About = () => {
   return (
-    <div className='about-container app__flex about' id='about' >
+    <motion.div 
+     whileInView={{y: [-300, 0]}}
+                    transition= {{ duration:0.85, ease:'easeOut' }}
+    className='about-container app__flex about' id='about' >
         <motion.img
            whileInView={{scale:[0,1]}}
             transition={{duration:1,ease:'easeInOut'}}
@@ -38,7 +41,7 @@ src={images.basic}
       <Carousel.Item interval={7500} className='image'>
         <img
           className="d-block w-100 images1"
-          src={images.carousel7}
+          src={images.carousel9}
           alt="Two"
         />
       </Carousel.Item>
@@ -76,7 +79,7 @@ src={images.basic}
           </p>
 
         </div>
-    </div>
+    </motion.div>
   )
 }
 

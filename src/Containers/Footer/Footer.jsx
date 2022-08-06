@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { images } from '../../Constants'
 import { Appwrap, MotionWrap } from '../../Wrapper';
-import { serverTimestamp} from 'firebase/firestore' 
+import { serverTimestamp, Timestamp} from 'firebase/firestore' 
 import { db } from '../../Components/firebaseConfig'
 import { v4 as uuidv4 } from 'uuid';
 import { doc, setDoc } from "firebase/firestore"; 
@@ -28,7 +28,7 @@ const Footer = () => {
     try{
       await setDoc(doc(db, "contactForm", uuidv4()), {
         ...data,
-        timeStamp:serverTimestamp(),
+        createdAt:Timestamp.now().toDate()
       });
   }catch(err){
     console.log(err)

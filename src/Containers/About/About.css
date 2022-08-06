@@ -7,7 +7,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  height: 80vh;
+  height: 100vh !important;
   margin-bottom: 1rem;
 }
 
@@ -97,27 +97,11 @@
 }
 
 .images1 {
-  height: 100vh;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 40px;
   width: 100%;
   object-fit: cover;
-}
-
-@media screen and (min-width: 1910px) {
-  .images1 {
-    height: 60vh;
-  }
-}
-
-@media screen and (min-width: 3000px) {
-  .images1 {
-    height: 60vh;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  .images1 {
-    height: 40vh;
-  }
 }
 
 .about_content {
@@ -127,8 +111,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: -3rem;
-  z-index: 1;
+  margin-top: -3.7rem;
+  z-index: 10000;
+  background-color: var(--primary-color);
 }
 
 @media screen and (max-width: 950px) {

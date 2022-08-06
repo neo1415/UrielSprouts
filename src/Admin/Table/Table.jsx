@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../Components/firebaseConfig";
 import {AuthContext} from '../../Context/AuthContext'
+import SideBar from "../SideBar/SideBar";
 
 
 const List = () => {
@@ -45,7 +46,7 @@ const List = () => {
   };
 
   const handleView = async (id) => {
-    navigate('/adminHome/' + id)
+    navigate('/list/' + id)
   };
 
   const actionColumn = [
@@ -78,13 +79,11 @@ const List = () => {
     },
   ];
   return (
-
-    <div className="datatable">
+    <div className="list">
+        <SideBar />
+      <div className="datatable">
       <div className="datatableTitle">
-        Add New User
-        <Link to="/adminHome/new" className="link">
-          Add New
-        </Link>
+        CV Review
       </div>
       <DataGrid
         className="datagrid"
@@ -95,6 +94,8 @@ const List = () => {
         checkboxSelection
       />
     </div>
+    </div>
+
     
   );
 

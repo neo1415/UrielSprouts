@@ -1,6 +1,12 @@
+.list {
+  flex: 6 !important;
+  display: flex;
+}
+
 .datatable {
   height: 600px;
   padding: 20px;
+  width: 100%;
 }
 
 .datatable .datatableTitle {

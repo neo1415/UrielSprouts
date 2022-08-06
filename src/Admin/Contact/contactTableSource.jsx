@@ -7,6 +7,11 @@ export const userColumns = [
     headerName: "Name",
     width: 230,
   },
+  {
+    field: "createdAt",
+    headerName: "time",
+    width: 230,
+  },
 
   {
     field: "email",

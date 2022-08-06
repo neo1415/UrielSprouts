@@ -2,12 +2,13 @@
   --primary: var(--secondary-color);
   --secondary: #FE4880;
   --dark: #212121;
-  --light: #F3F3F3;
+  --light: #eaeafa;
 }
 
 .services {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5rem;
 }
 
 .services .service-title {
@@ -47,6 +48,7 @@
   border: none;
   transition: .6s;
   display: flex;
+  background-color: var(--primary-color);
   align-items: center;
 }
 
@@ -113,8 +115,8 @@
 }
 
 .card__inner {
-  width: 350px;
-  height: 480px;
+  width: 420px;
+  height: 280px;
   transition: transform 1s;
   transition: .6s;
   transform-style: preserve-3d;
@@ -283,7 +285,7 @@
   height: 128px;
   margin: 0 auto 30px;
   border-radius: 50%;
-  background-color: #FFF;
+  background-color: var(--primary-color) !important;
   border: 5px solid #FFF;
   object-fit: cover;
 }

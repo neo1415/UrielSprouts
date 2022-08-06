@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import './Services.scss';
 // import {urlFor, client} from '../../client';
+import { motion } from 'framer-motion';
 
 
 const Services = () => {
@@ -35,7 +36,10 @@ const Services = () => {
             We <span>Offer</span>
           </h2>
           <div className='card-container'>
-                <div className='card ' onMouseEnter={handleMouseEnter}
+                <motion.div 
+                whileInView={{x: [300, 0]}}
+                    transition= {{ duration:0.45, ease:'easeOut' }}
+                className='card ' onMouseEnter={handleMouseEnter}
                                       onMouseLeave={handleMouseLeave}
                 >
                 <div 
@@ -60,9 +64,12 @@ const Services = () => {
                     </div>
                   </div>
                 </div>
-                </div>
+                </motion.div>
 
-                <div className='card' onMouseEnter={handleMouseEnter2}
+                <motion.div 
+                whileInView={{x: [300, 0]}}
+                    transition= {{ duration:0.65, ease:'easeOut' }}
+                className='card' onMouseEnter={handleMouseEnter2}
                                       onMouseLeave={handleMouseLeave2}
                 >
                 <div 
@@ -86,9 +93,12 @@ const Services = () => {
                     </div>
                   </div>
                 </div>
-                </div>
+                </motion.div>
 
-                <div className='card'  onMouseEnter={handleMouseEnter3}
+                <motion.div 
+                whileInView={{x: [300, 0]}}
+                    transition= {{ duration:0.95, ease:'easeOut' }}
+                className='card'  onMouseEnter={handleMouseEnter3}
                                       onMouseLeave={handleMouseLeave3}
                 >
                 <div 
@@ -114,7 +124,7 @@ const Services = () => {
                     </div>
                   </div>
                 </div>
-                </div>
+                </motion.div>
             </div>
           </div>
 

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import data from './data';
 import './Mission.scss'
 import './slide.css'
+import { motion } from 'framer-motion';
 
 
 const Mission = () => {
@@ -25,7 +26,10 @@ useEffect(() => {
 }, [index]);
 
   return (
-    <div className='slider-section' id='discover' >
+    <motion.div 
+     whileInView={{x: [300, 0]}}
+                    transition= {{ duration:0.85, ease:'easeOut' }}
+    className='slider-section' id='discover' >
         <div className='section-center'>
             {sliderData.map((item,sliderIndex) => {
                 const {id, Title, description} = item;
@@ -46,7 +50,7 @@ useEffect(() => {
                 
             })}
         </div>
-    </div>
+    </motion.div>
   )
 }
 
