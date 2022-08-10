@@ -32,12 +32,12 @@ const Companies = () => {
             brands.length === 0 ? (
                 <p>No Testimonials yet</p>
             ) : (
-                brands.map(({id, file, company}) => (
+                brands.map(({id, img, company}) => (
                   
                    
                         <div className='slide-track' key={id}>
                            <div className='slide'>
-                        <img src = {file} alt='imge'></img>
+                        <img src = {img} alt='imge'></img>
                         </div>
                         </div>
 

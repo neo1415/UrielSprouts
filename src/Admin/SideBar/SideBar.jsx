@@ -18,10 +18,10 @@ const SideBar = () => {
                 <Link to ='/contact'><span>Contact Us</span></Link> 
                 </li>
                 <li>
-                    <span>Dashboard</span>
+                <Link to ='/testimonialadmin'><span>Testimonials</span></Link> 
                 </li>
                 <li>
-                    <span>Dashboard</span>
+                <Link to ='/brands'><span>Brands</span></Link> 
                 </li>
             </ul>
         </div>

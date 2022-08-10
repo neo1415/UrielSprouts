@@ -1,3 +1,48 @@
 #review{
     height: 7rem;
 }
+.TestimonialAdmin{
+    display: flex;
+    flex: 2 !important;
+}
+.review-container{
+    display: flex;
+    margin-top: 2rem;
+    .test-title{
+        position: absolute;
+        right: 5%;
+
+        .test-form{
+            .Name, .Company{
+                width: 18rem;
+                margin: 1rem 0;
+                height: 2.5rem;
+                border-radius: 5px;
+                border: 1px solid rgb(75, 144, 235);
+            }
+            .Review{
+                width: 18rem;
+                margin: 1rem 0;
+                border-radius: 5px;
+                border: 1px solid rgb(75, 144, 235);
+            }
+            .input-file-container {
+                position: absolute;
+                right: 10%;
+            }
+            button{
+                margin-top: 7rem;
+                height: 1.5rem;
+                width: 10rem;
+                padding-bottom: 2rem;
+                background-color: rgb(23, 141, 238);
+                color: white;
+                font-weight: 600;
+                border-radius: 5px;
+                position: absolute;
+                right: 23%;
+            }
+        }
+        
+    }
+}

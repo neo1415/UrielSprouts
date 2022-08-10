@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { BsCloudUpload } from 'react-icons/bs';
 import ViewBrand from './ViewBrand';
 import { Timestamp } from 'firebase/firestore';
+import SideBar from '../SideBar/SideBar';
 
 const Brands = () => {
 
@@ -58,7 +59,7 @@ const Brands = () => {
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         getDownloadURL(storageRef).then((downloadURL) => {
-          setData((prev)=>({...prev, file:downloadURL}))
+          setData((prev)=>({...prev, img:downloadURL}))
         });
       }
     );
@@ -97,8 +98,8 @@ const Brands = () => {
         }
       }
       const Icon = {
-        fontSize:90,
-        marginTop:30
+        fontSize:30,
+        marginLeft:10
       }
 
       const handleInput =(e)=>{
@@ -110,10 +111,16 @@ const Brands = () => {
 
 
   return (
-    <div>
+    <div className='brands'>
+    <SideBar />
+    <div className='brands-container'>
+    <div className='BrandsReviews'>
     <ViewBrand />
-        <div className='test-form'>
-            <form  onSubmit={handleSend}>
+    </div>
+    <div className='test-form'>
+        <div className='brands-title'>
+        <div className='brands-form'>
+        <form  onSubmit={handleSend}>
                 <div className='test-form'>
                 {Inputs.map((input) => (
                 <div className="test-inputs" key={input.id}>
@@ -122,6 +129,7 @@ const Brands = () => {
                         id={input.id}
                         type={input.type}
                         placeholder={input.placeholder}
+                        className='brandinput'
                         onChange={handleInput}
                     />
                     </div>
@@ -134,10 +142,7 @@ const Brands = () => {
                     type="file"
                     onChange={changeHandler} />
                     <label tabIndex="0" htmlFor="my-file" className="input-file-trigger">
-                    <p>Select a file</p>
-                    <div className='iconBorder'>
-                    <BsCloudUpload style={Icon} />
-                    </div>
+                    <h5>Upload Photo <BsCloudUpload style={Icon} /></h5> 
                     </label>
                 </div>
                 <div className='output'>
@@ -148,7 +153,12 @@ const Brands = () => {
                     <button type='submit' >submit</button>
                 </div>  
             </form>
+        </div>
+        </div>
+
             </div>
+    </div>
+
     </div>
   )
 }

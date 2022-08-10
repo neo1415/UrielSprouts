@@ -1,23 +1,19 @@
-#review {
-  height: 7rem;
-}
-
-.TestimonialAdmin {
+.brands {
   display: flex;
   flex: 2 !important;
 }
 
-.review-container {
+.brands-container {
   display: flex;
   margin-top: 2rem;
 }
 
-.review-container .test-title {
+.brands-container .brands-title {
   position: absolute;
   right: 5%;
 }
 
-.review-container .test-title .test-form .Name, .review-container .test-title .test-form .Company {
+.brands-container .brands-title .brands-form .brandinput {
   width: 18rem;
   margin: 1rem 0;
   height: 2.5rem;
@@ -25,19 +21,12 @@
   border: 1px solid #4b90eb;
 }
 
-.review-container .test-title .test-form .Review {
-  width: 18rem;
-  margin: 1rem 0;
-  border-radius: 5px;
-  border: 1px solid #4b90eb;
-}
-
-.review-container .test-title .test-form .input-file-container {
+.brands-container .brands-title .brands-form .input-file-container {
   position: absolute;
   right: 10%;
 }
 
-.review-container .test-title .test-form button {
+.brands-container .brands-title .brands-form button {
   margin-top: 7rem;
   height: 1.5rem;
   width: 10rem;

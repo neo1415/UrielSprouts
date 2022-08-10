@@ -1,15 +1,22 @@
 import React,{useEffect, useState} from 'react'
 import { getDocs } from 'firebase/firestore';
+import { DataGrid } from "@mui/x-data-grid";
+import { userColumns } from './brandsTableSource';
 import { collection } from 'firebase/firestore';
 import { db, storage } from '../../Components/firebaseConfig';
 import { deleteDoc } from 'firebase/firestore';
 import { doc } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
+import './ViewBrand.scss'
+import SideBar from '../SideBar/SideBar';
 import { Params } from 'react-router-dom';
 import { deleteObject,ref } from 'firebase/storage';
 
 const ViewBrand = () => {
 
     const [data, setData] = useState([])
+
+    const navigate=useNavigate()
 
     useEffect(()=> {
         const fetchData = async () =>{
@@ -29,45 +36,67 @@ const ViewBrand = () => {
         fetchData()
       },[])
 
-      const handleDelete = async (id,data) => {
+      const handleDelete = async (id) => {
         try {
           await deleteDoc(doc(db, "brands", id));
-          // setData(data.filter((item) => item.id !== id));
-          const storageRef = ref(storage,data )
-          await deleteObject(storageRef)
+          setData(data.filter((item) => item.id !== id));
         } catch (err) {
           console.log(err);
         }
       };
-
+    
+      const handleView = async (id) => {
+        navigate('/brands/' + id)
+      };
+    
+      const actionColumn = [
+        {
+          field: "action",
+          headerName: "Action",
+          width: 200,
+          renderCell: (params, id) => {
+            return (
+              <div className="cellAction">
+                {/* <Link to={"/adminid/" + id} style={{ textDecoration: "none" }}>
+                  <div className="viewButton">View</div>
+                </Link> */}
+                <div
+                  className="deleteButton"
+                  onClick={() => handleDelete(params.row.id)}
+                >
+                  Delete
+                </div>
+                <div
+                  className="viewButton"
+                  onClick={() => handleView(params.row.id)}
+                >
+                  View
+                </div>
+    
+              </div>
+            );
+          },
+        },
+      ];
       return (
-    
-        <div>
-            {
-            data.length === 0 ? (
-                <p>No Testimonials yet</p>
-            ) : (
-                data.map(({id, customerName, file, review, company}) => (
-                    <div className="app__testimonial-item app__flex" key={id}>
-                    <img src = {file} alt='imge'></img>
-                        <div className='app__testimonial-content'>
-                            <div>
-                               <p className='p-text'>{review}</p>
-                            </div>
-                            <div>
-                            <h4 className='bold-text'>{customerName}</h4>
-                                <h5>{company}</h5>
-                                <button  onClick={handleDelete}>delete</button>
-                            </div>
-    
-                        </div>
-                    </div>
-                ))
-            )
-        }
+        <div className="brandslist">
+          <div className="datatable">
+          <div className="datatableTitle">
+            Brands
+          </div>
+          <DataGrid
+            className="datagrid"
+            rows={data}
+            columns={userColumns.concat(actionColumn)}
+            pageSize={9}
+            rowsPerPageOptions={[9]}
+            checkboxSelection
+          />
+        </div>
         </div>
     
-      )
+        
+      );
 
 }
 

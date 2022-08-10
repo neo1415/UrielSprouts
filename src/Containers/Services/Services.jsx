@@ -37,8 +37,7 @@ const Services = () => {
           </h2>
           <div className='card-container'>
                 <motion.div 
-                whileInView={{x: [300, 0]}}
-                    transition= {{ duration:0.45, ease:'easeOut' }}
+               
                 className='card ' onMouseEnter={handleMouseEnter}
                                       onMouseLeave={handleMouseLeave}
                 >
@@ -67,8 +66,7 @@ const Services = () => {
                 </motion.div>
 
                 <motion.div 
-                whileInView={{x: [300, 0]}}
-                    transition= {{ duration:0.65, ease:'easeOut' }}
+               
                 className='card' onMouseEnter={handleMouseEnter2}
                                       onMouseLeave={handleMouseLeave2}
                 >
@@ -96,8 +94,7 @@ const Services = () => {
                 </motion.div>
 
                 <motion.div 
-                whileInView={{x: [300, 0]}}
-                    transition= {{ duration:0.95, ease:'easeOut' }}
+              
                 className='card'  onMouseEnter={handleMouseEnter3}
                                       onMouseLeave={handleMouseLeave3}
                 >

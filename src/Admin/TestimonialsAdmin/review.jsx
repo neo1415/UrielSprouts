@@ -1,15 +1,23 @@
 import React,{useEffect, useState} from 'react'
+import { DataGrid } from "@mui/x-data-grid";
+import { userColumns } from './reviewTableSource';
 import { getDocs } from 'firebase/firestore';
 import { collection } from 'firebase/firestore';
 import { db } from '../../Components/firebaseConfig';
+import { deleteDoc } from 'firebase/firestore';
+import { doc } from 'firebase/firestore';
+import SideBar from '../SideBar/SideBar';
 import { orderBy } from 'firebase/firestore';
 import { query } from 'firebase/firestore';
 import { onSnapshot } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 import './review.scss'
 
 const Reviews = () => {
     // const [testimonials, setTestimonials] = useState([]);
     const [data, setData] = useState([])
+
+    const navigate=useNavigate()
 
     useEffect(()=> {
         const fetchData = async () =>{
@@ -43,33 +51,67 @@ const Reviews = () => {
     
 
 
-  return (
-    
-    <div>
-        {
-        data.length === 0 ? (
-            <p>No Testimonials yet</p>
-        ) : (
-            data.map(({id, customerName, file, review, company}) => (
-                <div className="app__testimonial-item app__flex" key={id}>
-                <img src = {file} alt='imge'></img>
-                    <div className='app__testimonial-content'>
-                        <div>
-                           <p className='p-text'>{review}</p>
-                        </div>
-                        <div>
-                        <h4 className='bold-text'>{customerName}</h4>
-                            <h5>{company}</h5>
-                        </div>
-
-                    </div>
-                </div>
-            ))
-        )
-    }
-    </div>
-
-  )
+    const handleDelete = async (id) => {
+      try {
+        await deleteDoc(doc(db, "testimonials", id));
+        setData(data.filter((item) => item.id !== id));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+  
+    const handleView = async (id) => {
+      navigate('/testimonials/' + id)
+    };
+  
+    const actionColumn = [
+      {
+        field: "action",
+        headerName: "Action",
+        width: 200,
+        renderCell: (params, id) => {
+          return (
+            <div className="cellAction">
+              {/* <Link to={"/adminid/" + id} style={{ textDecoration: "none" }}>
+                <div className="viewButton">View</div>
+              </Link> */}
+              <div
+                className="deleteButton"
+                onClick={() => handleDelete(params.row.id)}
+              >
+                Delete
+              </div>
+              <div
+                className="viewButton"
+                onClick={() => handleView(params.row.id)}
+              >
+                View
+              </div>
+  
+            </div>
+          );
+        },
+      },
+    ];
+    return (
+      <div className="testimonial-list">
+        <div className="datatable">
+        <div className="datatableTitle">
+          Testimonials
+        </div>
+        <DataGrid
+          className="datagrid"
+          rows={data}
+          columns={userColumns.concat(actionColumn)}
+          pageSize={9}
+          rowsPerPageOptions={[9]}
+          checkboxSelection
+        />
+      </div>
+      </div>
+  
+      
+    );
 }
 
 export default Reviews

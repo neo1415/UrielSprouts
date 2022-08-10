@@ -89,7 +89,7 @@ useEffect(() => {
       <div className='SlideSection' id='discover' >
         <div className='SectionCenter'>
             {testimonials.map((item,sliderIndex) => {
-                const {id, file, customerName, review, company} = item;
+                const {id, img, customerName, review, company} = item;
                 let position = 'next-slide';
                 if(sliderIndex === index){
                     position = 'active-slide'
@@ -100,7 +100,7 @@ useEffect(() => {
                 }
                 return(
                     <div id='SectionArticle' className={position} key={id}>
-                        <img className='SliderImage' src={file} alt ={file.name} />
+                        <img className='SliderImage' src={img} alt ={img.name} />
                         <div className='content'>
                         <p className='SliderTitle'>{review}</p>
                         <h4 className='SliderH4'>{customerName}</h4>

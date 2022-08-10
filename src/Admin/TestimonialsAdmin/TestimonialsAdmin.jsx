@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { BsCloudUpload } from 'react-icons/bs';
 import Review from './../../Pages/Review';
 import Reviews from './review';
+import SideBar from '../SideBar/SideBar';
 
 const TestimonialsAdmin = () => {
 
@@ -58,7 +59,7 @@ const TestimonialsAdmin = () => {
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         getDownloadURL(storageRef).then((downloadURL) => {
-          setData((prev)=>({...prev, file:downloadURL}))
+          setData((prev)=>({...prev, img:downloadURL}))
         });
       }
     );
@@ -97,8 +98,8 @@ const TestimonialsAdmin = () => {
         }
       }
       const Icon = {
-        fontSize:90,
-        marginTop:30
+        fontSize:30,
+        marginLeft:10
       }
 
       const handleInput =(e)=>{
@@ -111,7 +112,11 @@ const TestimonialsAdmin = () => {
   return (
    
     <div className='TestimonialAdmin'>
-     <Reviews />
+      <SideBar />
+      <div className='review-container'>
+      <div className='TestReviews'>
+    <Reviews />
+    </div>
         <div className='test-title'>
             <div className='test-form'>
             <form  onSubmit={handleSend}>
@@ -122,6 +127,7 @@ const TestimonialsAdmin = () => {
                     <input
                         id={input.id}
                         type={input.type}
+                        className={input.className}
                         placeholder={input.placeholder}
                         onChange={handleInput}
                     />
@@ -135,10 +141,7 @@ const TestimonialsAdmin = () => {
                     type="file"
                     onChange={changeHandler} />
                     <label tabIndex="0" htmlFor="my-file" className="input-file-trigger">
-                    <p>Select a file</p>
-                    <div className='iconBorder'>
-                    <BsCloudUpload style={Icon} />
-                    </div>
+                    <h5>Upload Photo <BsCloudUpload style={Icon} /></h5> 
                     </label>
                 </div>
                 <div className='output'>
@@ -151,6 +154,7 @@ const TestimonialsAdmin = () => {
             </form>
             </div>
         </div>
+      </div>
     </div>
   )
 }
