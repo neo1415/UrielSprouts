@@ -7,10 +7,17 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const About = () => {
   return (
-    <motion.div 
-     whileInView={{y: [-300, 0]}}
+    <div className='about-section'>
+   <h2 className='about-title'>
+      About <span>Us</span>
+    </h2>
+       <motion.div 
+     whileInView={{y: [300, 0]}}
                     transition= {{ duration:0.85, ease:'easeOut' }}
     className='about-container app__flex about' id='about' >
+        <div className='about-section'>
+      
+      </div>
         <motion.img
            whileInView={{scale:[0,1]}}
             transition={{duration:1,ease:'easeInOut'}}
@@ -63,7 +70,7 @@ src={images.basic}
              className='overlay_circle2'
         />
 
-          <h2 className='about-title'>About <span>Us</span></h2>
+         
           <p>
           Urielsprout Limited is a vibrant and innovative 
           company committed to the goal of training and 
@@ -80,6 +87,9 @@ src={images.basic}
 
         </div>
     </motion.div>
+  
+    </div>
+
   )
 }
 

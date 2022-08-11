@@ -8,6 +8,7 @@
   position: relative;
   overflow-y: visible;
   display: flex;
+  z-index: 10;
 }
 
 #section-article {

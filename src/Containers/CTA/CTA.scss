@@ -14,6 +14,7 @@
     align-items: center;
     text-align: center;
 }
+
 .cta{
     color: var(--black-color)!important;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -121,5 +122,20 @@ h3{
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: 500;
+    margin-bottom: -3rem;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+  }
+
+  .Containers {
+    padding-top: -90px;
+    margin: -19rem auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center !important;
+  justify-content: center !important;
+  a{
+    font-size: .9rem;
+  }
+  
   }
