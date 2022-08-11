@@ -7,7 +7,7 @@ import './Header.scss'
 import { HiArrowNarrowDown } from 'react-icons/hi';
 import { BsTwitter, BsInstagram} from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
-import Button from './../../Constants/button/button';
+
 import { FaHandPointRight } from 'react-icons/fa';
 
 const Header = () => {
