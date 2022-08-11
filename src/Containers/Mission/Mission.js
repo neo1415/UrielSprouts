@@ -27,8 +27,7 @@ useEffect(() => {
 
   return (
     <motion.div 
-     whileInView={{x: [300, 0]}}
-                    transition= {{ duration:0.85, ease:'easeOut' }}
+   
     className='slider-section' id='discover' >
         <div className='section-center'>
             {sliderData.map((item,sliderIndex) => {

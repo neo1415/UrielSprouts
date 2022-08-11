@@ -24,8 +24,8 @@ src={images.carousel1}
         <Carousel.Caption>
         <div
          className='hero-Contents'>
-            <h1 className='hero-h'
-            >Reach Your <br/><span className='span'>Highest Potential</span> </h1>
+            <h2 className='hero-h'
+            >Reach Your <br/><span className='span'>Highest Potential</span> </h2>
             <div
             className='header-p'
             >
@@ -66,7 +66,7 @@ src={images.carousel1}
         <div
          className='hero-Contents'>
             <h1 className='hero-h span'>
-            Business Management & Incubation </h1>
+            Business Management </h1>
             <div
             className='header-p'
             >

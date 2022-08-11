@@ -13,13 +13,13 @@
 
 @media screen and (max-width: 1080px) {
   .about-container {
-    height: 40vh;
+    height: 40vh !important;
   }
 }
 
 @media screen and (max-width: 550px) {
   .about-container {
-    height: 70vh;
+    height: 70vh !important;
   }
 }
 
@@ -31,19 +31,19 @@
 
 @media screen and (max-width: 385px) {
   .about-container {
-    height: 85vh;
+    height: 85vh !important;
   }
 }
 
 @media screen and (min-width: 1910px) {
   .about-container {
-    height: 60vh;
+    height: 60vh !important;
   }
 }
 
 @media screen and (min-width: 3000px) {
   .about-container {
-    height: 60vh;
+    height: 60vh !important;
   }
 }
 
@@ -73,7 +73,7 @@
   width: 150rem;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 720px) {
   .app__header-image {
     display: none;
   }
