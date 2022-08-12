@@ -48,7 +48,7 @@ src={images.basic}
       <Carousel.Item interval={7500} className='image'>
         <img
           className="d-block w-100 images1"
-          src={images.carousel9}
+          src={images.carousel4}
           alt="Two"
         />
       </Carousel.Item>

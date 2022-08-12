@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect,useContext } from "react";
 import './Table.scss'
 import { useNavigate } from "react-router-dom";
-import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { collection, getDocs, deleteDoc, doc,onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../../Components/firebaseConfig";
 import {AuthContext} from '../../Context/AuthContext'
 import SideBar from "../SideBar/SideBar";
@@ -16,21 +16,16 @@ const List = () => {
   const navigate=useNavigate()
   
   useEffect(()=> {
-    const fetchData = async () =>{
-      let list =[]
-      try{
-        const querySnapshot = await getDocs(collection(db,'users'));
-        querySnapshot.forEach((doc)=>{
-          list.push({id: doc.id, ...doc.data()})
-          console.log(doc.id, "=>", doc.data());
-        })
-        setData(list)
-        console.log(list)
-      } catch(err){
-        console.log(err)
-      }
-    }
-    fetchData()
+    const dataRef = collection(db, 'users')
+    const q = query(dataRef, orderBy('createdAt', 'desc'));
+    onSnapshot(q,(snapshot) => {
+      const data = snapshot.docs.map((doc) => ({
+        id:doc.id,
+        ...doc.data(),
+      }))
+      setData(data);
+      console.log(data)
+    })
   },[])
   console.log(data)
 

@@ -4,7 +4,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { userColumns } from './brandsTableSource';
 import { collection } from 'firebase/firestore';
 import { db, storage } from '../../Components/firebaseConfig';
-import { deleteDoc } from 'firebase/firestore';
+import { deleteDoc, orderBy, query, onSnapshot } from 'firebase/firestore';
 import { doc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import './ViewBrand.scss'
@@ -18,23 +18,35 @@ const ViewBrand = () => {
 
     const navigate=useNavigate()
 
+    // useEffect(()=> {
+    //     const fetchData = async () =>{
+    //       let list =[]
+    //       try{
+    //         const querySnapshot = await getDocs(collection(db,'brands'));
+    //         querySnapshot.forEach((doc)=>{
+    //           list.push({id: doc.id, ...doc.data()})
+    //           console.log(doc.id, "=>", doc.data());
+    //         })
+    //         setData(list)
+    //         console.log(list)
+    //       } catch(err){
+    //         console.log(err)
+    //       }
+    //     }
+    //     fetchData()
+    //   },[])
     useEffect(()=> {
-        const fetchData = async () =>{
-          let list =[]
-          try{
-            const querySnapshot = await getDocs(collection(db,'brands'));
-            querySnapshot.forEach((doc)=>{
-              list.push({id: doc.id, ...doc.data()})
-              console.log(doc.id, "=>", doc.data());
-            })
-            setData(list)
-            console.log(list)
-          } catch(err){
-            console.log(err)
-          }
-        }
-        fetchData()
-      },[])
+      const dataRef = collection(db, 'brands')
+      const q = query(dataRef, orderBy('createdAt', 'desc'));
+      onSnapshot(q,(snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+          id:doc.id,
+          ...doc.data(),
+        }))
+        setData(data);
+        console.log(data)
+      })
+    },[])
 
       const handleDelete = async (id) => {
         try {

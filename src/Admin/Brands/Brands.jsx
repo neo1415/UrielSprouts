@@ -150,7 +150,7 @@ const Brands = () => {
                 {file && <div className='error'>{file.name}</div>}
               </div>
                 <div className='submit_button'>
-                    <button type='submit' >submit</button>
+                    <button className='sub-btn' type='submit' >submit</button>
                 </div>  
             </form>
         </div>

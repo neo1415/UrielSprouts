@@ -10,6 +10,7 @@ import { BsCloudUpload } from 'react-icons/bs';
 import Review from './../../Pages/Review';
 import Reviews from './review';
 import SideBar from '../SideBar/SideBar';
+import { Timestamp } from 'firebase/firestore';
 
 const TestimonialsAdmin = () => {
 
@@ -79,7 +80,7 @@ const TestimonialsAdmin = () => {
           // )
           await setDoc(doc(db, "testimonials", uuidv4()), {
             ...data,
-            timeStamp:serverTimestamp(),
+            createdAt: Timestamp.now().toDate()
           });
       }catch(err){
         console.log(err)
@@ -149,7 +150,7 @@ const TestimonialsAdmin = () => {
                 {file && <div className='error'>{file.name}</div>}
               </div>
                 <div className='submit_button'>
-                    <button type='submit' >submit</button>
+                <button className='sub-btn' type='submit' >submit</button>
                 </div>  
             </form>
             </div>

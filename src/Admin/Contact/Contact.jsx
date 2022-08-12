@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import { collection, getDocs, deleteDoc,doc, } from "firebase/firestore";
+import { collection, getDocs, deleteDoc,doc,query, onSnapshot,orderBy } from "firebase/firestore";
 import { db } from "../../Components/firebaseConfig";
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns } from './contactTableSource';
@@ -11,24 +11,36 @@ const Contact = () => {
     const [data, setData] = useState([]);
     const navigate=useNavigate()
 
+    // useEffect(()=> {
+    //     const fetchData = async () =>{
+    //       let list =[]
+    //       try{
+    //         const querySnapshot = await getDocs(collection(db,'contactForm'));
+    //         querySnapshot.forEach((doc)=>{
+    //           list.push({id: doc.id, ...doc.data()})
+    //           console.log(doc.id, "=>", doc.data());
+    //         })
+    //         setData(list)
+    //         console.log(list)
+    //       } catch(err){
+    //         console.log(err)
+    //       }
+    //     }
+    //     fetchData()
+    //   },[])
+    //   console.log(data)
     useEffect(()=> {
-        const fetchData = async () =>{
-          let list =[]
-          try{
-            const querySnapshot = await getDocs(collection(db,'contactForm'));
-            querySnapshot.forEach((doc)=>{
-              list.push({id: doc.id, ...doc.data()})
-              console.log(doc.id, "=>", doc.data());
-            })
-            setData(list)
-            console.log(list)
-          } catch(err){
-            console.log(err)
-          }
-        }
-        fetchData()
-      },[])
-      console.log(data)
+      const dataRef = collection(db, 'contactForm')
+      const q = query(dataRef, orderBy('createdAt', 'desc'));
+      onSnapshot(q,(snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+          id:doc.id,
+          ...doc.data(),
+        }))
+        setData(data);
+        console.log(data)
+      })
+    },[])
 
 
       const handleDelete = async (id) => {

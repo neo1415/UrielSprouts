@@ -11,6 +11,7 @@ import { BsCloudUpload } from 'react-icons/bs';
 import { PaystackButton } from 'react-paystack';
 import { Link } from 'react-router-dom'
 import { BsArrowLeft } from 'react-icons/bs'
+import { Timestamp } from 'firebase/firestore';
 
 
 const HeroSection = () => {
@@ -122,7 +123,7 @@ uploadTask.on('state_changed',
       // )
       await setDoc(doc(db, "users", uuidv4()), {
         ...data,
-        timeStamp:serverTimestamp(),
+        createdAt: Timestamp.now().toDate()
       });
   }catch(err){
     console.log(err)
@@ -200,7 +201,7 @@ uploadTask.on('state_changed',
                   />
                 </div>
               ))}
-              <div className='output'>
+              <div className='Output'>
                 {error && <div className='error'>{error}</div>}
                 {file && <div className='error'>{file.name}</div>}
               </div>
