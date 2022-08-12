@@ -63,15 +63,15 @@ const Services = () => {
 <div className='serviceCard'>
 <div class="blog-card business spring-fever">
   <div class="title-content">
-    <h3><a href="http://localhost:3000/review/#cv">Business Advisory</a></h3>
-    <div class="intro"> <a href="http://localhost:3000/review/#cv">Business Management & Incubation Program</a> </div>
+    <h3><a href="/review/#cv">Business Advisory</a></h3>
+    <div class="intro"> <a href="/review/#cv">Business Management & Incubation Program</a> </div>
   </div>
   <div class="card-info">
   <p>
   We train individuals business enthusiast on the rudiment of starting a business
   from ideation stage to going-live and also deploy advanced business management ... 
   </p>
-    <a href="http://localhost:3000/review/#cv">Continue<span class="licon icon-arr icon-black"></span></a>
+    <a href="/review/#cv">Continue<span class="licon icon-arr icon-black"></span></a>
   </div>
   <div class="utility-info">
     <ul class="utility-list">
