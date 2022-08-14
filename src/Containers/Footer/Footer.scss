@@ -139,6 +139,8 @@ margin-top: 7rem;
         width: 100%;
         border-radius: 10px;
         border: none;
+        resize: none;
+
     }
 .message{
     height: 6rem;
@@ -207,7 +209,7 @@ bottom: -15%!important;
     color: var(--primary-color);
 }
 .message{
-    width: 20rem !important;
+    width: 50rem !important;
     height: 10rem;
    
 }

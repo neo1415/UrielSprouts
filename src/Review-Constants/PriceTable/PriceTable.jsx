@@ -18,10 +18,10 @@ const PriceTable = () => {
     }
   return (
     <div className='price-section'>
+    <div className='container-fluid'>
     <div className='price-title'>
         <h2>Our Pricing</h2>
     </div>
-    <div className='container-fluid'>
     <div className="container-price">
       <div className="row">
         <div className="col-sm-4">

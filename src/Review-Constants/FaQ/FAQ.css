@@ -7,7 +7,8 @@
   text-align: center;
   align-items: center;
   width: 100%;
-  margin-top: -26rem !important;
+  position: relative;
+  margin-top: -9rem;
   background-image: var(--primary-color);
 }
 
@@ -17,7 +18,7 @@
   margin: 0 auto;
   max-width: 100%;
   padding: 0;
-  margin-top: -77px;
+  margin-top: -49px;
 }
 
 .faq__logo__image {

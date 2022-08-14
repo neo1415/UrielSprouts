@@ -157,6 +157,7 @@ h2 {
   width: 100%;
   border-radius: 10px;
   border: none;
+  resize: none;
 }
 
 .app__footer-form .message {
@@ -239,6 +240,6 @@ h2 {
 }
 
 .message {
-  width: 20rem !important;
+  width: 50rem !important;
   height: 10rem;
 }

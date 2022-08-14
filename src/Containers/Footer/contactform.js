@@ -14,7 +14,7 @@ export const Inputs = [
     
     {
         id: "message",
-        type: "text",
+        type: "textarea",
         placeholder: "Message",
         className:'message'
       },   

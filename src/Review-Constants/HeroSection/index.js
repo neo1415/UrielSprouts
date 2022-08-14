@@ -218,7 +218,7 @@ uploadTask.on('state_changed',
     <div   className={` ${openPayment ? 'check':'checkHidden'}`}  id='checkout'>
       <div 
      className='check_container'>
-      <div className="top">
+      <div className="Top">
           <h1>Checkout </h1>
         </div>
         <div className="bottom">

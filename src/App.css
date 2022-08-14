@@ -46,7 +46,7 @@
 }
 
 .head-text span {
-  color: #bf2e46;
+  color: #bf2e46 !important;
 }
 
 @media screen and (min-width: 2000px) {

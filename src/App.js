@@ -11,6 +11,9 @@ import List from './Admin/Table/Table';
 import Contact from './Admin/Contact/Contact';
 import TestimonialsAdmin from './Admin/TestimonialsAdmin/TestimonialsAdmin';
 import Brands from './Admin/Brands/Brands';
+import Employability from './Pages/Employability';
+import Reg from './EmployabilityContainers/Reg';
+import ExecReg from './EmployabilityContainers/ExecReg';
 
 const App = () => {
   const {currentUser} = useContext(AuthContext)
@@ -27,6 +30,12 @@ const App = () => {
            element = {<Home />} />
           <Route exact path="/review"
            element = {<Review />} />
+          <Route exact path="/employability"
+           element = {<Employability />} />
+          <Route exact path="registration"
+           element = {<Reg />} />
+            <Route exact path="executive-registration"
+           element = {<ExecReg />} />
           <Route exact path="/login"
            element = {<Login />} />
           <Route exact path="/adminHome">

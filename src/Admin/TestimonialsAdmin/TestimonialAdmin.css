@@ -49,3 +49,7 @@
   position: absolute;
   right: 23%;
 }
+
+.Company, .Name {
+  resize: none;
+}

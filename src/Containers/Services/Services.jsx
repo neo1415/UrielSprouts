@@ -39,8 +39,8 @@ const Services = () => {
 <div className='serviceCard'>
 <div class="blog-card employability spring-fever">
   <div class="title-content">
-    <h3><a href="https://urielsproutslimited.netlify.app/">Employability</a></h3>
-    <div class="intro"> <a href="https://urielsproutslimited.netlify.app/">Emplpoyability Skills Program and Job/Internship Placements</a> </div>
+    <h3><a href="/employability">Employability</a></h3>
+    <div class="intro"> <a href="/employability">Emplpoyability Skills Program and Job/Internship Placements</a> </div>
   </div>
   <div class="card-info">
   <p>
@@ -48,7 +48,7 @@ const Services = () => {
   job seekers for the world of work. Through our work readiness ... 
   </p>
    
-    <a href="https://urielsproutslimited.netlify.app/">Continue<span class="licon icon-arr icon-black"></span></a>
+    <a href="/employability">Continue<span class="licon icon-arr icon-black"></span></a>
   </div>
   <div class="utility-info">
     <ul class="utility-list">

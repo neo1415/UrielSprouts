@@ -60,15 +60,18 @@ const Footer = () => {
       {Inputs.map((input) => (
                 <div className="formInput" key={input.id}>
                   <label>{input.label}</label>
-                  <input
+                  <textarea
                     id={input.id}
                     type={input.type}
                     className={input.className}
                     placeholder={input.placeholder}
                     onChange={handleInput}
                   />
+        
                 </div>
+                
               ))}  
+
         <button type='button' className='p-text' onClick={handleAdd}>{loading ? 'Sending' : 'Send Message'}</button>
         
       </div>

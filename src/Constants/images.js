@@ -23,7 +23,7 @@ import Email from '../Assets/email.mp4'
 import Hero1 from '../Assets/hero1.jpeg';
 import Hero2 from '../Assets/Hero2.jpeg';
 import Hero3 from '../Assets/Hero3.jpeg';
-// import formBG from '../Assets/formBG.jpg';
+import formBG from '../Assets/formBG.jpg';
 import basic from '../Assets/baasic.jpeg';
 import carousel1 from '../Assets/carousel1.jpeg'
 import carousel2 from '../Assets/Carousel2.jpeg'
@@ -61,7 +61,7 @@ export default {
     Hero1,
     Hero2,
     Hero3,
-//    formBG,
+   formBG,
    basic,
    carousel1,
    carousel2,

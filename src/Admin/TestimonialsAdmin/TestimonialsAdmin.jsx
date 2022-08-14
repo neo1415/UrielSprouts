@@ -125,7 +125,7 @@ const TestimonialsAdmin = () => {
                 {Inputs.map((input) => (
                 <div className="test-inputs" key={input.id}>
                 
-                    <input
+                    <textarea
                         id={input.id}
                         type={input.type}
                         className={input.className}
