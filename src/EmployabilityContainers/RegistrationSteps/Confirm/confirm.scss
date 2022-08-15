@@ -23,6 +23,9 @@
     flex-direction: column;
     background-image: linear-gradient(rgba(255, 255, 255, 0.596), rgb(20, 20, 20)),url('../../../Assets/aboutBG.jpg')!important;
     background-size: cover;
+    @media screen and (max-width:650px) {
+        margin: 0 3rem;
+    }
     }
     .confirmTitle{
         margin-top: 5rem;

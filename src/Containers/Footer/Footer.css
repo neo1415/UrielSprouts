@@ -240,6 +240,6 @@ h2 {
 }
 
 .message {
-  width: 50rem !important;
+  width: 50rem;
   height: 10rem;
 }

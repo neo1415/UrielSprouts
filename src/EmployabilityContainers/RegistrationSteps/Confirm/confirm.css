@@ -27,6 +27,12 @@
   background-size: cover;
 }
 
+@media screen and (max-width: 650px) {
+  .confirm {
+    margin: 0 3rem;
+  }
+}
+
 .confirmTitle {
   margin-top: 5rem;
 }

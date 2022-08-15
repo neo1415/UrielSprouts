@@ -72,7 +72,7 @@ const Footer = () => {
                 
               ))}  
 
-        <button type='button' className='p-text' onClick={handleAdd}>{loading ? 'Sending' : 'Send Message'}</button>
+        <button type='button' className='p-text' onClick={handleAdd}>{loading ? 'Sending' : 'Send'}</button>
         
       </div>
       :<div>
