@@ -38,6 +38,32 @@
   }
 }
 
+.css-xts502 {
+  width: 1031px !important;
+  margin: auto;
+  height: none;
+  overflow: none !important;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .css-xts502 {
+    width: 700px !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .css-xts502 {
+    width: 350px !important;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .css-xts502 {
+    width: 250px !important;
+  }
+}
+
 .upload {
   display: flex;
 }

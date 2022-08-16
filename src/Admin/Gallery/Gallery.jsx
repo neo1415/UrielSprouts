@@ -7,11 +7,25 @@ import { deleteDoc, orderBy, query, onSnapshot } from 'firebase/firestore';
 import { doc } from 'firebase/firestore';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { Delete, Download, MoreVert } from '@mui/icons-material';
+import deleteDocument from '../../firebase/deleteDocument';
+import deleteFile from '../../firebase/deleteFile';
+import { useAuth } from '../../context/AuthContext';
 
 import { Avatar, Tooltip, Typography } from '@mui/material';
 
 const Gallery = () => {
     const [images, setImage] = useState('')
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const { currentUser, setAlert } = useAuth();
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
 
     useEffect(()=> {
         const dataRef = collection(db, 'gallery')
@@ -34,6 +48,22 @@ const Gallery = () => {
           }&fit=crop&auto=format&dpr=2 2x`,
         };
       }
+
+      const handleDelete = async () => {
+        try {
+          await deleteDocument('gallery', imageId);
+          await deleteFile(`gallery/${currentUser.uid}/${imageId}`);
+        } catch (error) {
+          setAlert({
+            isAlert: true,
+            severity: 'error',
+            message: error.message,
+            timeout: 8000,
+            location: 'main',
+          });
+          console.log(error);
+        }
+      };
 
   return (
     <div className='gallery-admin'>
@@ -67,7 +97,8 @@ const Gallery = () => {
         {...srcset(image.img, 121, image.rows, image.cols)}
         alt={Image.title}
         loading="lazy"
-      />
+        
+      > <button>Delete</button></img>
     </ImageListItem>
   ))}
 </ImageList>
