@@ -5,6 +5,16 @@
   color: var(--black-color) !important;
 }
 
+.about-section {
+  height: 250vh;
+}
+
+@media screen and (max-width: 650px) {
+  .about-section {
+    height: 50vh;
+  }
+}
+
 .about-section p {
   padding: 0 4rem;
   text-align: center;
@@ -16,68 +26,14 @@
 
 @media screen and (max-width: 650px) {
   .about-section p {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 }
 
-.gallery {
-  display: flex;
-  padding: 2px;
-  transition: .3s;
-  margin: 2rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.gallery__column {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.gallery__link {
-  margin: 2px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-}
-
-.gallery__link:hover .gallery__image {
-  filter: grayscale(0);
-}
-
-.gallery__link:hover .gallery__caption {
-  opacity: 1;
-}
-
-.gallery__thumb {
-  position: relative;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-}
-
-.gallery__image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: .3s;
-  border-radius: 10px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-}
-
-.gallery__image:hover {
-  transform: scale(1.1);
-}
-
-.gallery__caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 25px 15px 15px;
-  width: 100%;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  color: white;
-  opacity: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-  transition: .3s;
+.css-uym98a-MuiImageList-root {
+  width: 1031px !important;
+  margin: auto;
+  height: none;
+  overflow-y: inherit !important;
+  margin-bottom: 4rem;
 }

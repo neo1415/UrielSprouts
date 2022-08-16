@@ -6,6 +6,11 @@
 
 }
 .about-section{
+	height: 250vh;
+	@media screen and (max-width:650px)  {
+		height: 50vh;
+		
+		}
   p{
     padding: 0 4rem;
     text-align: center;
@@ -14,76 +19,16 @@
     line-height: 1.6;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	@media screen and (max-width:650px)  {
-		padding: 0 1rem;
+		padding: 0 2rem;
 		
 		}
   }
 }
-.gallery {
-	display: flex;
-	padding: 2px;
-	transition: .3s;
-  margin: 2rem;
-  align-items: center;
-justify-content: center;
-	
-	&:hover &__image {
-		
-	}
-	
-	&__column {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-    
-	}
-	
-	&__link {
-		margin: 2px;
-		overflow: hidden;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		
-		&:hover {
-			.gallery__image {
-				filter: grayscale(0);
-			}
-			
-			.gallery__caption {
-				opacity: 1;
-			}
-		}
-	}
-	
-	&__thumb {
-		position: relative;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-	}
-	
-	&__image {
-		display: block;
-		width: 100%;
-    height: auto;
-    object-fit: cover;
-		transition: .3s;
-    border-radius: 10px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		
-		&:hover {
-			transform: scale(1.1);
-		}
-	}
-	
-	&__caption {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		padding: 25px 15px 15px;
-		width: 100%;
-		font-family: 'Raleway', sans-serif;
-		font-size: 16px;
-		color: white;
-		opacity: 0;
-		background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255 ,255 , 0) 100%);
-		transition: .3s;
-	}
+
+.css-uym98a-MuiImageList-root{
+    width: 1031px !important;
+    margin: auto;
+    height: none;
+    overflow-y: inherit !important;
+    margin-bottom:4rem ;
 }

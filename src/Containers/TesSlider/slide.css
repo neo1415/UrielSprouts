@@ -101,9 +101,9 @@ border-top-right-radius:15rem ; */
 .company {
   color: var(--gray-color) !important;
   font-size: .8rem;
-  margin-top: .5rem;
+  margin-top: -.5rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .SliderTitle {

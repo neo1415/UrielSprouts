@@ -1,0 +1,36 @@
+.Gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  padding: 0 12px;
+}
+
+.Gallery .pics {
+  height: auto;
+}
+
+.css-uym98a-MuiImageList-root {
+  width: 1031px !important;
+  margin: auto;
+  height: none;
+  overflow: none !important;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 650px) {
+  .gallery-admin {
+    display: none;
+  }
+}
+
+.upload {
+  display: flex;
+}
+
+.upload-admin {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

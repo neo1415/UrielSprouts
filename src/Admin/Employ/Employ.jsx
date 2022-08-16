@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import { collection, getDocs, deleteDoc,doc } from "firebase/firestore";
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns } from './EmployTableSource';
-import { db } from './../../FirebaseConfig';
+import { db } from '../../Components/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import './Employ.scss'
 

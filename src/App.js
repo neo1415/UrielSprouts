@@ -14,6 +14,9 @@ import Brands from './Admin/Brands/Brands';
 import Employability from './Pages/Employability';
 import Reg from './EmployabilityContainers/Reg';
 import ExecReg from './EmployabilityContainers/ExecReg';
+import Employ from './Admin/Employ/Employ';
+import EmployExec from './Admin/EmployExec/Employ';
+import Upload from './Admin/Gallery/Upload';
 
 const App = () => {
   const {currentUser} = useContext(AuthContext)
@@ -57,6 +60,18 @@ const App = () => {
           <Route exact path="/brands">
             <Route index element = { <RequireAuth> <Brands /> </RequireAuth> } />
             <Route path='/brands/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+          </Route>
+          <Route exact path="/employ">
+            <Route index element = { <RequireAuth> <Employ /> </RequireAuth> } />
+            <Route path='/employ/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+          </Route>
+          <Route exact path="/employ-exec">
+            <Route index element = { <RequireAuth> <EmployExec /> </RequireAuth> } />
+            <Route path='/employ-exec:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+          </Route>
+          <Route exact path="/upload">
+            <Route index element = { <RequireAuth> <Upload /> </RequireAuth> } />
+            <Route path='/upload:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
           </Route>
       </Routes>
     </div>
