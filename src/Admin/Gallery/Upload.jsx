@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { BsCloudUpload } from 'react-icons/bs';
 import SideBar from '../SideBar/SideBar';
 import './Gallery.scss'
+import Modal from './modal';
 
 const Upload = () => {
     const [data , setData] = useState('')
@@ -16,6 +17,7 @@ const Upload = () => {
     const [error, setError] = useState(null)
     const [per, setPerc] = useState(null)
     const [url, setUrl] = useState(null)
+    const [selectedImg , setSelectedImg] = useState(null)
 
     const types = ['image/png', 'image/jpeg'];
 
@@ -139,7 +141,8 @@ const Upload = () => {
                     <button className='sub-btn' type='submit' >submit</button>
                 </div>  
             </form>
-        <Gallery />
+        <Gallery setSelectedImg={setSelectedImg} />
+        {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
     </div>
     </div>
   )

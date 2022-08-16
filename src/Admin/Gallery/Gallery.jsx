@@ -8,11 +8,11 @@ import { doc } from 'firebase/firestore';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { Delete, Download, MoreVert } from '@mui/icons-material';
-
+import { motion } from 'framer-motion';
 
 import { Avatar, Tooltip, Typography } from '@mui/material';
 
-const Gallery = () => {
+const Gallery = ({setSelectedImg}) => {
     const [images, setImage] = useState('')
  
 
@@ -72,6 +72,7 @@ const Gallery = () => {
         {...srcset(image.img, 121, image.rows, image.cols)}
         alt={Image.title}
         loading="lazy"
+        onClick={()=> setSelectedImg(image.img)}
         
       /> 
     </ImageListItem>

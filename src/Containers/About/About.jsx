@@ -1,12 +1,16 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { images } from '../../Constants'
 import './About.scss';
 import { motion } from 'framer-motion';
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 import Gallery from '../../Admin/Gallery/Gallery';
+import Modal from '../../Admin/Gallery/modal';
 
 const About = () => {
+
+  const [selectedImg , setSelectedImg] = useState(null)
+
   return (
     <div className='about-section'>
    <h2 className='about-title'>
@@ -79,7 +83,8 @@ src={images.basic}
             className='overlay_circle3'
         /> */}
 
-<Gallery />
+<Gallery setSelectedImg={setSelectedImg} />
+{selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
 
     
   
