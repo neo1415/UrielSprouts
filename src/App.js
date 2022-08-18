@@ -1,11 +1,11 @@
-import React,{useContext} from 'react'
+import React from 'react'
 import './App.scss'
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Home from './Pages/Home';
 import Review from './Pages/Review';
 import AdminHome from './Admin/AdminHome';
 import Login from './Admin/Login/Login';
-import { AuthContext, AuthContextProvider } from './Context/AuthContext';
+import { AuthContextProvider } from './Context/AuthContext';
 import SingleUser from './Admin/Singleuser/SingleUser';
 import List from './Admin/Table/Table';
 import Contact from './Admin/Contact/Contact';
@@ -18,8 +18,8 @@ import Employ from './Admin/Employ/Employ';
 import EmployExec from './Admin/EmployExec/Employ';
 import Upload from './Admin/Gallery/Upload';
 import SignIn from './Admin/Authentication/SignIn';
-import Account from './Admin/Authentication/Account';
 import SignUp from './Admin/Authentication/SignUp';
+import ProtectedRoute from './Admin/Authentication/ProtectedRoute';
 
 const App = () => {
   // const {currentUser} = useContext(AuthContext)
@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <div className='app'>
-
+    <AuthContextProvider>
       <Routes >
           <Route exact path="/"
            element = {<Home />} />
@@ -44,8 +44,8 @@ const App = () => {
            element = {<ExecReg />} />
        
       </Routes>
-      
-      <AuthContextProvider>
+
+  
         <Routes>
         <Route exact path="/login"
            element = {<Login />} />
@@ -53,39 +53,38 @@ const App = () => {
            element = {<SignIn />} />
           <Route exact path="/signup"
            element = {<SignUp />} />
-          <Route exact path="/account"
-           element = {<Account />} />
+
           <Route exact path="/adminHome">
-            <Route index element = {  <AdminHome />  } />
-            <Route path='/adminHome/:id' element = {<SingleUser />} />
+            <Route index element = {  <ProtectedRoute><AdminHome /></ProtectedRoute>  } />
+            <Route path='/adminHome/:id' element = { <ProtectedRoute><SingleUser /></ProtectedRoute>} />
           </Route>
           <Route exact path="/list">
-            <Route index element = {  <List />  } />
-            <Route path='/list/:id' element = {<SingleUser />} />
+            <Route index element = { <ProtectedRoute><List /></ProtectedRoute>   } />
+            <Route path='/list/:id' element = {<ProtectedRoute><SingleUser /></ProtectedRoute>} />
           </Route>
           <Route exact path="/contact">
-            <Route index element = {  <Contact />  } />
-            <Route path='/contact/:id' element = {<SingleUser />} />
+            <Route index element = { <ProtectedRoute><Contact /></ProtectedRoute>   } />
+            <Route path='/contact/:id' element = {<ProtectedRoute><SingleUser /></ProtectedRoute>} />
           </Route>
           <Route exact path="/testimonialadmin">
-            <Route index element = {  <TestimonialsAdmin />  } />
-            <Route path='/testimonialadmin/:id' element = {<SingleUser />} />
+            <Route index element = {  <ProtectedRoute><TestimonialsAdmin /></ProtectedRoute> } />
+            <Route path='/testimonialadmin/:id' element = {<ProtectedRoute><SingleUser /></ProtectedRoute>} />
           </Route>
           <Route exact path="/brands">
-            <Route index element = {  <Brands />  } />
-            <Route path='/brands/:id' element = {<SingleUser />} />
+            <Route index element = { <ProtectedRoute><Brands /></ProtectedRoute>   } />
+            <Route path='/brands/:id' element = {<ProtectedRoute><SingleUser /></ProtectedRoute>} />
           </Route>
           <Route exact path="/employ">
-            <Route index element = {  <Employ />  } />
-            <Route path='/employ/:id' element = {<SingleUser />} />
+            <Route index element = {  <ProtectedRoute ><Employ /></ProtectedRoute>  } />
+            <Route path='/employ/:id' element = {<ProtectedRoute><SingleUser /></ProtectedRoute>} />
           </Route>
           <Route exact path="/employ-exec">
-            <Route index element = {  <EmployExec />  } />
-            <Route path='/employ-exec:id' element = {<SingleUser />} />
+            <Route index element = {  <ProtectedRoute ><EmployExec /></ProtectedRoute>  } />
+            <Route path='/employ-exec:id' element = {<ProtectedRoute><SingleUser /></ProtectedRoute>} />
           </Route>
           <Route exact path="/upload">
-            <Route index element = {  <Upload />  } />
-            <Route path='/upload:id' element = {<SingleUser />} />
+            <Route index element = {  <ProtectedRoute ><Upload /></ProtectedRoute>  } />
+            <Route path='/upload:id' element = {<ProtectedRoute><SingleUser /></ProtectedRoute>} />
           </Route>
         </Routes>
       </AuthContextProvider>
