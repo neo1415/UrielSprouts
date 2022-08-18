@@ -59,6 +59,9 @@ h2{
         a{
             text-decoration: none;
             font-weight: 500;
+            &:hover{
+                color: var(--gray-color) !important;
+            }
         }
         &:hover{
             box-shadow: 0 0 25px #fef4f5;

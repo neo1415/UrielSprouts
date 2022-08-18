@@ -5,6 +5,11 @@
   color: var(--black-color) !important;
 }
 
+.about-section {
+  margin-top: 6rem;
+  padding-bottom: 1rem;
+}
+
 .about-section p {
   padding: 0 4rem;
   text-align: center;

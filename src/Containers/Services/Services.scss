@@ -9,14 +9,15 @@
 .services{
   display: flex;
   flex-direction: column;
-  margin-bottom: 13rem;
-  margin-top: 9rem;
+  margin-bottom: 22rem;
+  margin-top: 13rem;
 
 
 
   .service-title{
     text-align: center;
     margin-top: -5rem;
+    margin-bottom: 1rem;
     color: var(--dark-color)!important;
 
     @media screen and (max-width:300px) {

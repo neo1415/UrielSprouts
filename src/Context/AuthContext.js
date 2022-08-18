@@ -1,25 +1,25 @@
-import { createContext, useEffect, useReducer } from "react";
-import AuthReducer from "./AuthReducer,";
+// import { createContext, useEffect, useReducer } from "react";
+// import AuthReducer from "./AuthReducer,";
 
-const INITIAL_STATE = {
-  currentUser: JSON.parse(localStorage.getItem("user")) || null,
-};
+// const INITIAL_STATE = {
+//   currentUser: JSON.parse(localStorage.getItem("user")) || null,
+// };
 
-export const AuthContext = createContext(INITIAL_STATE);
+// export const AuthContext = createContext(INITIAL_STATE);
 
-export const AuthContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
+// export const AuthContextProvider = ({ children }) => {
+//   const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
 
-  useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(state.currentUser));
-  }, [state.currentUser]);
+//   useEffect(() => {
+//     localStorage.setItem("user", JSON.stringify(state.currentUser));
+//   }, [state.currentUser]);
 
-  return (
-    <AuthContext.Provider value={{ currentUser: state.currentUser, dispatch }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
+//   return (
+//     <AuthContext.Provider value={{ currentUser: state.currentUser, dispatch }}>
+//       {children}
+//     </AuthContext.Provider>
+//   );
+// };
 
 // // import {
 // //   createUserWithEmailAndPassword,
@@ -98,3 +98,53 @@ export const AuthContextProvider = ({ children }) => {
 // // };
 
 // // export default AuthContext;
+import { createContext,useContext } from 'react';
+import {useState, useEffect} from 'react'
+import { auth } from '../Components/firebaseConfig';
+import {
+   createUserWithEmailAndPassword,
+   signInWithEmailAndPassword, 
+  signOut,
+  onAuthStateChanged 
+} from 'firebase/auth';
+
+
+export const UserContext = createContext()
+
+
+
+export const AuthContextProvider = ({children}) => {
+  const [user, setUser] = useState({})
+const createUser= (email, password,name)=>{
+  return createUserWithEmailAndPassword(auth, email, password,name)
+}
+
+const signIn = (email, password) => {
+  return signInWithEmailAndPassword(auth, email, password)
+}
+
+const logout= ()=>{
+  return signOut(auth)
+}
+
+useEffect(() => {
+  const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    console.log(currentUser)
+    setUser(currentUser)
+  })
+  return () => {
+    unsubscribe()
+  }
+  
+}, []);
+
+  return(
+    <UserContext.Provider value={{createUser, user, logout, signIn}}>
+      {children}
+    </UserContext.Provider>
+  )
+}
+
+export const UserAuth=() => {
+  return useContext(UserContext);
+}

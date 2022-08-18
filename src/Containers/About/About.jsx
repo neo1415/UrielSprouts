@@ -12,7 +12,7 @@ const About = () => {
   const [selectedImg , setSelectedImg] = useState(null)
 
   return (
-    <div className='about-section'>
+    <div className='about-section' id='about'>
    <h2 className='about-title'>
       About <span>Us</span>
     </h2>

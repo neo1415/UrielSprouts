@@ -5,9 +5,17 @@
     border-right: .5px solid lightgray;
     .top{
         height: 50px;
+        margin-top: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        display: flex;
+        flex-direction: column;
+        p{
+            font-size: 15px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
         .logo{
             font-size: 20px;
             font-weight: bold;
@@ -33,6 +41,26 @@
                     background-color: rgb(233, 230, 230);
                 }
             }
+        }
+    }
+}
+
+.bottom{
+    position: absolute;
+    padding-left: 10px;
+
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+
+    p{
+        font-size: 19px;
+        font-weight: bold;
+        padding-left: 10px;
+        &:hover{
+            background-color: rgb(248, 202, 202);
+            width: 200PX;
         }
     }
 }

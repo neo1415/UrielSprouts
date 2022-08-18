@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import Review from './Pages/Review';
 import AdminHome from './Admin/AdminHome';
 import Login from './Admin/Login/Login';
-import { AuthContext } from './Context/AuthContext';
+import { AuthContext, AuthContextProvider } from './Context/AuthContext';
 import SingleUser from './Admin/Singleuser/SingleUser';
 import List from './Admin/Table/Table';
 import Contact from './Admin/Contact/Contact';
@@ -17,13 +17,16 @@ import ExecReg from './EmployabilityContainers/ExecReg';
 import Employ from './Admin/Employ/Employ';
 import EmployExec from './Admin/EmployExec/Employ';
 import Upload from './Admin/Gallery/Upload';
+import SignIn from './Admin/Authentication/SignIn';
+import Account from './Admin/Authentication/Account';
+import SignUp from './Admin/Authentication/SignUp';
 
 const App = () => {
-  const {currentUser} = useContext(AuthContext)
+  // const {currentUser} = useContext(AuthContext)
 
-  const RequireAuth= ({children})=>{
-    return currentUser ? (children) : <Navigate to={'/Login'} />
-  }
+  // const RequireAuth= ({children})=>{
+  //   return currentUser ? (children) : <Navigate to={'/Login'} />
+  // }
 
   return (
     <div className='app'>
@@ -39,41 +42,53 @@ const App = () => {
            element = {<Reg />} />
             <Route exact path="executive-registration"
            element = {<ExecReg />} />
-          <Route exact path="/login"
+       
+      </Routes>
+      
+      <AuthContextProvider>
+        <Routes>
+        <Route exact path="/login"
            element = {<Login />} />
+          <Route exact path="/signin"
+           element = {<SignIn />} />
+          <Route exact path="/signup"
+           element = {<SignUp />} />
+          <Route exact path="/account"
+           element = {<Account />} />
           <Route exact path="/adminHome">
-            <Route index element = { <RequireAuth> <AdminHome /> </RequireAuth> } />
-            <Route path='/adminHome/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+            <Route index element = {  <AdminHome />  } />
+            <Route path='/adminHome/:id' element = {<SingleUser />} />
           </Route>
           <Route exact path="/list">
-            <Route index element = { <RequireAuth> <List /> </RequireAuth> } />
-            <Route path='/list/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+            <Route index element = {  <List />  } />
+            <Route path='/list/:id' element = {<SingleUser />} />
           </Route>
           <Route exact path="/contact">
-            <Route index element = { <RequireAuth> <Contact /> </RequireAuth> } />
-            <Route path='/contact/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+            <Route index element = {  <Contact />  } />
+            <Route path='/contact/:id' element = {<SingleUser />} />
           </Route>
           <Route exact path="/testimonialadmin">
-            <Route index element = { <RequireAuth> <TestimonialsAdmin /> </RequireAuth> } />
-            <Route path='/testimonialadmin/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+            <Route index element = {  <TestimonialsAdmin />  } />
+            <Route path='/testimonialadmin/:id' element = {<SingleUser />} />
           </Route>
           <Route exact path="/brands">
-            <Route index element = { <RequireAuth> <Brands /> </RequireAuth> } />
-            <Route path='/brands/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+            <Route index element = {  <Brands />  } />
+            <Route path='/brands/:id' element = {<SingleUser />} />
           </Route>
           <Route exact path="/employ">
-            <Route index element = { <RequireAuth> <Employ /> </RequireAuth> } />
-            <Route path='/employ/:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+            <Route index element = {  <Employ />  } />
+            <Route path='/employ/:id' element = {<SingleUser />} />
           </Route>
           <Route exact path="/employ-exec">
-            <Route index element = { <RequireAuth> <EmployExec /> </RequireAuth> } />
-            <Route path='/employ-exec:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+            <Route index element = {  <EmployExec />  } />
+            <Route path='/employ-exec:id' element = {<SingleUser />} />
           </Route>
           <Route exact path="/upload">
-            <Route index element = { <RequireAuth> <Upload /> </RequireAuth> } />
-            <Route path='/upload:id' element = {<RequireAuth ><SingleUser /></RequireAuth>} />
+            <Route index element = {  <Upload />  } />
+            <Route path='/upload:id' element = {<SingleUser />} />
           </Route>
-      </Routes>
+        </Routes>
+      </AuthContextProvider>
     </div>
   )
 }

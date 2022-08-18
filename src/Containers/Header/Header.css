@@ -60,7 +60,7 @@
   font-size: 4rem;
   position: absolute;
   padding: 0 1.5rem;
-  top: 20%;
+  top: 30%;
 }
 
 @media screen and (max-width: 860px) {
@@ -340,6 +340,10 @@
 .Container a {
   font-size: .9rem;
   border-radius: 10px;
+}
+
+.Container a:hover {
+  color: var(--primary-coior) !important;
 }
 
 h1 {

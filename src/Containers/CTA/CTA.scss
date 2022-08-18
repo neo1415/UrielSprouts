@@ -5,7 +5,7 @@
     justify-content: center;
     justify-items: center;
     background-image: linear-gradient(rgba(255, 255, 255, 0.774), rgb(255, 255, 255)),url(reviewBG.jpg)!important;
-    padding: 2rem 0 2rem 0;
+    padding: 4rem 0 6rem 0;
     margin-top: -12rem;
 }
 .review__container{
@@ -133,9 +133,13 @@ h3{
     display: flex;
     text-align: center;
     align-items: center !important;
-  justify-content: center !important;
-  a{
-    font-size: .9rem;
+  justify-content: center !important;  
   }
-  
+
+  .Containers a{
+    font-size: .9rem;
+    border-radius: 10px;
+    &:hover{
+      color: white !important;
+    }
   }

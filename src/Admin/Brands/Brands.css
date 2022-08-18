@@ -15,7 +15,7 @@
 
 .brands-container .brands-title .brands-form .brandinput {
   width: 18rem;
-  margin: 1rem 0;
+  margin-bottom: 5rem;
   height: 2.5rem;
   border-radius: 5px;
   border: 1px solid #4b90eb;
@@ -23,11 +23,11 @@
 
 .brands-container .brands-title .brands-form .input-file-container {
   position: absolute;
-  right: 10%;
+  right: 2 .brands-container .brands-title .brands-form .input-file-container;
 }
 
 .brands-container .brands-title .brands-form .sub-btn {
-  margin-top: 2rem;
+  margin-top: -2rem;
   height: 1.5rem;
   width: 10rem;
   padding-bottom: 2rem;
@@ -36,7 +36,7 @@
   font-weight: 600;
   border-radius: 5px;
   position: absolute;
-  right: 23%;
+  right: 15%;
 }
 
 .output {

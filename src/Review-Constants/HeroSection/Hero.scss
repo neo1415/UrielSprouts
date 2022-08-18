@@ -118,7 +118,7 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 0px;
     width: 9rem;
     margin-left: 2.5rem;
     border-radius: 5px;
@@ -134,8 +134,6 @@
 
   .input-file-container {
     position: relative;
-    width: 225px;
-    
   } 
    .input-file-trigger {
     border-radius: 5px;
@@ -182,6 +180,7 @@
   position: absolute;
   z-index: 100;
   background-color: #EDF2F8;
+  position: fixed;
   transition: 1s;
   top: 0;
     @media screen and (max-width:900px) {
@@ -216,7 +215,7 @@
         margin: 20px;
         display: flex;
         margin-top: 3rem;
-        margin-left: 2rem;
+        margin-left: 0rem;
   
         h1 {
           color: lightgray;
@@ -249,9 +248,10 @@
             flex-direction: column;
             flex-wrap: wrap;
             gap: 30px;
-            justify-content: space-around;
+            justify-content: center;
             @media screen and (max-width: 720px) {
              justify-content: center;
+             align-items: center;
           }
   
             .formInput {
@@ -318,6 +318,7 @@
   .checkHidden{
     display: none;
     transition: .6s;
+   
   }
   .left{
     display: none;
@@ -332,5 +333,11 @@
     align-items:center ;
 }
 .Output{
-  margin-top: 2rem;
+  margin-top: 0rem;
+  color: white;
+  font-weight: 700;
+}
+
+.check .check_container .Top .right form .submit_button, .check .check_container .bottom .right form .submit_button{
+  display: grid;
 }

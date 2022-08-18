@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns } from './EmployTableSource';
 import { db } from '../../Components/firebaseConfig';
+import SideBar from './../SideBar/SideBar';
 
 
 const EmployExec = () => {
@@ -61,6 +62,8 @@ const EmployExec = () => {
         },
       ];
       return (
+        <div className="list">
+        <SideBar />
         <div className="datatable">
           <div className="datatableTitle">
             Add New User
@@ -78,6 +81,7 @@ const EmployExec = () => {
             checkboxSelection
           />
         </div>
+      </div>
       );
 }
 

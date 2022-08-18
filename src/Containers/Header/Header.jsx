@@ -68,11 +68,11 @@ src={images.carousel1}
         <div
          className='hero-Contents'>
             <h1 className='hero-h span'>
-            Business Management </h1>
+            Business<br /> Management </h1>
             <div
             className='header-p'
             >
-        <p className='head-p'>We incubate business ideas and help accelerate through our unique business support servicess.</p>
+        <p className='head-p'>We incubate business ideas and help accelerate through our unique <br />business support servicess.</p>
             </div>
             <div class="Container">
    
@@ -109,11 +109,11 @@ src={images.carousel1}
         <div
          className='hero-Contents'>
             <h1 className='hero-h span'
-            >Hospitality Management </h1>
+            >Hospitality<br /> Management </h1>
             <div
             className='header-p'
             >
-        <p className='head-p'>Identify potential growth that ensures robust return on investment, </p>
+        <p className='head-p'>Identify potential growth that ensures robust return on investment </p>
             </div>
             <div class="Container">
    

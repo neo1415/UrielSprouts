@@ -1,12 +1,28 @@
 import React from 'react'
 import './Sidebar.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { UserAuth } from '../../Context/AuthContext'
 
 const SideBar = () => {
+  const {user, logout} = UserAuth()
+
+  const navigate = useNavigate()
+
+  const handleLogout = async () => {
+    try{
+      await logout()
+      navigate('/signin')
+
+    }catch (e){
+      console.log(e.message)
+    }
+  }
+
   return (
     <div className='sidebar'>
         <div className='top'>
             <span className='logo'>UrielSprouts</span>
+            <p>{user && user.email}</p>
         </div>
         <hr></hr>
         <div className='center'>
@@ -34,6 +50,11 @@ const SideBar = () => {
                 </li>
             </ul>
         </div>
+        <hr/>
+        <div className='bottom'>
+        <p className='logout' onClick={handleLogout}>LogOut</p>
+        </div>
+       
     </div>
   )
 }

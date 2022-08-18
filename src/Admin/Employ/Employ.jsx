@@ -5,6 +5,7 @@ import { userColumns } from './EmployTableSource';
 import { db } from '../../Components/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import './Employ.scss'
+import SideBar from './../SideBar/SideBar';
 
 const Employ = () => {
 
@@ -74,7 +75,10 @@ const Employ = () => {
         },
       ];
       return (
+        <div className="list">
+        <SideBar />
         <div className="datatable">
+
           <div className="datatableTitle">
             Basic Path
             {/* <Link to="/adminHome/new" className="link">
@@ -90,6 +94,7 @@ const Employ = () => {
             checkboxSelection
           />
         </div>
+      </div>
       );
 }
 

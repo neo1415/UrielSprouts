@@ -5,7 +5,7 @@
   justify-content: center;
   justify-items: center;
   background-image: linear-gradient(rgba(255, 255, 255, 0.774), white), url(reviewBG.jpg) !important;
-  padding: 2rem 0 2rem 0;
+  padding: 4rem 0 6rem 0;
   margin-top: -12rem;
 }
 
@@ -142,4 +142,9 @@ h3 {
 
 .Containers a {
   font-size: .9rem;
+  border-radius: 10px;
+}
+
+.Containers a:hover {
+  color: white !important;
 }
