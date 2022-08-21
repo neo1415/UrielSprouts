@@ -3,6 +3,9 @@ import { userColumns} from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useState, useEffect,useContext } from "react";
 import './Table.scss'
+import { GridToolbar } from "@mui/x-data-grid";
+import { GridToolbarContainer } from "@mui/x-data-grid";
+import { GridToolbarExport } from "@mui/x-data-grid";
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs, deleteDoc, doc,onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../../Components/firebaseConfig";
@@ -44,6 +47,15 @@ const List = () => {
     navigate('/list/' + id)
   };
 
+  function CustomToolbar() {
+    return (
+      <GridToolbarContainer>
+        <GridToolbarExport />
+      </GridToolbarContainer>
+    );
+  }
+  
+
   const actionColumn = [
     {
       field: "action",
@@ -81,12 +93,19 @@ const List = () => {
         CV Review
       </div>
       <DataGrid
+
+{...data}
+  components={{
+    Toolbar: CustomToolbar,
+  }}
+
         className="datagrid"
         rows={data}
         columns={userColumns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
+
       />
     </div>
     </div>

@@ -1,7 +1,6 @@
 
 export const userColumns = [
-  { field: "id", headerName: "ID", width: 70 },
-  {
+ {
     field: 'file',
     headerName:'image',
     width:60 ,

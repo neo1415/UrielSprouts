@@ -19,23 +19,36 @@ const Reviews = () => {
 
     const navigate=useNavigate()
 
+    // useEffect(()=> {
+    //     const fetchData = async () =>{
+    //       let list =[]
+    //       try{
+    //         const querySnapshot = await getDocs(collection(db,'testimonials'));
+    //         querySnapshot.forEach((doc)=>{
+    //           list.push({id: doc.id, ...doc.data()})
+    //           console.log(doc.id, "=>", doc.data());
+    //         })
+    //         setData(list)
+    //         console.log(list)
+    //       } catch(err){
+    //         console.log(err)
+    //       }
+    //     }
+    //     fetchData()
+    //   },[])
     useEffect(()=> {
-        const fetchData = async () =>{
-          let list =[]
-          try{
-            const querySnapshot = await getDocs(collection(db,'testimonials'));
-            querySnapshot.forEach((doc)=>{
-              list.push({id: doc.id, ...doc.data()})
-              console.log(doc.id, "=>", doc.data());
-            })
-            setData(list)
-            console.log(list)
-          } catch(err){
-            console.log(err)
-          }
-        }
-        fetchData()
-      },[])
+      const dataRef = collection(db, 'testimonials')
+      const q = query(dataRef, orderBy('createdAt', 'desc'));
+      onSnapshot(q,(snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
+          id:doc.id,
+          ...doc.data(),
+        }))
+        setData(data);
+        console.log(data)
+      })
+    },[])
+
     // useEffect(() => {
     //     const testRef = collection(db, 'testimonials');
     //     const q= query(testRef, orderBy('createdAt', 'desc'));
@@ -61,7 +74,7 @@ const Reviews = () => {
     };
   
     const handleView = async (id) => {
-      navigate('/testimonials/' + id)
+      navigate('/testimonialadmin/' + id)
     };
   
     const actionColumn = [

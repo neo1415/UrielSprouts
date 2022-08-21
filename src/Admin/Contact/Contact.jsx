@@ -5,6 +5,8 @@ import { DataGrid } from "@mui/x-data-grid";
 import { userColumns } from './contactTableSource';
 import SideBar from '../SideBar/SideBar';
 import { useNavigate } from 'react-router-dom';
+import { GridToolbarContainer } from "@mui/x-data-grid";
+import { GridToolbarExport } from "@mui/x-data-grid";
 
 const Contact = () => {
 
@@ -55,6 +57,14 @@ const Contact = () => {
       const handleView = async (id) => {
         navigate('/contact/' + id)
       };
+
+      function CustomToolbar() {
+        return (
+          <GridToolbarContainer>
+            <GridToolbarExport />
+          </GridToolbarContainer>
+        );
+      }
     
       const actionColumn = [
         {
@@ -93,6 +103,12 @@ const Contact = () => {
             Contact Us 
           </div>
           <DataGrid
+
+          {...data}
+          components={{
+          Toolbar: CustomToolbar,
+          }}
+
             className="datagrid"
             rows={data}
             columns={userColumns.concat(actionColumn)}

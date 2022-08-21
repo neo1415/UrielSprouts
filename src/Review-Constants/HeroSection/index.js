@@ -12,39 +12,42 @@ import { PaystackButton } from 'react-paystack';
 import { Link } from 'react-router-dom'
 import { BsArrowLeft } from 'react-icons/bs'
 import { Timestamp } from 'firebase/firestore';
+import Checkout from '../../Components/Checkout/Checkout';
+import { useNavigate } from 'react-router-dom';
+import Email from './email';
 
 
 const HeroSection = () => {
 
   // checkout states
 
-  const publicKey = "pk_test_d76efdb1f2965b416262f9d99e8b53ff9e801434"
-  const amount = 1
-  const [email, setEmail] = useState("")
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
-  const [openPayment, setOpenPayment] = useState(false)
+  // const publicKey = "pk_test_d76efdb1f2965b416262f9d99e8b53ff9e801434"
+  // const amount = 1
+  // const [email, setEmail] = useState("")
+  // const [firstName, setFirstName] = useState("")
+  // const [lastName, setLastName] = useState("")
+  // const [openPayment, setOpenPayment] = useState(false)
 
-  // checkout componentProps
+  // // checkout componentProps
 
-  const componentProps = {
-    email,
-    amount,
-    metadata: {
-     firstName,
-     lastName
-    },
-    publicKey,
-    text: "Pay Now",
-    onSuccess: () =>
-     handleSend(),
-    onClose: () => window.location.reload()
-    ,
-  }
+  // const componentProps = {
+  //   email,
+  //   amount,
+  //   metadata: {
+  //    firstName,
+  //    lastName
+  //   },
+  //   publicKey,
+  //   text: "Pay Now",
+  //   onSuccess: () =>
+  //    handleSend(),
+  //   onClose: () => window.location.reload()
+  //   ,
+  // }
 
-  const handleComplete =(e)=>{
-    e.preventDefault()
-  }
+  // const handleComplete =(e)=>{
+  //   e.preventDefault()
+  // }
 
 
 
@@ -54,8 +57,11 @@ const HeroSection = () => {
   const [data , setData] = useState('')
   const [per, setPerc] = useState(null)
   const [error , setError]= useState(null)
+  const [openModal, setOpenModal] = useState(false);
   
 const types= ['application/pdf'];
+
+const navigate= useNavigate()
 
 // storage hooks
 
@@ -132,8 +138,9 @@ uploadTask.on('state_changed',
   
   const handleAdd= async(e) => {
     e.preventDefault()
-    setOpenPayment(!openPayment);
-    document.body.style.overflow = "hidden";   
+    // setOpenPayment(!openPayment);
+    // document.body.style.overflow = "hidden";   
+    navigate='/checkout'
     };
     const changeHandler =(e) =>{
       let selected= e.target.files[0];
@@ -150,30 +157,21 @@ uploadTask.on('state_changed',
       fontSize:90,
       marginTop:30
     }
-    const handleLink =()=>{
-      window.location.reload()
-    }
+    // const handleLink =()=>{
+    //   window.location.reload()
+    // }
 
   return (
-    <div id='cvhome' className='hero-container'>
+    <div id='hero' className='hero-container'>
         <div className='hero-content'>
-            <h1>Progress Made Easy</h1>
+            <h1>Review Your Resume</h1>
+            <p>IMPROVE YOUR CHANCES OF EMPLOYMENT</p>
             <div className='blob'></div>
             <div className="bottom">
-            <div className="left">
-            <img
-              src={
-                file
-                  ? URL.createObjectURL(file)
-                  : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
-              }
-              alt=""
-            />
-          </div>
           <div className="right">
             <form onSubmit={handleAdd} >
               <div className="formInput">
-              <div className="input-file-container">  
+              <div className="input-file-container fileLoad">  
                 <input 
                 className="input-file" 
                 id="my-file" 
@@ -188,33 +186,27 @@ uploadTask.on('state_changed',
              </div>
               </div>
 
-              {userInputs.map((input) => (
-                <div className="forminput" key={input.id}>
-                  <label>{input.label}</label>
-                  <input
-                    id={input.id}
-                    type={input.type}
-                    placeholder={input.placeholder}
-                    onChange={handleInput}
-                    className='Mail'
-                    required
-                  />
-                </div>
-              ))}
+            
               <div className='Output'>
                 {error && <div className='error'>{error}</div>}
                 {file && <div className='error'>{file.name}</div>}
               </div>
-              <button disabled={per !== null && per < 100} type="submit" className='send'>
+              <button disabled={per !== null && per < 100} type="submit" className='send' onClick={()=>{
+                setOpenModal(true)
+              }}>
                 Upload CV
               </button>
             </form>
           </div>
         </div>
         </div>
+
+       
+
+              { openModal && <Email handleInput={handleInput} handleSend={handleSend}  />}
         
                 {/* checkout form */}
-
+{/* 
     <div   className={` ${openPayment ? 'check':'checkHidden'}`}  id='checkout'>
       <div 
      className='check_container'>
@@ -261,7 +253,7 @@ uploadTask.on('state_changed',
         </div>
       </div>
           
-      </div>
+      </div> */}
 
 
         <div className="custom-shape-divider-bottom-1656072431">

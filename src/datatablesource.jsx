@@ -1,7 +1,6 @@
 import { HiDownload } from "react-icons/hi";
 
 export const userColumns = [
-    { field: "id", headerName: "ID", width: 70 },
     {
       field: "email",
       headerName: "Email",
@@ -20,14 +19,8 @@ export const userColumns = [
       
     },
 
-  
     {
-      field: "age",
-      headerName: "Age",
-      width: 100,
-    },
-    {
-      field: "timeStamp",
+      field: "createdAt",
       headerName: "Date",
       width: 300,
     },

@@ -1,4 +1,3 @@
-import { async } from '@firebase/util'
 import React,{useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../Context/AuthContext'
@@ -44,6 +43,7 @@ const handleSubmit = async(e) =>{
         </div>
         { error && <span className='error'>Wrong Email or Password</span>}
         <button>Log In</button>
+        <p><Link to='/resetpassword'>Forgot Password</Link></p>
 
     </form>
 </div>

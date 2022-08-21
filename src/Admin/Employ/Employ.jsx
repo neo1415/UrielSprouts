@@ -5,6 +5,8 @@ import { userColumns } from './EmployTableSource';
 import { db } from '../../Components/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import './Employ.scss'
+import { GridToolbarContainer } from "@mui/x-data-grid";
+import { GridToolbarExport } from "@mui/x-data-grid";
 import SideBar from './../SideBar/SideBar';
 
 const Employ = () => {
@@ -35,7 +37,7 @@ const Employ = () => {
 
 
       const handleView = async (id) => {
-        navigate('/adminHome/' + id)
+        navigate('/employ/' + id)
       };
 
       const handleDelete = async (id) => {
@@ -46,6 +48,15 @@ const Employ = () => {
           console.log(err);
         }
       };
+
+      function CustomToolbar() {
+        return (
+          <GridToolbarContainer>
+            <GridToolbarExport />
+          </GridToolbarContainer>
+        );
+      }
+
       const actionColumn = [
         {
           field: "action",
@@ -70,6 +81,9 @@ const Employ = () => {
               View
             </div>
               </div>
+
+             
+
             );
           },
         },
@@ -86,11 +100,18 @@ const Employ = () => {
             </Link> */}
           </div>
           <DataGrid
+
+          {...data}
+          components={{
+          Toolbar: CustomToolbar,
+          }}
+
             className="datagrid"
             rows={data}
             columns={userColumns.concat(actionColumn)}
             pageSize={9}
             rowsPerPageOptions={[9]}
+            
             checkboxSelection
           />
         </div>

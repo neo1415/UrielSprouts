@@ -40,7 +40,7 @@ const PriceTable = () => {
               <li> <FaCheck style={checkStyle} />  Clean and Reusable </li>
               </ul>
             </div>
-            <Link to='/#cvhome'>Send Now</Link>
+            <a href='#hero'>Send Now</a>
           </div>
         </div>
     </div>

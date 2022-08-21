@@ -1,25 +1,21 @@
 
-export const userColumns = [
-  { field: "id", headerName: "ID", width: 40 },
-
-  {
-    field: "createdAt",
-    headerName: "Date",
-    width: 230,
-    type:'date'
-  },
-
+export const userColumns = [ 
+//  {
+//     field: "createdAt",
+//     headerName: "Date",
+//     width: 230,
+//     type:'string'
+//   },
   {
     field: "firstname",
     headerName: "First Name",
-    width: 230,
+    width: 180,
   },
   {
     field: "lastname",
     headerName: "Last Name",
-    width: 230,
+    width: 180,
   },
-  
   {
     field: "email",
     headerName: "Email",
@@ -33,7 +29,7 @@ export const userColumns = [
   {
     field: "gender",
     headerName: "Gender",
-    width: 130,
+    width: 80,
   },
   {
     field: "levelOfEducation",

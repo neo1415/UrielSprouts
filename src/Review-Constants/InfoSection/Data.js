@@ -39,7 +39,7 @@ export const homeObjThree = {
   lightTextDesc:false,
   topLine: 'Be the Best',
   Headline: 'Bring Professionalism to the Next Level',
-  description: 'Lorem ipsum dolor sit amet. Aut expedita illo eum provident similique aut numquam doloremque et doloremque corporis qui repudiandae autem quo voluptas quos',
+  description: 'Professionally Written, Easy to peruse and impresive looking resumes at the tip of your hands whenever you need it. Our Team will make sure that your resume gets the attention it desrves and more',
   buttonLabel: 'Get Started',
   imgStart:false,
   img:  require("../../Assets/businessTeam.mp4"),

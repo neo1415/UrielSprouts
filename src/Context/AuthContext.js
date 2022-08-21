@@ -105,6 +105,7 @@ import {
    createUserWithEmailAndPassword,
    signInWithEmailAndPassword, 
   signOut,
+  sendPasswordResetEmail,
   onAuthStateChanged 
 } from 'firebase/auth';
 
@@ -115,12 +116,17 @@ export const UserContext = createContext()
 
 export const AuthContextProvider = ({children}) => {
   const [user, setUser] = useState({})
+
 const createUser= (email, password,name)=>{
   return createUserWithEmailAndPassword(auth, email, password,name)
 }
 
 const signIn = (email, password) => {
   return signInWithEmailAndPassword(auth, email, password)
+}
+
+const resetPassword=(email)=>{
+  return sendPasswordResetEmail(auth,email)
 }
 
 const logout= ()=>{
@@ -139,7 +145,7 @@ useEffect(() => {
 }, []);
 
   return(
-    <UserContext.Provider value={{createUser, user, logout, signIn}}>
+    <UserContext.Provider value={{createUser, user, logout, signIn, resetPassword}}>
       {children}
     </UserContext.Provider>
   )
