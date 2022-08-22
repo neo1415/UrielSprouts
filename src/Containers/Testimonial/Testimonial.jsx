@@ -115,7 +115,7 @@ useEffect(() => {
                     <button className='ButtonPrev' onClick={() => setIndex(index-1)}>
                 <MdChevronLeft size={30} />
             </button>
-            <button className='ButtonNext' onClick={() => setIndex(index-1)}>
+            <button className='ButtonNext' onClick={() => setIndex(index+1)}>
                 <MdChevronRight size={30} />
             </button>
     </div>

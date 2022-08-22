@@ -75,9 +75,9 @@ const ContactExec = () => {
         <div className="datatable">
           <div className="datatableTitle">
             Executive Path
-            {/* <Link to="/adminHome/new" className="link">
+            <Link to="/adminHome/newExecEmploy" className="link">
               Add New
-            </Link> */}
+            </Link>
           </div>
           <DataGrid
             className="datagrid"
