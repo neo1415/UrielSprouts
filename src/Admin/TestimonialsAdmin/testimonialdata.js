@@ -1,4 +1,5 @@
 export const Inputs = [
+
     {
       id: "customerName",
       type: "text",

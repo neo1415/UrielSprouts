@@ -7,11 +7,16 @@ import InfoSection from './../Review-Constants/InfoSection/index';
 import PriceTable from '../Review-Constants/PriceTable/PriceTable';
 import FAQ from '../Review-Constants/FaQ/FAQ';
 import Navbar from '../Components/Navbar copy';
-
+import { motion } from 'framer-motion'
 
 const Review = () => {
   return (
-    <div id='cv'>
+    <motion.div
+    initial={{width:0}}
+    animate={{width:'100%'}}
+    exit={{x:window.innerWidth, transition:{duration:0.1}}}
+
+    id='cv'>
     <Navbar />
 
     <HeroSection />
@@ -23,7 +28,7 @@ const Review = () => {
     <FAQ />
     {/* <Section /> */}
     <Footer />
-    </div>
+    </motion.div>
   )
 }
 

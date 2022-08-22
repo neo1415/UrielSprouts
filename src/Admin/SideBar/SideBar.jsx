@@ -22,7 +22,7 @@ const SideBar = () => {
     <div className='sidebar'>
         <div className='top'>
             <span className='logo'>UrielSprouts</span>
-            <p>{user && user.email}</p>
+            <p>{user && user.displayName}</p>
         </div>
         <hr></hr>
         <div className='center'>

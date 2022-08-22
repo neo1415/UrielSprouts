@@ -78,14 +78,14 @@ const [toggle, setToggle] = useState(false);
 <Link to='/#homepage ' className='logo'><img src={images.logo} className='nav-logo' /> </Link>
 </div>
   <ol>
-    <li className="menu-item"><a href="/#homepge">Home</a></li>
+    <li className="menu-item"><Link to='/#homepage ' >Home</Link></li>
     <li className="menu-item"><a href="/#about">About</a></li>
     <li className="menu-item">
     <a href="#services">Services</a>
       <ol className="sub-menu">
-        <li className="menu-item"><a href='/employability' >Employability</a></li>
-        <li className="menu-item"><a href="/review/#cv" >Business Advisory</a></li>
-        <li className="menu-item"><a href="#0" >Hospitality</a></li>
+        <li className="menu-item"><Link to='/employability' >Employability</Link></li>
+        <li className="menu-item"><Link to="/review/#cv" >Business Advisory</Link></li>
+        <li className="menu-item"><Link to="#0" >Hospitality</Link></li>
       </ol>
     </li>
     <li className="menu-item">
@@ -108,9 +108,9 @@ const [toggle, setToggle] = useState(false);
     <li className="menu-item" >
     <details className="faq__detail drop-container">
           <summary  className="faq__summary drop"><span className="faq__question question"><p className='d-link'>Services</p></span></summary>
-          <a href='/employability' className="faq__text drop-link" onClick={() => setToggle(false)}>Employability</a>
-          <a href='/review/#cv' className="faq__text drop-link" onClick={() => setToggle(false)}>Business Advisory</a>
-          <a href='#0' className="faq__text drop-link" onClick={() => setToggle(false)}>Hospitality</a>
+          <Link to='/employability' className="faq__text drop-link" onClick={() => setToggle(false)}>Employability</Link>
+          <Link to='/review/#cv' className="faq__text drop-link" onClick={() => setToggle(false)}>Business Advisory</Link>
+          <Link to='#0' className="faq__text drop-link" onClick={() => setToggle(false)}>Hospitality</Link>
         </details> 
     </li>
     <li className="menu-item" >

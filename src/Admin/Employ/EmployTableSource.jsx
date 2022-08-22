@@ -1,12 +1,14 @@
+import moment from 'moment'
 
 export const userColumns = [
  
-  // {
-  //   field: "createdAt",
-  //   headerName: "Date",
-  //   width: 230,
-  //   type:'date'
-  // },
+  {
+    field: "createdAt",
+    headerName: "Date",
+    width: 200,  
+    dataType: 'date',  
+    format: 'dd/MM/yyyy hh:mm'   
+  },
 
   {
     field: "firstname",

@@ -1,16 +1,18 @@
 
 export const userColumns = [
+  {
+    field: "createdAt",
+    headerName: "Date",
+    width: 200,  
+    dataType: 'date',  
+    format: 'dd/MM/yyyy hh:mm'   
+  },
 
   {
     field: "name",
     headerName: "Name",
     width: 230,
   },
-  // {
-  //   field: "createdAt",
-  //   headerName: "time",
-  //   width: 230,
-  // },
 
   {
     field: "email",

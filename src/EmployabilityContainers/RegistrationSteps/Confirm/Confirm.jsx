@@ -44,7 +44,7 @@ const Confirm = ({values}) => {
             birthday:birthday,
             levelOfEducation:levelOfEducation,
             PrefferedAreaOfExpertise:PrefferedAreaOfExpertise,
-            createdAt:Timestamp.now().toDate()
+            createdAt: Timestamp.now().toDate().toString()
           });
       }catch(err){
         console.log(err)

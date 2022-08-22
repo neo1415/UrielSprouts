@@ -85,9 +85,9 @@ const Reviews = () => {
         renderCell: (params, id) => {
           return (
             <div className="cellAction">
-              <Link to={"/testAdmin"} style={{ textDecoration: "none" }}>
+              {/* <Link to={"/testAdmin"} style={{ textDecoration: "none" }}>
                 <div className="viewButton">View</div>
-              </Link>
+              </Link> */}
               <div
                 className="deleteButton"
                 onClick={() => handleDelete(params.row.id)}

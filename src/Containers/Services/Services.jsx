@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './Services.scss';
 // import {urlFor, client} from '../../client';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 
 const Services = () => {
@@ -39,8 +40,8 @@ const Services = () => {
 <div className='serviceCard'>
 <div class="blog-card employability spring-fever">
   <div class="title-content">
-    <h3><a href="/employability">Employability</a></h3>
-    <div class="intro"> <a href="/employability">Emplpoyability Skills Program and Job/Internship Placements</a> </div>
+    <h3><Link to="/employability">Employability</Link></h3>
+    <div class="intro"> <Link to="/employability">Emplpoyability Skills Program and Job/Internship Placements</Link> </div>
   </div>
   <div class="card-info">
   <p>
@@ -48,11 +49,11 @@ const Services = () => {
   job seekers for the world of work. Through our work readiness ... 
   </p>
    
-    <a href="/employability">Continue<span class="licon icon-arr icon-black"></span></a>
+    <Link to="/employability">Continue<span class="licon icon-arr icon-black"></span></Link>
   </div>
   <div class="utility-info">
     <ul class="utility-list">
-    <li><span class="licon icon-tag"></span><a href="/employability">Find Out More</a></li>
+    <li><span class="licon icon-tag"></span><Link to="/employability">Find Out More</Link></li>
     </ul>
   </div>
   <div class="gradient-overlay"></div>
@@ -63,20 +64,20 @@ const Services = () => {
 <div className='serviceCard'>
 <div class="blog-card business spring-fever">
   <div class="title-content">
-    <h3><a href="/review/#cv">Business Advisory</a></h3>
-    <div class="intro"> <a href="/review/#cv">Business Management & Incubation Program</a> </div>
+    <h3><Link to="/review/#cv">Business Advisory</Link></h3>
+    <div class="intro"> <Link to="/review/#cv">Business Management & Incubation Program</Link> </div>
   </div>
   <div class="card-info">
   <p>
   We train individuals business enthusiast on the rudiment of starting a business
   from ideation stage to going-live and also deploy advanced business management ... 
   </p>
-    <a href="/review/#cv">Continue<span class="licon icon-arr icon-black"></span></a>
+    <Link to="/review/#cv">Continue<span class="licon icon-arr icon-black"></span></Link>
   </div>
   <div class="utility-info">
     <ul class="utility-list">
 
-      <li><span class="licon icon-tag"></span><a href="http://localhost:3000/review/#cv">Find Out More</a></li>
+      <li><span class="licon icon-tag"></span><Link to="http://localhost:3000/review/#cv">Find Out More</Link></li>
     </ul>
   </div>
   <div class="gradient-overlay"></div>
@@ -87,20 +88,20 @@ const Services = () => {
 <div className='serviceCard'>
 <div class="blog-card hospitality spring-fever">
   <div class="title-content">
-    <h3><a href="#">Hospitality</a></h3>
-    <div class="intro"> <a href="#">Hospitality Management</a> </div>
+    <h3><Link to="#">Hospitality</Link></h3>
+    <div class="intro"> <Link to="#">Hospitality Management</Link> </div>
   </div>
   <div class="card-info">
   <p>
   The Hospitality and Tourism industry is a large and complex industry
   and one that is of significant economic importance to the country... 
   </p>
-    <a href="#">Continue<span class="licon icon-arr icon-black"></span></a>
+    <Link to="#">Continue<span class="licon icon-arr icon-black"></span></Link>
   </div>
   <div class="utility-info">
     <ul class="utility-list">
 
-    <li><span class="licon icon-tag"></span><a href="#">Find Out More</a></li> 
+    <li><span class="licon icon-tag"></span><Link to="#">Find Out More</Link></li> 
     </ul>
   </div>
   <div class="gradient-overlay"></div>

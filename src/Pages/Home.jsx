@@ -6,10 +6,16 @@ import CTA from '../Containers/CTA/CTA';
 import CopyRight from '../Containers/copyright';
 import Header from '../Containers/Header/Header';
 import Slider from '../Containers/TesSlider/Slider';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <div id='homepage'>
+    <motion.div
+    initial={{width:0}}
+    animate={{width:'100%'}}
+    exit={{x:window.innerWidth, transition:{duration:0.1}}}
+
+     id='homepage'>
       <Navbar />
       <Header />
       <About />
@@ -20,7 +26,7 @@ const Home = () => {
       <Testimonial />
       <Footer />
       <CopyRight />
-    </div>
+    </motion.div>
   )
 }
 

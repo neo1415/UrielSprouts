@@ -1,5 +1,6 @@
 import React from 'react'
 import './CTA.scss'
+import { Link } from 'react-router-dom'
 import { FaHandPointRight } from 'react-icons/fa'
 
 const CTA = () => {
@@ -11,7 +12,7 @@ const CTA = () => {
            <div className='CTA'></div>
             <div class="Containers">
    
-   <a href='/review/#cv' class="button">Read More <div className='btn-span'><FaHandPointRight /></div> </a>
+   <Link to='/review/#cv' class="button">Read More <div className='btn-span'><FaHandPointRight /></div> </Link>
 </div>
    
         </div>

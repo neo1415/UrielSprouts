@@ -129,7 +129,8 @@ uploadTask.on('state_changed',
       // )
       await setDoc(doc(db, "users", uuidv4()), {
         ...data,
-        createdAt: Timestamp.now().toDate()
+        createdAt: Timestamp.now().toDate().toString(),
+        status:[]
       });
   }catch(err){
     console.log(err)

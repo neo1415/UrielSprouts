@@ -1,6 +1,8 @@
 import { HiDownload } from "react-icons/hi";
+import moment from 'moment'
 
 export const userColumns = [
+
     {
       field: "email",
       headerName: "Email",
@@ -22,7 +24,9 @@ export const userColumns = [
     {
       field: "createdAt",
       headerName: "Date",
-      width: 300,
+      width: 200,  
+      dataType: 'date',  
+      format: 'dd/MM/yyyy hh:mm'   
     },
     {
       field: "status",

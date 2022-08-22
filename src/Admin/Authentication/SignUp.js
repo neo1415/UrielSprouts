@@ -1,8 +1,9 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import React,{useState} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../Context/AuthContext';
 import './form.scss'
+import { auth } from '../../Components/firebaseConfig';
 
 const SignUp = () => {
 
@@ -20,6 +21,7 @@ const SignUp = () => {
         setError('')
         try{
             await createUser(email, password,name);
+            updateProfile(auth.currentUser,{displayName:name})
             navigate('/list')
         } catch(e){
             setError(e.message)

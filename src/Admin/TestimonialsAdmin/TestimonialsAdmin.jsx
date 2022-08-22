@@ -80,7 +80,7 @@ const TestimonialsAdmin = () => {
           // )
           await setDoc(doc(db, "testimonials", uuidv4()), {
             ...data,
-            createdAt: Timestamp.now().toDate()
+            createdAt: Timestamp.now().toDate().toDateString()
           });
       }catch(err){
         console.log(err)
@@ -127,7 +127,6 @@ const TestimonialsAdmin = () => {
                 
                     <textarea
                         id={input.id}
-                        type={input.type}
                         className={input.className}
                         placeholder={input.placeholder}
                         onChange={handleInput}

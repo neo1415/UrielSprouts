@@ -28,7 +28,7 @@ const Footer = () => {
     try{
       await setDoc(doc(db, "contactForm", uuidv4()), {
         ...data,
-        createdAt:Timestamp.now().toDate()
+        createdAt:Timestamp.now().toDate().toString()
       });
   }catch(err){
     console.log(err)
