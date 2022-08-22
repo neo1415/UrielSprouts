@@ -15,6 +15,7 @@ import SideBar from "../SideBar/SideBar";
 
 const List = () => {
   const [data, setData] = useState([]);
+  const [approved, setApproved] = useState(false);
   // const {currentUser} = useContext(AuthContext)
   const navigate=useNavigate()
   
@@ -32,7 +33,11 @@ const List = () => {
   },[])
   console.log(data)
 
-
+// const approve = async (id) => {
+//   try{
+//     setApproved(true)
+//   }
+// }
 
   const handleDelete = async (id) => {
     try {

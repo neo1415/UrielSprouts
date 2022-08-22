@@ -5,11 +5,32 @@ import { useState } from 'react';
 
 import { images } from '../../Constants';
 import './NavBar.scss';
+import { motion } from 'framer-motion';
 
 const NavBar = () => {
+
+    const [scrollNav, setScrollNav] = useState(false);
+
+    const changeNav = () => {
+        if (window.scrollY >= 60){
+          setScrollNav(true);
+        }else{
+          setScrollNav(false);
+        }
+      };
+
+      useEffect(() => {
+        window.addEventListener('scroll', changeNav);
+      },[]);
+
     const [toggle, setToggle] = useState(false);
   return (
-    <nav className='app__navbar'>
+    <motion.nav
+     initial={{position:'relative'}}
+     animate={{position:'fixed'}}
+  
+
+     className='app__navbar'>
         <a href='/#homepage' className='app__navbar-logo'>
             <img src={ images.logo } alt='logo' />
         </a>
@@ -45,7 +66,7 @@ const NavBar = () => {
                 </motion.div>    
             )}
         </div>
-    </nav>
+    </motion.nav>
   )
 }
 
