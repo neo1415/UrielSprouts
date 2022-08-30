@@ -8,9 +8,11 @@ import { GridToolbarContainer } from "@mui/x-data-grid";
 import { GridToolbarExport } from "@mui/x-data-grid";
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs, deleteDoc, doc,onSnapshot, orderBy, query } from "firebase/firestore";
-import { db } from "../../Components/firebaseConfig";
+import {auth, db } from "../../Components/firebaseConfig";
 import {AuthContext} from '../../Context/AuthContext'
 import SideBar from "../SideBar/SideBar";
+import Status from "./Status";
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const List = () => {
@@ -18,6 +20,8 @@ const List = () => {
   const [approved, setApproved] = useState(false);
   // const {currentUser} = useContext(AuthContext)
   const navigate=useNavigate()
+ 
+    const [user] = useAuthState(auth)
   
   useEffect(()=> {
     const dataRef = collection(db, 'users')
@@ -28,7 +32,7 @@ const List = () => {
         ...doc.data(),
       }))
       setData(data);
-      console.log(data)
+   
     })
   },[])
   console.log(data)
@@ -85,6 +89,11 @@ const List = () => {
               View
             </div>
 
+            <div>
+            
+           
+           </div>
+      
           </div>
         );
       },

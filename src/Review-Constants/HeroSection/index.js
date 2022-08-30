@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './Hero.scss'
+import { CheckBox } from '@mui/icons-material';
 // import {useNavigate} from 'react-router-dom'
 import { serverTimestamp} from 'firebase/firestore' 
 import { doc, setDoc } from "firebase/firestore"; 
@@ -15,45 +16,13 @@ import { Timestamp } from 'firebase/firestore';
 import Checkout from '../../Components/Checkout/Checkout';
 import { useNavigate } from 'react-router-dom';
 import Email from './email';
+import Status from '../../Admin/Table/Status';
 
 
 const HeroSection = () => {
 
-  // checkout states
-
-  // const publicKey = "pk_test_d76efdb1f2965b416262f9d99e8b53ff9e801434"
-  // const amount = 1
-  // const [email, setEmail] = useState("")
-  // const [firstName, setFirstName] = useState("")
-  // const [lastName, setLastName] = useState("")
-  // const [openPayment, setOpenPayment] = useState(false)
-
-  // // checkout componentProps
-
-  // const componentProps = {
-  //   email,
-  //   amount,
-  //   metadata: {
-  //    firstName,
-  //    lastName
-  //   },
-  //   publicKey,
-  //   text: "Pay Now",
-  //   onSuccess: () =>
-  //    handleSend(),
-  //   onClose: () => window.location.reload()
-  //   ,
-  // }
-
-  // const handleComplete =(e)=>{
-  //   e.preventDefault()
-  // }
-
-
-
-  // hero states
-
   const [file, setFile] = useState('')
+  const [status, setStatus] = useState('')
   const [data , setData] = useState('')
   const [per, setPerc] = useState(null)
   const [error , setError]= useState(null)
@@ -120,6 +89,8 @@ uploadTask.on('state_changed',
     setData({...data,[id]: value});
   }
   console.log(data)
+
+
   const handleSend= async (e) =>{
     try{
       // const res=await createUserWithEmailAndPassword(
@@ -130,7 +101,7 @@ uploadTask.on('state_changed',
       await setDoc(doc(db, "users", uuidv4()), {
         ...data,
         createdAt: Timestamp.now().toDate().toString(),
-        status:[]
+        complete:'Pending'
       });
   }catch(err){
     console.log(err)
@@ -185,9 +156,9 @@ uploadTask.on('state_changed',
                 </div>
                 </label>
              </div>
+           
               </div>
 
-            
               <div className='Output'>
                 {error && <div className='error'>{error}</div>}
                 {file && <div className='error'>{file.name}</div>}

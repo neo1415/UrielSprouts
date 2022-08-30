@@ -6,6 +6,9 @@ import { list } from 'firebase/storage';
 import { useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { HiDownload } from 'react-icons/hi';
+import Status from '../Table/Status';
+// import Status from './../Table/Status';
+
 const SingleUser = () => {
 
     const [data, setData] = useState([]);
@@ -23,9 +26,12 @@ const SingleUser = () => {
             onSnapshot(docRef, (snapshot) =>{
                 setData({...snapshot.data(), id:snapshot.id});
             })
+         
         }
+        
     )
-      console.log(data)
+ 
+
 
   return (
     <div className='singles'>
@@ -33,6 +39,8 @@ const SingleUser = () => {
     <a href={data.file}>Download File <HiDownload style={style} /> </a>
     </div>
         <p>Email : {data.email}</p>
+        <p>Status: {data.cars}</p>
+        <Status data={data} id={id} />
     </div>
     
   )

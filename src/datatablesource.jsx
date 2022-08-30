@@ -15,7 +15,7 @@ export const userColumns = [
       type:'link',
       link:'a',
       renderCell: (cellValues) => {
-        return <a href={`${cellValues.row.file}` } download ><HiDownload /></a>;
+        return <a href={`${cellValues.row.file}` } download target='blank'><HiDownload /></a>;
       }
      
       
@@ -29,17 +29,22 @@ export const userColumns = [
       format: 'dd/MM/yyyy hh:mm'   
     },
     {
-      field: "status",
+      field: "complete",
       headerName: "Status",
-      width: 60,
-      renderCell: (params) => {
-        return (
-          <div className={`cellWithStatus ${params.row.status}`}>
-            {params.row.status}
-          </div>
-        );
-      },
+      width: 200,     
     },
+    // {
+    //   field: "status",
+    //   headerName: "Status",
+    //   width: 60,
+    //   renderCell: (params) => {
+    //     return (
+    //       <div className={`cellWithStatus ${params.row.status}`}>
+    //         {params.row.status}
+    //       </div>
+    //     );
+    //   },
+    // },
   ];
   
   //temporary data
