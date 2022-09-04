@@ -18,7 +18,7 @@ const handleSubmit = async(e) =>{
     setError('')
     try{
         await signIn(email, password);
-        navigate('/list')
+        navigate('/adminHome')
     } catch(e){
         setError(e.message)
         console.log(e.message)

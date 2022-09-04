@@ -24,14 +24,14 @@ export const userColumns = [
     {
       field: "createdAt",
       headerName: "Date",
-      width: 200,  
+      width: 180,  
       dataType: 'date',  
       format: 'dd/MM/yyyy hh:mm'   
     },
     {
       field: "complete",
       headerName: "Status",
-      width: 200,     
+      width: 85,     
     },
     // {
     //   field: "status",

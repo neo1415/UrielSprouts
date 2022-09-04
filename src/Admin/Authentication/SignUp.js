@@ -22,7 +22,7 @@ const SignUp = () => {
         try{
             await createUser(email, password,name);
             updateProfile(auth.currentUser,{displayName:name})
-            navigate('/list')
+            navigate('/adminHome')
         } catch(e){
             setError(e.message)
             console.log(e.message)

@@ -2,21 +2,18 @@ import { DataGrid } from "@mui/x-data-grid";
 import { userColumns} from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useState, useEffect,useContext } from "react";
-import './Table.scss'
 import { GridToolbar } from "@mui/x-data-grid";
 import { GridToolbarContainer } from "@mui/x-data-grid";
 import { GridToolbarExport } from "@mui/x-data-grid";
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs, deleteDoc, doc,onSnapshot, orderBy, query } from "firebase/firestore";
 import {auth, db } from "../../Components/firebaseConfig";
-import {AuthContext} from '../../Context/AuthContext'
-import SideBar from "../SideBar/SideBar";
-import Status from "./Status";
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const List = () => {
   const [data, setData] = useState([]);
+  const [approved, setApproved] = useState(false);
   // const {currentUser} = useContext(AuthContext)
   const navigate=useNavigate()
  
@@ -99,10 +96,9 @@ const List = () => {
     },
   ];
   return (
-    <div className="list">
-        <SideBar />
-      <div className="datatable">
-      <div className="datatableTitle">
+    <div className="list" style={{height:'55vh'}}>
+      <div className="datatable" style={{height:'65vh'}}>
+      <div className="datatableTitle" style={{fontSize:20}}>
         CV Review
       </div>
       <DataGrid
@@ -114,10 +110,8 @@ const List = () => {
 
         className="datagrid"
         rows={data}
-        columns={userColumns.concat(actionColumn)}
-        pageSize={9}
-        rowsPerPageOptions={[9]}
-        checkboxSelection
+        columns={userColumns}
+        pageSize={3}
 
       />
     </div>

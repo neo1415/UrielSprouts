@@ -21,7 +21,7 @@ const SideBar = () => {
   return (
     <div className='sidebar'>
         <div className='top'>
-            <span className='logo'>UrielSprouts</span>
+        <Link to ='/adminHome'><span className='logo'>UrielSprouts</span></Link>   
             <p>{user && user.displayName}</p>
         </div>
         <hr></hr>

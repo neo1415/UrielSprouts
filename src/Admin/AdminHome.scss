@@ -1,11 +1,32 @@
 .listContainer{
-    -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
-    box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+    -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.082);
+    box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.082);
     padding: 20px;
-    margin: 20px;
+    margin: 0px;
+    display: flex;
+    flex:6;
+    
+    .AdminContainer{
+        display: flex;
+        flex-direction: column;
+        padding:  20px 5px 20px 20px; 
+ 
+    }
     .listTitle{
         font-weight: 500;
         color: gray;
         margin-bottom: 15px;
     }
+}
+
+.widget{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+
+}
+.Middle{
+    -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.082);
+    box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.082);
+    padding: 0px;
 }
