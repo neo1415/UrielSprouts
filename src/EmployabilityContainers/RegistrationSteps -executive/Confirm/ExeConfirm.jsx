@@ -1,7 +1,7 @@
 import React from 'react'
 import { ListGroup } from 'react-bootstrap'
 import { db } from '../../../Components/firebaseConfig';
-import { setDoc,doc } from 'firebase/firestore'
+import { setDoc,doc, serverTimestamp } from 'firebase/firestore'
 import { v4 as uuidv4 } from 'uuid';
 import { Timestamp } from 'firebase/firestore';
 import { PaystackButton } from 'react-paystack';
@@ -42,7 +42,9 @@ const ExeConfirm = ({values}) => {
             birthday:birthday,
             levelOfEducation:levelOfEducation,
             PrefferedAreaOfExpertise:PrefferedAreaOfExpertise,
-            createdAt: Timestamp.now().toDate().toString()
+            complete:'Pending',
+            createdAt: Timestamp.now().toDate().toString(),
+            timestamp:serverTimestamp()
           });
       }catch(err){
         console.log(err)

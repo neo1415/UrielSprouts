@@ -1,10 +1,10 @@
 import React from 'react'
 import './AdminHome.scss'
-import Contact from './Contact/Contact';
 import Widget from './WIdgets/Widget';
 import List from './homeAdmin/Table';
 import Header from './homeAdmin/Header';
 import SideBar from './SideBar/SideBar';
+import Contact from './homeAdmin/Contact';
 
 const adminHome = () => {
   return (
@@ -26,7 +26,7 @@ const adminHome = () => {
     </div>
     </div>   
     <div className='adminList' style={{flex:3}}>
-     <List />
+     <Contact />
     </div>  
     </div>
     </div>

@@ -4,7 +4,7 @@ import { collection, getDocs, deleteDoc, doc, getDoc, onSnapshot } from "firebas
 import { db } from '../../Components/firebaseConfig';
 import { list } from 'firebase/storage';
 import { useParams } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
+import ExecStatus from './../Table/ExecStatus';
 
 const ExecEmployUser = () => {
 
@@ -31,7 +31,7 @@ const ExecEmployUser = () => {
         <p>Date of Birth : {data.birthday}</p>
         <p>Level Of Education : {data.levelOfEducation}</p>
         <p>Preferred Area of Expertise : {data.PrefferedAreaOfExpertise}</p>
-      
+      <ExecStatus data={data} id={id} />
 
     </div>
     

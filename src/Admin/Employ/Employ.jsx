@@ -105,7 +105,7 @@ const Employ = () => {
           components={{
           Toolbar: CustomToolbar,
           }}
-
+          
             className="datagrid"
             rows={data}
             columns={userColumns.concat(actionColumn)}

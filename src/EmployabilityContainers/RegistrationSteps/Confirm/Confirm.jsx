@@ -4,6 +4,7 @@ import { db } from '../../../Components/firebaseConfig';
 import { setDoc,doc, Timestamp } from 'firebase/firestore'
 import { v4 as uuidv4 } from 'uuid';
 import { PaystackButton } from 'react-paystack';
+import { serverTimestamp } from 'firebase/firestore';
 import './confirm.scss'
 
 const Confirm = ({values}) => {
@@ -44,7 +45,9 @@ const Confirm = ({values}) => {
             birthday:birthday,
             levelOfEducation:levelOfEducation,
             PrefferedAreaOfExpertise:PrefferedAreaOfExpertise,
-            createdAt: Timestamp.now().toDate().toString()
+            complete:'Pending',
+            createdAt: Timestamp.now().toDate().toString(),
+            timestamp:serverTimestamp()
           });
       }catch(err){
         console.log(err)

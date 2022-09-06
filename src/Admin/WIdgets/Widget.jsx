@@ -6,7 +6,7 @@ import  {KeyboardArrowDown, ShoppingBagOutlined } from '@mui/icons-material'
 import { query, where, collection, getDocs, } from 'firebase/firestore';
 import { db } from '../../Components/firebaseConfig'
 import { useState } from 'react';
-import { doc } from 'firebase/firestore';
+import { Link } from 'react-router-dom'
 
 const Widget = ({type}) => {
 
@@ -22,7 +22,8 @@ switch(type){
       title:'USERS',
       query: 'users',
       link:'see all Users',
-      icon: <PersonOutlined className='icon' />
+      icon: <PersonOutlined className='icon' />,
+      to:'/list'
     };
     break;
 
@@ -31,7 +32,8 @@ switch(type){
       title:'Basic Pathway',
       query: 'registration',
       link:'View all Customers',
-      icon: <ShoppingBagOutlined className='icon' />
+      icon: <ShoppingBagOutlined className='icon' />,
+      to:'/employ'
     };
     break;
 
@@ -40,7 +42,8 @@ switch(type){
       title:'Executive PathWay',
       query: 'Exec-Registration',
       link:'view All Customers',
-      icon: <ShoppingBagOutlined className='icon' />
+      icon: <ShoppingBagOutlined className='icon' />,
+      to:'/employ-exec'
     };
     break;
     default:
@@ -49,19 +52,19 @@ switch(type){
 
 useEffect(() => {
   const fetchData = async () => {
-    const today = new Date();
+    const today = new Date(new Date());
     const lastMonth = new Date(new Date().setMonth(today.getMonth() - 1));
     const prevMonth = new Date(new Date().setMonth(today.getMonth() - 2));
 
     const lastMonthQuery = query(
-      collection(db, 'data.query'),
-      where("createdAt", "<=", today),
-      where("createdAt", ">", lastMonth)
+      collection(db, data.query),
+      where("timestamp", "<=", today),
+      where("timestamp", ">", lastMonth)
     );
     const prevMonthQuery = query(
-      collection(db, 'data.query'),
-      where("createdAt", "<=", lastMonth),
-      where("createdAt", ">", prevMonth)
+      collection(db, data.query),
+      where("timestamp", "<=", lastMonth),
+      where("timestamp", ">", prevMonth)
     );
 
     const lastMonthData = await getDocs(lastMonthQuery);
@@ -73,6 +76,7 @@ useEffect(() => {
         100
     );
     console.log(amount)
+    console.log(diff)
   };
   fetchData();
 }, []);
@@ -84,7 +88,7 @@ useEffect(() => {
         <div className='left'>
             <span className='titler'>{data.title}</span>
             <span className='counter'> {amount}</span>
-            <span className='link'>{data.link}</span>
+            <Link to={data.to}><span className='link'>{data.link}</span></Link>
         </div>
         <div className='right'>
         <div className={`percentage ${diff < 0 ? "negative" : "positive"}`}>

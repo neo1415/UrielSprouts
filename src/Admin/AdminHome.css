@@ -5,12 +5,15 @@
   margin: 0px;
   display: flex;
   flex: 6;
+  z-index: 3;
 }
 
 .listContainer .AdminContainer {
   display: flex;
   flex-direction: column;
   padding: 20px 5px 20px 20px;
+  position: absolute;
+  left: 12%;
 }
 
 .listContainer .listTitle {

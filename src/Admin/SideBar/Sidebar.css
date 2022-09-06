@@ -1,7 +1,10 @@
 .sidebar {
-  width: 140px !important;
+  width: 180px !important;
   min-height: 100vh;
   border-right: .5px solid lightgray;
+  position: fixed;
+  z-index: 0;
+  left: 0;
 }
 
 .sidebar .top {

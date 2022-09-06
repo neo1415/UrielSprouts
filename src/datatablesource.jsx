@@ -6,12 +6,12 @@ export const userColumns = [
     {
       field: "email",
       headerName: "Email",
-      width: 230,
+      width: 220,
     },
     {
       field: "file",
       headerName: "File",
-      width: 30,
+      width: 10,
       type:'link',
       link:'a',
       renderCell: (cellValues) => {
@@ -25,13 +25,13 @@ export const userColumns = [
       field: "createdAt",
       headerName: "Date",
       width: 180,  
-      dataType: 'date',  
+      type: 'timestamp',  
       format: 'dd/MM/yyyy hh:mm'   
     },
     {
       field: "complete",
       headerName: "Status",
-      width: 85,     
+      width: 83,     
     },
     // {
     //   field: "status",

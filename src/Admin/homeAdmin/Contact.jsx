@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import { collection, getDocs, deleteDoc,doc,query, onSnapshot,orderBy } from "firebase/firestore";
 import { db } from "../../Components/firebaseConfig";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns } from './contactTableSource';
+import { userColumns } from '../Contact/contactTableSource';
 import SideBar from '../SideBar/SideBar';
 import { useNavigate } from 'react-router-dom';
 import { GridToolbarContainer } from "@mui/x-data-grid";
@@ -96,10 +96,9 @@ const Contact = () => {
         },
       ];
       return (
-        <div className='list'>
-        <SideBar />
+        <div className='list' style={{marginTop:30}}>
         <div className="datatable">
-          <div className="datatableTitle">
+          <div className="datatableTitle" style={{fontSize:25}}>
             Contact Us 
           </div>
           <DataGrid
@@ -108,13 +107,12 @@ const Contact = () => {
           components={{
           Toolbar: CustomToolbar,
           }}
-            
+            autoHeight={true}
             className="datagrid"
             rows={data}
             columns={userColumns.concat(actionColumn)}
-            pageSize={9}
-            rowsPerPageOptions={[9]}
-            checkboxSelection
+            pageSize={6}
+
           />
         </div>
         </div>
