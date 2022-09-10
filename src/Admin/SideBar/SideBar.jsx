@@ -2,6 +2,8 @@ import React from 'react'
 import './Sidebar.scss'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../Context/AuthContext'
+import Brands from './../Brands/Brands';
+import { images } from '../../Constants';
 
 const SideBar = () => {
   const {user, logout} = UserAuth()
@@ -20,39 +22,58 @@ const SideBar = () => {
 
   return (
     <div className='sidebar'>
-        <div className='top'>
-        <Link to ='/adminHome'><span className='logo'>UrielSprouts</span></Link>   
+        <div className='Top'>
+        <img className='logo' src={images.logo}/>
             <p>{user && user.displayName}</p>
         </div>
         <hr></hr>
         <div className='center'>
             <ul>
-                <li>
-                   <Link to ='/list'><span>CV review</span></Link> 
-                </li>
-                <li>
-                   <Link to ='/employ'><span>Basic Path</span></Link> 
-                </li>
-                <li>
-                   <Link to ='/employ-exec'><span>Executive Path</span></Link> 
-                </li>
-                <li>
-                <Link to ='/contact'><span>Contact Us</span></Link> 
-                </li>
-                <li>
-                <Link to ='/testimonialadmin'><span>Testimonials</span></Link> 
-                </li>
-                <li>
-                <Link to ='/brands'><span>Brands</span></Link> 
-                </li>
-                <li>
-                <Link to ='/upload'><span>Gallery</span></Link> 
-                </li>
+              <Link to ='/adminHome'>
+                  <li className='sideList'>
+                    Dashboard
+                  </li>
+                </Link> 
+              <Link to ='/list'>
+                  <li className='sideList'>
+                    CV review
+                  </li>
+                </Link> 
+                <Link to ='/employ'>
+                  <li className='sideList'>
+                    Basic Path 
+                  </li>
+                </Link>
+                <Link to ='/employ-exec'>
+                  <li className='sideList'>
+                    Executive Path
+                  </li>
+                </Link> 
+                <Link to ='/contact'>
+                  <li className='sideList'>
+                    Contact Us
+                  </li>
+                </Link> 
+                <Link to ='/testimonialadmin'>
+                  <li className='sideList'>
+                    Testimonials
+                  </li>
+                </Link> 
+                <Link to ='/brands'>
+                  <li className='sideList'>
+                    Brands 
+                  </li>
+                </Link>
+                <Link to ='/upload'>
+                  <li className='sideList'>
+                    Gallery
+                  </li>
+                </Link> 
             </ul>
         </div>
         <hr/>
         <div className='bottom'>
-        <p className='logout' onClick={handleLogout}>LogOut</p>
+        <li className='logout' onClick={handleLogout}>LogOut</li>
         </div>
        
     </div>

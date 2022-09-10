@@ -5,6 +5,9 @@
 .TestimonialAdmin {
   display: flex;
   flex: 2 !important;
+  position: absolute;
+  left: 12%;
+  width: 100%;
 }
 
 .review-container {
@@ -13,8 +16,11 @@
 }
 
 .review-container .test-title {
-  position: absolute;
-  right: 5%;
+  position: fixed;
+  right: 10%;
+  border-left: 1px solid gray;
+  height: 100vh;
+  padding-left: 2rem;
 }
 
 .review-container .test-title .test-form .Name, .review-container .test-title .test-form .Company {

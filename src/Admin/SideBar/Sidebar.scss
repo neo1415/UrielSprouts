@@ -1,28 +1,28 @@
 .sidebar{
     
     width: 180px !important;
-   min-height: 100vh;
+    min-height: 100vh;
     border-right: .5px solid lightgray;
     position: fixed;
-    z-index: 0;
+    z-index: 5;
     left: 0;
-    .top{
+    background-color: var(--secondary-color);
+    color:white;
+    .Top{
         height: 50px;
         margin-top: 1rem;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         display: flex;
         flex-direction: column;
         p{
             font-size: 15px;
             font-weight: bold;
-            padding-left: 10px;
+            padding-left: 1px;
         }
         .logo{
-            font-size: 20px;
-            font-weight: bold;
-            color: blue($color: #2847f7);
+            width: 10rem;
         }
     }
     hr{
@@ -30,7 +30,7 @@
         border: .5px solid lightgray;
     }
     .center{
-        padding-left: 10px;
+        padding-left: 1px;
         ul{
             list-style: none;
             margin: 0;
@@ -39,9 +39,24 @@
                 display: flex;
                 align-items: center;
                 padding: 5px;
+                height: 50px;
                 cursor: pointer;
+                color: white !important;
                 &:hover{
-                    background-color: rgb(233, 230, 230);
+                    background-color: var(--primary-color) !important;
+                    color: #bf2e46 !important;
+                }
+                &:active{
+                    background-color: var(--primary-color) !important;
+                    color: #bf2e46 !important;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    padding: 5px ;
+                    width: 100vw;
+                    cursor: pointer;
+                    color: white !important;
                 }
             }
         }
@@ -49,21 +64,23 @@
 }
 
 .bottom{
-    position: absolute;
-    padding-left: 10px;
-
+    padding-left: 1px;
+    background-color: var(--primary-color) !important; 
     display: flex;
-    align-items: center;
-    padding: 5px;
+    align-items: flex-start;
     cursor: pointer;
 
-    p{
-        font-size: 19px;
-        font-weight: bold;
-        padding-left: 10px;
+    li{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        height: 50px;
+        cursor: pointer;
+        color: white !important;
+        color: #bf2e46 !important;
         &:hover{
-            background-color: rgb(248, 202, 202);
-            width: 200PX;
+            background-color: var(--primary-color) !important;
+            color: #bf2e46 !important;
         }
-    }
+}
 }

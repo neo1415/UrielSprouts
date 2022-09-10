@@ -12,6 +12,7 @@ const Widget = ({type}) => {
 
   const [amount, setAmount] = useState(null)
   const [diff, setDiff] = useState(null)
+  const [money, setMoney] = useState(null)
 
 
 let data;
@@ -55,6 +56,7 @@ useEffect(() => {
     const today = new Date(new Date());
     const lastMonth = new Date(new Date().setMonth(today.getMonth() - 1));
     const prevMonth = new Date(new Date().setMonth(today.getMonth() - 2));
+    const thisMonth = new Date(new Date().setMonth(today.getMonth()));
 
     const lastMonthQuery = query(
       collection(db, data.query),
@@ -67,8 +69,17 @@ useEffect(() => {
       where("timestamp", ">", prevMonth)
     );
 
+    const thisMonthQuery = query(
+      collection(db, data.query),
+      where("timestamp", "<=", thisMonth),
+      where("timestamp", ">", prevMonth)
+    );
+
     const lastMonthData = await getDocs(lastMonthQuery);
     const prevMonthData = await getDocs(prevMonthQuery);
+    const thisMonthData = await getDocs(thisMonthQuery);
+
+    setMoney(((thisMonthData.docs.length)*1000).toLocaleString("en-US") )
 
     setAmount(lastMonthData.docs.length);
     setDiff(

@@ -101,7 +101,7 @@ const ViewBrand = () => {
             rows={data}
             columns={userColumns.concat(actionColumn)}
             pageSize={9}
-            rowsPerPageOptions={[9]}
+            rowsPerPageOptions={[7]}
             checkboxSelection
           />
         </div>

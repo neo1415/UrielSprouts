@@ -61,4 +61,7 @@
 .upload-admin {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  position: absolute;
+  left: 7%;
+  width: 100%;
 }

@@ -1,6 +1,9 @@
 .brands {
   display: flex;
   flex: 2 !important;
+  position: absolute;
+  left: 12%;
+  width: 100%;
 }
 
 .brands-container {

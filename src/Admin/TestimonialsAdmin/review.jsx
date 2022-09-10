@@ -12,6 +12,7 @@ import { query } from 'firebase/firestore';
 import { onSnapshot } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import './review.scss'
+import { Link } from 'react-router-dom';
 
 const Reviews = () => {
     // const [testimonials, setTestimonials] = useState([]);
@@ -111,7 +112,11 @@ const Reviews = () => {
         <div className="datatable">
         <div className="datatableTitle">
           Testimonials
+          <Link to="/adminHome/new" className="link">
+              Add New
+        </Link> 
         </div>
+
         <DataGrid
           className="datagrid"
           rows={data}

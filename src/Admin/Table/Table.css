@@ -1,6 +1,9 @@
 .list {
   flex: 6 !important;
   display: flex;
+  position: absolute;
+  left: 12%;
+  width: 100%;
 }
 
 .datatable {

@@ -96,7 +96,7 @@ const Contact = () => {
         },
       ];
       return (
-        <div className='list' style={{marginTop:30}}>
+        <div className='List' style={{marginTop:30}}>
         <div className="datatable">
           <div className="datatableTitle" style={{fontSize:25}}>
             Contact Us 
