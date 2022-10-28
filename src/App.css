@@ -100,10 +100,10 @@
   flex-direction: column;
   position: absolute;
   padding: 1rem;
-  margin-left: -14rem;
+  right: -15%;
   position: absolute;
   z-index: 999;
-  margin-top: -15rem;
+  top: 45%;
 }
 
 @media screen and (min-width: 980px) and (max-width: 1180px) {

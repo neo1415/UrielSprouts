@@ -1,15 +1,15 @@
 import React from 'react'
-import HeroSection from './../Review-Constants/HeroSection/index';
-import Services from './../Review-Constants/Services/index';
-import Footer from './../Review-Constants/Footer/index';
-import { homeObjOne, homeObjTwo, homeObjThree } from './../Review-Constants/InfoSection/Data';
-import InfoSection from './../Review-Constants/InfoSection/index';
+import HeroSection from '../Review-Constants/HeroSection/index';
+import Services from '../Review-Constants/Services/index';
+import Footer from '../Review-Constants/Footer/index';
+import { homeObjOne, homeObjTwo, homeObjThree } from '../Review-Constants/InfoSection/Data';
+import InfoSection from '../Review-Constants/InfoSection/index';
 import PriceTable from '../Review-Constants/PriceTable/PriceTable';
 import FAQ from '../Review-Constants/FaQ/FAQ';
 import Navbar from '../Components/Navbar copy';
 import { motion } from 'framer-motion'
 
-const Review = () => {
+const CVReview = () => {
   return (
     <motion.div
     initial={{width:0}}
@@ -32,4 +32,4 @@ const Review = () => {
   )
 }
 
-export default Review
+export default CVReview

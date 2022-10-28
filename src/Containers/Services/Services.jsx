@@ -32,12 +32,18 @@ const Services = () => {
   
   return (
 
-      <div className='services ' id='services'>
+      <motion.div
+        whileInView={{y: [100, 0], opacity: [0, 1]}}
+        transition= {{ duration:1.2, ease:'easeOut' }}
+       className='services ' id='services'>
           <h2 className='service-title'>
             We <span>Offer</span>
           </h2>
 <div className='flex'>
-<div className='serviceCard'>
+<motion.div className='serviceCard'
+  whileInView={{opacity: [0, 1]}}
+  transition= {{ duration:1.2, ease:'easeOut' }}
+>
 <div class="blog-card employability spring-fever">
   <div class="title-content">
     <h3><Link to="/employability">Employability</Link></h3>
@@ -59,9 +65,12 @@ const Services = () => {
   <div class="gradient-overlay"></div>
   <div class="color-overlay"></div>
 </div>
-</div>
+</motion.div>
 
-<div className='serviceCard'>
+<motion.div
+  whileInView={{ opacity: [0, 1]}}
+  transition= {{ duration:1.2, ease:'easeOut' }}
+ className='serviceCard'>
 <div class="blog-card business spring-fever">
   <div class="title-content">
     <h3><Link to="/review/#hero">Business Advisory</Link></h3>
@@ -83,9 +92,12 @@ const Services = () => {
   <div class="gradient-overlay"></div>
   <div class="color-overlay"></div>
 </div>
-</div>
+</motion.div>
 
-<div className='serviceCard'>
+<motion.div 
+  whileInView={{ opacity: [0, 1]}}
+  transition= {{ duration:1.2, ease:'easeOut' }}
+className='serviceCard'>
 <div class="blog-card hospitality spring-fever">
   <div class="title-content">
     <h3><Link to="#">Hospitality</Link></h3>
@@ -107,14 +119,14 @@ const Services = () => {
   <div class="gradient-overlay"></div>
   <div class="color-overlay"></div>
 </div>
-</div>
+</motion.div>
 
 </div>
 
 
 
 
-</div>
+</motion.div>
 
 
 

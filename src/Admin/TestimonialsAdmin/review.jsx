@@ -112,7 +112,7 @@ const Reviews = () => {
         <div className="datatable">
         <div className="datatableTitle">
           Testimonials
-          <Link to="/adminHome/new" className="link">
+          <Link to="/review" className="link">
               Add New
         </Link> 
         </div>

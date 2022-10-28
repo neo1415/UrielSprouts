@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes,Route,useLocation } from 'react-router-dom';
 import Home from './../Pages/Home';
-import Review from './../Pages/Review';
+import CVReview from '../Pages/CVReview';
 import Employability from './../Pages/Employability';
 import Reg from './../EmployabilityContainers/Reg';
 import ExecReg from './../EmployabilityContainers/ExecReg';
@@ -19,8 +19,8 @@ const AnimateRouters = () => {
         <Routes location={location} key={location.pathname} >
             <Route exact path="/"
             element = {<Home />} />
-            <Route exact path="/review"
-            element = {<Review />} />
+            <Route exact path="/business-advisory"
+            element = {<CVReview />} />
             <Route exact path="/employability"
             element = {<Employability />} />
             <Route exact path="registration"

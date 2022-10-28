@@ -1,10 +1,14 @@
 import React from 'react'
 import './Team.scss';
 import { images } from '../../Constants';
+import {motion} from 'framer-motion';
 
 const Team = () => {
   return (
-    <div className='Team' id='team'>
+    <motion.div
+      whileInView={{y: [100, 0], opacity: [0, 1]}}
+    transition= {{ duration:1.2, ease:'easeOut' }}
+     className='Team' id='team'>
     <div className="container">
           <div className='titles-team'>
           <h2 className='head-text'>Meet <span>The Faculty</span></h2>
@@ -141,7 +145,7 @@ const Team = () => {
         </div>
     </div>
 
-</div>
+</motion.div>
   )
 }
 

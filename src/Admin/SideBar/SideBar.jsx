@@ -20,6 +20,8 @@ const SideBar = () => {
     }
   }
 
+
+
   return (
     <div className='sidebar'>
         <div className='Top'>

@@ -5,7 +5,7 @@ import DoughnutChart from './DoughnutChart'
 const Account = () => {
   return (
     <div className='account'>
-        <div className='account-widget'>
+        <div className='account-widget' style={{marginLeft:'-10rem'}}>
             <DoughnutChart />
         </div>
     </div>

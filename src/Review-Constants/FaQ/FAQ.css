@@ -1,7 +1,7 @@
 .faq {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: var(--primary-coior);
   border-radius: 25px;
   padding: 50px 25px;
   text-align: center;
@@ -118,7 +118,7 @@ details[open] .faq__summary:after {
   color: var(--blue-mid);
   font-size: 18px;
   line-height: 1.6;
-  margin: 10px 0 0 0;
+  margin: 42px 0 0 0;
 }
 
 .hidden-lg {

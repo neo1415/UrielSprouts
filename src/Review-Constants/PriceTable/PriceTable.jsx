@@ -18,7 +18,7 @@ const PriceTable = () => {
     }
   return (
     <div className='price-section'>
-    <div className='container-fluid'>
+    <div className='container-fluid' style={{paddingLeft:0, paddingRight:0,paddingBottom:'3rem' }} >
     <div className='price-title'>
         <h2>Our Pricing</h2>
     </div>
@@ -26,7 +26,7 @@ const PriceTable = () => {
       <div className="row">
         <div className="col-sm-4">
           <div className="Card text-center">
-            <div className="title">
+            <div className="titlePrice">
               <FaPaperPlane style={cardStyle} />
             </div>
             <div className="price">

@@ -39,6 +39,11 @@ const Gallery = ({setSelectedImg}) => {
         };
       }
 
+      const handleDelete = async (id) => {
+        const imageRef = doc(db, 'gallery', id)
+        await deleteDoc(imageRef)
+        
+      }
 
   return (
     <div className='gallery-admin'>

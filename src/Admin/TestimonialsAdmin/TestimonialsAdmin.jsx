@@ -7,7 +7,7 @@ import { Inputs } from './testimonialdata';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { v4 as uuidv4 } from 'uuid';
 import { BsCloudUpload } from 'react-icons/bs';
-import Review from './../../Pages/Review';
+import Review from '../../Pages/CVReview';
 import Reviews from './review';
 import SideBar from '../SideBar/SideBar';
 import { Timestamp } from 'firebase/firestore';
@@ -115,9 +115,6 @@ const TestimonialsAdmin = () => {
     <div className='TestimonialAdmin'>
       <SideBar />
       <div className='review-container'>
-      <div className='TestReviews'>
-    <Reviews />
-    </div>
         <div className='test-title'>
             <div className='test-form'>
             <form  onSubmit={handleSend}>

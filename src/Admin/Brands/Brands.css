@@ -13,7 +13,8 @@
 
 .brands-container .brands-title {
   position: absolute;
-  right: 5%;
+  right: 20%;
+  top: 20%;
 }
 
 .brands-container .brands-title .brands-form .brandinput {

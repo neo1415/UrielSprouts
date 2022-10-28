@@ -12,10 +12,14 @@ const About = () => {
   const [selectedImg , setSelectedImg] = useState(null)
 
   return (
-    <div className='about-section' id='about'>
-   <h2 className='about-title'>
+    <motion.div className='about-section' id='about'
+         whileInView={{y: [100, 0], opacity: [0, 1]}}
+                    transition= {{ duration:1, ease:'easeOut' }}
+    >
+   <motion.h2
+    className='about-title'>
       About <span>Us</span>
-    </h2>
+    </motion.h2>
     <div className='about_content'>
         {/* <motion.img
             whileInView={{scale:[0,1]}}
@@ -88,7 +92,7 @@ src={images.basic}
 
     
   
-    </div>
+    </motion.div>
 
   )
 }

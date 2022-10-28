@@ -140,8 +140,8 @@ uploadTask.on('state_changed',
             <h1>Review Your Resume</h1>
             <p>IMPROVE YOUR CHANCES OF EMPLOYMENT</p>
             <div className='blob'></div>
-            <div className="bottom">
-          <div className="right">
+            <div className="Bottom">
+          <div className="right" style={{marginTop:'-8rem'}} >
             <form onSubmit={handleAdd} >
               <div className="formInput">
               <div className="input-file-container fileLoad">  

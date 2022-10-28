@@ -96,7 +96,7 @@ const List = () => {
     },
   ];
   return (
-    <div className="list" style={{height:'55vh'}}>
+    <div className="list" style={{marginLeft:'-4rem', marginRight:'-4rem',height:'55vh'}}>
       <div className="datatable" style={{height:'65vh'}}>
       <div className="datatableTitle" style={{fontSize:20}}>
         CV Review

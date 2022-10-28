@@ -13,6 +13,7 @@
   position: absolute;
   margin-top: 2rem;
   left: 12%;
+  width: 100%;
 }
 
 .listContainer .listTitle {
@@ -55,4 +56,28 @@
   border-radius: 5px;
   background-color: white;
   border: 1px solid #4b90eb;
+  border-right: 0px solid transparent !important;
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  height: -1em;
+}
+
+.searchIcon {
+  margin-top: 1.5rem;
+  border: 1px solid #4b90eb;
+  border-left: 0px solid transparent !important;
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  height: 2.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminHead {
+  position: 'relative';
 }

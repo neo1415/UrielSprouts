@@ -2,7 +2,7 @@ import React from 'react'
 import './App.scss'
 import { Routes, Route, Router} from 'react-router-dom';
 import Home from './Pages/Home';
-import Review from './Pages/Review';
+import Review from './Pages/CVReview';
 import AdminHome from './Admin/AdminHome';
 import Login from './Admin/Login/Login';
 import { AuthContextProvider } from './Context/AuthContext';
@@ -68,6 +68,9 @@ const App = () => {
             <Route exact path="/testimonialadmin">
               <Route index element = {  <ProtectedRoute><TestimonialsAdmin /></ProtectedRoute> } />
               <Route path='/testimonialadmin/:id' element = {<ProtectedRoute><TestimonialUser /></ProtectedRoute>} />
+            </Route>
+            <Route exact path="/review">
+              <Route index element = {  <ProtectedRoute><Review /></ProtectedRoute> } />
             </Route>
             <Route exact path="/brands">
               <Route index element = { <ProtectedRoute><Brands /></ProtectedRoute>   } />
