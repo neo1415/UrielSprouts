@@ -68,7 +68,7 @@ const goBack=()=>{
                   />
                 </div>
               <div className='submit_button'>
-                  <Link to='/review'>
+                  <Link to='/business-advisory'>
                   <div className='back'>
                     <BsArrowLeft />
                     <p  onClick={()=>{setOpenModal(false)}}>Go Back</p> 

@@ -1,8 +1,23 @@
 .app__container {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden !important;
   display: flex;
   flex-direction: column;
+}
+
+.app {
+  overflow-x: hidden !important;
+}
+
+@media screen and (max-width: 850px) {
+  .app {
+    overflow-x: hidden !important;
+  }
+}
+
+body {
+  overflow-x: hidden !important;
 }
 
 .app__flex {

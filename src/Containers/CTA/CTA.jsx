@@ -12,7 +12,7 @@ const CTA = () => {
            <div className='CTA'></div>
             <div class="Containers">
    
-   <Link to='/review/#cv' class="button">Read More <div className='btn-span'><FaHandPointRight /></div> </Link>
+   <Link to='/business-advisory' class="button">Read More <div className='btn-span'><FaHandPointRight /></div> </Link>
 </div>
    
         </div>

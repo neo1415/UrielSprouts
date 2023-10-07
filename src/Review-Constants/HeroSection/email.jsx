@@ -13,6 +13,7 @@ const Email = ({handleInput, handleSend}) => {
 
      const handleLink =()=>{
        window.location.reload()
+   
      }
 
      const styles={
