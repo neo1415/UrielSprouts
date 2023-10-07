@@ -11,6 +11,12 @@
   z-index: 10;
 }
 
+@media screen and (max-width: 820px) {
+  .section-center {
+    height: 260px;
+  }
+}
+
 #section-article {
   position: absolute;
   top: 0;
@@ -32,6 +38,13 @@
   position: relative;
   z-index: 1;
   color: #bf2e46;
+}
+
+@media screen and (max-width: 820px) {
+  .slider-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1910px) and (max-width: 2550px) {
@@ -57,7 +70,8 @@
 
 @media screen and (max-width: 880px) {
   .slider-description {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    font-size: 1.1rem;
   }
 }
 

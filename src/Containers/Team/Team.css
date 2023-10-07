@@ -4,6 +4,15 @@
   padding-top: 2em;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1050px) {
+  .Team {
+    padding-bottom: 3rem;
+  }
 }
 
 .container {

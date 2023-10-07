@@ -85,7 +85,7 @@ const [toggle, setToggle] = useState(false);
       <ol className="sub-menu">
         <li className="menu-item"><Link to='/employability' >Employability</Link></li>
         <li className="menu-item"><Link to="/business-advisory" >Business Advisory</Link></li>
-        <li className="menu-item"><Link to="#0" >Hospitality</Link></li>
+        <li className="menu-item"><Link to="/hospitality" >Hospitality</Link></li>
       </ol>
     </li>
     <li className="menu-item">

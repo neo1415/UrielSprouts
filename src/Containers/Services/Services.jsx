@@ -100,20 +100,20 @@ const Services = () => {
 className='serviceCard'>
 <div class="blog-card hospitality spring-fever">
   <div class="title-content">
-    <h3><Link to="#">Hospitality</Link></h3>
-    <div class="intro"> <Link to="#">Hospitality Management</Link> </div>
+    <h3><Link to="/hospitality">Hospitality</Link></h3>
+    <div class="intro"> <Link to="/hospitality">Hospitality Management</Link> </div>
   </div>
   <div class="card-info">
   <p>
   The Hospitality and Tourism industry is a large and complex industry
   and one that is of significant economic importance to the country... 
   </p>
-    <Link to="#">Continue<span class="licon icon-arr icon-black"></span></Link>
+    <Link to="/hospitality">Continue<span class="licon icon-arr icon-black"></span></Link>
   </div>
   <div class="utility-info">
     <ul class="utility-list">
 
-    <li><span class="licon icon-tag"></span><Link to="#">Find Out More</Link></li> 
+    <li><span class="licon icon-tag"></span><Link to="/hospitality">Find Out More</Link></li> 
     </ul>
   </div>
   <div class="gradient-overlay"></div>

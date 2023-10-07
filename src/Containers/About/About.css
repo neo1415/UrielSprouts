@@ -26,6 +26,17 @@
   }
 }
 
+.css-tn8o5s-MuiImageListItem-root {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+  opacity: 1 !important;
+  transform: scale(1);
+  /* Initial scale property */
+  transition: transform 0.3s ease-in-out, opacity 0.3s linear;
+  cursor: pointer;
+}
+
 .css-uym98a-MuiImageList-root {
   width: 1031px !important;
   margin: auto;
