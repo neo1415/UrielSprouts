@@ -110,7 +110,7 @@ const [toggle, setToggle] = useState(false);
           <summary  className="faq__summary drop"><span className="faq__question question"><p className='d-link'>Services</p></span></summary>
           <Link to='/employability' className="faq__text drop-link" onClick={() => setToggle(false)}>Employability</Link>
           <Link to='/business-advisory' className="faq__text drop-link" onClick={() => setToggle(false)}>Business Advisory</Link>
-          <Link to='#0' className="faq__text drop-link" onClick={() => setToggle(false)}>Hospitality</Link>
+          <Link to='/hospitality' className="faq__text drop-link" onClick={() => setToggle(false)}>Hospitality</Link>
         </details> 
     </li>
     <li className="menu-item" >
