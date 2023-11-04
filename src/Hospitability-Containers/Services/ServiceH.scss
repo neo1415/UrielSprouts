@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;1,400;1,500&display=swap');
+
+.h-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top:6rem;
+  
+    @media screen and (max-width: 650px){
+        padding: 5rem .5rem;
+      }
+      @media screen and (max-width: 1050px){
+       padding: 5rem .5rem; /* Position the child absolutely within the parent */
+
+      }
+}
+
+.service-title{
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size:3rem ;
+    font-weight: 800;
+    margin-bottom: -3rem;
+    @media screen and (max-width: 650px){
+        margin-bottom: -3rem;
+      }
+}
+
+.service-h{
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size:3rem ;
+    font-weight: 800;
+}
+
+.first-service{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 6rem 3rem;
+    padding-right: 6rem;
+    margin-top: 3rem;
+    justify-content: space-between;
+    @media screen and (max-width: 650px){
+        flex-direction: column;
+        padding-right: 2rem;
+        padding: 4rem .5rem;
+        margin-bottom: 0;
+        padding-right: .5rem !important;
+        margin-top: 1rem;
+    }
+    @media screen and (max-width: 1050px){
+     
+        padding-right: 3rem;
+      }
+}
+
+.second-service{
+    display: flex;
+    flex-direction: row;
+    padding: 6rem 2rem;
+    padding-left: 6rem;
+    justify-content: space-between;
+    background-color: aliceblue;
+    @media screen and (max-width: 650px){
+        flex-direction: column;
+        padding-left: .5rem;
+        padding: 4rem .5rem;
+        margin-bottom: 0;
+        padding-left: .5rem !important;
+        margin-top: 1rem;
+    }
+    @media screen and (max-width: 1050px){
+        margin-bottom: -2rem;
+        padding-left: 3rem;
+      }
+}
+
+.first-image{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    position: relative;
+    margin-right: -7rem;
+    @media screen and (max-width: 650px){
+        flex-direction: column;
+        width: 100%;
+        justify-content: center !important;
+        margin-bottom: 2rem;
+    }
+    
+    @media screen and (max-width: 1050px){
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 3rem;
+      }
+
+      @media screen and (max-width: 950px){
+        margin-right: -3rem;
+      }
+}
+.second-image{
+    display: flex;
+    width: 50%;
+    position: relative;
+    justify-content: center;
+    margin-left: -7rem;
+    @media screen and (max-width: 650px){
+        flex-direction: column;
+        width: 100%;
+        justify-content: center !important;
+        margin-bottom: 2rem;
+        margin-left: 0 !important;
+    }
+
+    @media screen and (max-width: 1050px){
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 3rem;
+        }
+
+        @media screen and (max-width: 950px){
+            margin-left: -3rem;
+          }
+}
+
+.first-content{
+    width: 50%;
+    @media screen and (max-width: 650px){
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.second-content{
+    width: 50%;
+    @media screen and (max-width: 650px){
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.service2-circle{
+    width: 29rem;
+    height: 29rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    // right: -13%;
+    background: linear-gradient(60deg, rgba(59, 104, 251, 1), rgba(255,144,168,1));
+    @media screen and (max-width: 650px){
+        width: 25rem;
+        height: 25rem; /* Position the child absolutely within the parent */
+        top: 50%; /* Move the top of the child to the vertical center of the parent */
+        left: 50%; /* Move the left of the child to the horizontal center of the parent */
+        transform: translate(-50%, -50%);
+    }
+    @media screen and (max-width: 1050px){
+        width: 21rem;
+        height: 21rem; /* Position the child absolutely within the parent */
+        // right: -10%;
+      }
+}
+
+.service3{
+    width: 100%;
+    object-fit: cover;
+    height: 29rem;
+    margin-right: 1rem;
+    @media screen and (max-width: 650px){
+        height: 25rem;
+      }
+      @media screen and (max-width: 1050px){
+        height: 22rem;
+      }
+}
+
+.service2{
+    width: 100%;
+    object-fit: cover;
+    height: 30rem;
+    @media screen and (max-width: 650px){
+        height: 25rem;
+      }
+      @media screen and (max-width: 1050px){
+        height: 22rem;
+      }
+}
+
+.service3-image{
+    position: relative;
+    z-index: 2;
+    @media screen and (max-width: 650px){
+        width: 100%;
+    }
+}
+
+.service-h4{
+    margin-bottom: 2rem;
+    margin-top: -1.5rem;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Kanit', sans-serif;
+    color: rgba(30, 30, 238, 0.618);
+    @media screen and (max-width: 650px){
+        text-align: center;
+        font-size: 1.7rem;
+      }
+    @media screen and (max-width: 1050px){
+        font-size: 1.5rem;
+      }
+}
+
+.service-button{
+    background-color: rgba(30, 30, 238, 0.618);
+    width: 12rem;
+    border: none;
+}
+.service-button-con{
+    @media screen and (max-width:650px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.service-p{
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--gray-color);
+    @media screen and (max-width: 650px){
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+    }
+    @media screen and (max-width: 1050px){
+        font-size: 1.1rem;
+      }
+}
+h6{
+    color: rgb(238, 33, 19);
+    font-size: 1.5rem;
+    @media screen and (max-width: 650px){
+        text-align: center;
+        
+      }
+      @media screen and (max-width: 1050px){
+        font-size: 1.3rem;
+      }
+}
+
+.service-circle{
+    width: 29rem;
+    height: 29rem;
+    border-radius: 50%;
+    object-fit: cover;
+    // left: -13%;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(315deg, rgba(59, 104, 251, 1), rgba(255,144,168,1));
+    @media screen and (max-width: 650px){
+        width: 25rem;
+        height: 25rem;
+        top: 50%; /* Move the top of the child to the vertical center of the parent */
+        left: 50% !important; /* Move the left of the child to the horizontal center of the parent */
+        transform: translate(-50%, -50%);
+    }
+    @media screen and (max-width: 1050px){
+        width: 21rem;
+        height: 21rem; /* Position the child absolutely within the parent */
+        // left: -11%;
+      }
+}

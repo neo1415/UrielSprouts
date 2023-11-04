@@ -8,6 +8,7 @@ import ExecReg from './../EmployabilityContainers/ExecReg';
 import Checkout from './Checkout/Checkout';
 import { AnimatePresence } from 'framer-motion';
 import ComingSoon from '../Pages/ComingSoon';
+import Hosptality from './../Pages/Hosptality';
 
 const AnimateRouters = () => {
 
@@ -25,7 +26,7 @@ const AnimateRouters = () => {
             <Route exact path="/employability"
             element = {<Employability />} />
             <Route exact path="/hospitality"
-            element = {<ComingSoon />} />
+            element = {<Hosptality />} />
             <Route exact path="registration"
             element = {<Reg />} />
                 <Route exact path="executive-registration"

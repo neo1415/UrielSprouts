@@ -34,6 +34,16 @@ import carousel7 from '../Assets/carousel7.jpeg'
 import carousel8 from '../Assets/carousel8.jpeg'
 import carousel9 from '../Assets/carousel9.jpeg'
 import executive from '../Assets/executive.jpeg'
+import service1 from '../Assets/service1.png'
+import service2 from '../Assets/service2.png'
+import service3 from '../Assets/service3.png'
+import service4 from '../Assets/service4.jpg'
+import service5 from '../Assets/service5.jpg'
+import serviceimg from '../Assets/service-img.png'
+import serviceimg2 from '../Assets/service-img2.png'
+import serviceimg3 from '../Assets/service-img3.png'
+import trust from '../Assets/trust.png'
+import ready from '../Assets/ready.mp4'
 
 export default {
     logo,
@@ -71,5 +81,15 @@ export default {
    carousel7,
    carousel8,
    carousel9,
-   executive
+   executive,
+   service1,
+   service2,
+   service3,
+   service4,
+   service5,
+   serviceimg,
+   serviceimg2,
+   serviceimg3, 
+   trust,
+   ready
 }

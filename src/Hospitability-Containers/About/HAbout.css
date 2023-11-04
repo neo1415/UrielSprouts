@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;1,400;1,500&display=swap");
+.about-title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  /* or 'normal' */
+}
+
+.about-h {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 800;
+  /* or 'normal' */
+  font-size: 3rem;
+}
