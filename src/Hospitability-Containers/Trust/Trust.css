@@ -237,8 +237,8 @@
 
 @media screen and (max-width: 650px) {
   .trust-content .trust1 {
-    width: 22rem !important;
-    height: 22rem !important;
+    width: 19rem !important;
+    height: 19rem !important;
     margin: .5rem;
     padding: .5rem;
   }
@@ -281,7 +281,7 @@
 
 .trust-content .trust1 .trust-p {
   font-size: 1.1rem;
-  color: #151414;
+  color: var(--gray-color);
   text-align: center;
   font-family: 'Kanit', sans-serif;
 }
@@ -294,6 +294,6 @@
 
 @media screen and (max-width: 650px) {
   .trust-content .trust1 .trust-p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 }

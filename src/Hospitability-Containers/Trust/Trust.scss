@@ -174,8 +174,8 @@ position: absolute;
         }
 
         @media screen and (max-width:650px) {
-            width: 22rem !important;
-            height: 22rem !important;
+            width: 19rem !important;
+            height: 19rem !important;
             margin: .5rem;
             padding: .5rem;
         }
@@ -209,14 +209,14 @@ position: absolute;
         }
         .trust-p{
             font-size: 1.1rem;
-            color: rgb(21, 20, 20);
+            color: var(--gray-color);
             text-align: center;
             font-family: 'Kanit', sans-serif;
             @media screen and (max-width:850px) {
              font-size: 1rem;
             }
             @media screen and (max-width:650px) {
-                font-size: 1.6rem;
+                font-size: 1.2rem;
                }
         }
 

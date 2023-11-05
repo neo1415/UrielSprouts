@@ -86,7 +86,8 @@
 }
 
 .relative .button-group .button.button-start {
-  width: 16rem;
+  width: 12rem;
+  height: 3rem;
   color: #ffffff;
   display: flex;
   justify-content: center;
